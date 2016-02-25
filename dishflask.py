@@ -85,15 +85,19 @@ def show_home_page():
 
 # @app.route('/assets/<path:path>')
 # def send_assets(path):
-#     return send_from_directory('/var/www/thedishonscience.com/assets', path)
+#     return send_from_directory('/var/www/thedishonscience.com/assets/', path)
 
 # @app.route('/images/<path:path>')
 # def send_images(path):
-#     return send_from_directory('/var/www/thedishonscience.com/images', path)
+#     return send_from_directory('/var/www/thedishonscience.com/images/', path)
+
+# @app.route('/documents/<path:path>')
+# def send_documents(path):
+#     return send_from_directory('/var/www/thedishonscience.com/documents/', path)
 
 # @app.route('/temp_images/<path:path>')
 # def send_temp_images(path):
-#     return send_from_directory('/var/www/thedishonscience.com/temp_images', path)
+#     return send_from_directory('/var/www/thedishonscience.com/temp_images/', path)
 
 @app.route('/<post_name>')
 def send_post(post_name):

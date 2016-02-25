@@ -1,0 +1,64 @@
+* TODO Finish website
+  * Immediate Goals
+    ** twitter button should go to twitter page
+    ** article should be shareable via twitter
+    ** put "topics" next to the three bars for team names
+    ** Make sure to uncomment Stanford's name after club app goes through (2 places)
+    ** sort team names in pop-out menu
+    ** include link to science dictionary at bottom of the pop-out menu and
+    ** move facebook like and twitter buttons to the post itself, and make them point to each specific article instead of to the webpage as a whole
+    ** increase spacing slightly between three "menu" bars and the "Close menu" text
+  * Large Goals
+    ** set up a SQL server using sqlalchemy to store the articles
+      *** various things become more manageable once this is done:
+        **** actually sort posts
+        **** actually track pageviews
+        **** pagination.
+        **** Make sure to switch to first 5 most popular posts and first 10 most recent posts
+    ** make a page to look at a specific author's articles, with optional bio at top
+      *** hook up author links
+    ** don't let website fail on startup if there's a bad post file
+  * Strech Goals
+    ** ?Login system? + comments
+    ** Post list page
+    ** Science dictionary
+    ** Search box
+  * URL Scheme:
+    http://thedishonscience.com/topics/$topic_name
+    http://thedishonscience.com/posts/$year/$post_name
+  * Objects (to Jay: this is probably outdated, the code is the docs)
+class Team {
+    string url;
+    string name;
+    string blurb;
+    string description;
+    string logo_src;
+}
+class Post {
+    int year;
+    string url;
+    string absolute_url;
+    datetime publication_date;
+    Author[] authors;
+    string featured_image_src;
+    string featured_image_square_src;
+    string description;
+    string blurb;
+    string title;
+    Team[] teams;
+    method most_popular(int n);
+    method most_recent(int n);
+}
+class Author {
+    string name;
+    string headshot_src;
+}
+class TheDish {
+    string official_name;
+    string subtitle;
+    string long_name;
+    string blurb;
+    string description;
+    string url;
+    string logo_src;
+}
