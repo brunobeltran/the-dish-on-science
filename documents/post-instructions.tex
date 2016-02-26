@@ -41,7 +41,8 @@
 \numberwithin{equation}{section}        % Equationnumbering: section.eq#
 \numberwithin{figure}{section}            % Figurenumbering: section.fig#
 \numberwithin{table}{section}                % Tablenumbering: section.tab#
-\newcommand{\dishurl}[1]{\url{http://www.brunobeltran.org/#1}}
+\newcommand{\dishurlplain}[1]{http://www.brunobeltran.org/#1}
+\newcommand{\dishurl}[1]{\url{\dishurlplain{#1}}}
 
 
 %%% Maketitle metadata
@@ -91,7 +92,7 @@ for the Dish:\@
 As long as you keep to the simplified guidelines above and maintain a
 professional tone, we should not have any problems. If in doubt, however,
 consult the full university policy at
-\href{https://adminguide.stanford.edu/chapter-6/subchapter-2/policy-6-2-1}{https://adminguide.stanford.edu/chapter-6/subchapter-2/policy-6-2-1}.
+\url{https://adminguide.stanford.edu/chapter-6/subchapter-2/policy-6-2-1}.
 
 \section{Copyright Law}\label{sec:copyright}
 
@@ -101,18 +102,26 @@ public domain, then you have to ask the person that owns it for permission to
 use it.
 
 In particular, this means that if you want to reproduce a figure from a journal,
-you \textbf{must} ask the journal's permission since usually the journal is the
-copyright holder and not the author.
+you invariably \textbf{must} ask permission from the copyright holder. This is
+usually the journal, but you can find out for sure by searching either the PDF
+or the webpage of the article for a Copyright notice for the article and seeing
+who the copyright is assigned to. Do not mistake the article being available
+from a separate site as meaning that it is okay to steal pictures from it. Many
+good, well-meaning blogs have been sued for exactly this practice.
 
 As an important aside, realize that this document is not legally binding in any way and its author
 is not a lawyer, so please use your own best judgement as necessary to obey all
 relevant laws and regulations.
 
-
 \section{How to Format a Post}
-The Dish's website is maintained by the editor as part of his or her duties. A
-large part of this is automated to ensure consistency of design across the site.
-As such, we ask that all posts follow the following format \textit{exactly}.
+The Dish's website is maintained by the Website Administrator, and the Editor in
+Chief is in charge of managing timely submission of articles to the site, per
+their duties as outlined in
+\href{\dishurlplain{documents/dish-constitution.pdf}}{the constitution}. A
+large part of the uploading is automated to both ensure consistency of design
+across the site and to minimize the extra work that has to be done by the
+Editor.  As such, we ask that all posts follow the following format
+\textit{exactly}.
 
 A minimal, correct example article can be found at
 \dishurl{documents/minimal-example-post}. A post that leverages all optional
