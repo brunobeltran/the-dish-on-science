@@ -10,6 +10,7 @@
     ** increase spacing slightly between three "menu" bars and the "Close menu" text
   * Large Goals
     ** set up a SQL server using sqlalchemy to store the articles
+      *** Create database
       *** various things become more manageable once this is done:
         **** actually sort posts
         **** actually track pageviews
@@ -25,40 +26,6 @@
     ** Search box
   * URL Scheme:
     http://thedishonscience.com/topics/$topic_name
-    http://thedishonscience.com/posts/$year/$post_name
-  * Objects (to Jay: this is probably outdated, the code is the docs)
-class Team {
-    string url;
-    string name;
-    string blurb;
-    string description;
-    string logo_src;
-}
-class Post {
-    int year;
-    string url;
-    string absolute_url;
-    datetime publication_date;
-    Author[] authors;
-    string featured_image_src;
-    string featured_image_square_src;
-    string description;
-    string blurb;
-    string title;
-    Team[] teams;
-    method most_popular(int n);
-    method most_recent(int n);
-}
-class Author {
-    string name;
-    string headshot_src;
-}
-class TheDish {
-    string official_name;
-    string subtitle;
-    string long_name;
-    string blurb;
-    string description;
-    string url;
-    string logo_src;
-}
+    http://thedishonscience.com/posts/$post_name
+    http://thedishonscience.com/author/$author_name
+
