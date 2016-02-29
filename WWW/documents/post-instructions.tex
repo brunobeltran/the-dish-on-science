@@ -41,7 +41,7 @@
 \numberwithin{equation}{section}        % Equationnumbering: section.eq#
 \numberwithin{figure}{section}            % Figurenumbering: section.fig#
 \numberwithin{table}{section}                % Tablenumbering: section.tab#
-\newcommand{\dishurlplain}[1]{http://www.brunobeltran.org/#1}
+\newcommand{\dishurlplain}[1]{http://thedishonscience.stanford.edu/#1}
 \newcommand{\dishurl}[1]{\url{\dishurlplain{#1}}}
 
 
@@ -97,9 +97,13 @@ consult the full university policy at
 \section{Copyright Law}\label{sec:copyright}
 
 This is fairly easy to summarize. If you didn't make it, and it is not both from
-a credible source and explicitly marked as Creative Commons (for reuse) or
-public domain, then you have to ask the person that owns it for permission to
-use it.
+a credible source and explicitly marked as free for reuse, then you have to ask
+the person that owns it for permission to use it. Don't assume that something
+marked free for reuse at \texttt{sketchy.illegalwebsite.wut} is actually
+legitimately free for reuse.  Besides saying explicitly somewhere that you're
+free to reproduce it, the most common way a content creator will give you legal
+rights to reuse something is to mark it as being under a Creative Commons
+license or as being ``public domain''.
 
 In particular, this means that if you want to reproduce a figure from a journal,
 you invariably \textbf{must} ask permission from the copyright holder. This is
@@ -109,9 +113,9 @@ who the copyright is assigned to. Do not mistake the article being available
 from a separate site as meaning that it is okay to steal pictures from it. Many
 good, well-meaning blogs have been sued for exactly this practice.
 
-As an important aside, realize that this document is not legally binding in any way and its author
-is not a lawyer, so please use your own best judgement as necessary to obey all
-relevant laws and regulations.
+As an important aside, realize that this document is not legally binding in any
+way and its author is not a lawyer, so please use your own best judgement as
+necessary to obey all relevant laws and regulations.
 
 \section{How to Format a Post}
 The Dish's website is maintained by the Website Administrator, and the Editor in
@@ -123,15 +127,19 @@ across the site and to minimize the extra work that has to be done by the
 Editor.  As such, we ask that all posts follow the following format
 \textit{exactly}.
 
-A minimal, correct example article can be found at
-\dishurl{documents/minimal-example-post}. A post that leverages all optional
-features of the website available without special requests can be found at
-\dishurl{documents/maximal-example-post}. In places where this document is
-ambiguous, these examples should serve as an official reference.
+A minimal, correct example article as the Editor will expect to recieve it can
+be found at \dishurl{documents/minimal-example-post}. A analagous post that
+leverages all optional features of the website that are available without
+special requests can be found at \dishurl{documents/maximal-example-post}. In
+places where this document is ambiguous, these examples should serve as an
+official reference.
 
 For an article with desired URL
-\dishurl{posts/post-name-url}, the following folder structure is required.
-\begin{figure}[H]
+\dishurl{posts/post-name-url}, the folder structure in
+Figure~\ref{fig:folder-structure} is required. The
+editor will expect to recieve a single file, \texttt{post-url-name.zip}, with
+the entire contents of \texttt{post-url-name} folder.
+\begin{figure}[h]
 \begin{forest}
   for tree={%
     font=\ttfamily,
@@ -170,6 +178,13 @@ The \texttt{post\_info.json} and \texttt{post.md} files must have
 they're correctly linked to in the article, but the
 folder containing them must be called \texttt{images}. See Section~\ref{sec:image-links}
 for how to correctly link to your images.
+
+\emph{For advanced users only:} for full control of the article using custom
+HTML, CSS, or JavaScript, simply include a your own \texttt{post.html} in
+the top level \texttt{post-url-name} directory. This will
+prevent the server from attempting to compile one for you from \texttt{post.md}.
+You may assume that the webserver has read-only access to arbitrary
+subdirectories of your post directory.
 
 \subsection{How to Make \texttt{\textbf{post\_info.json}}}
 Please see the examples mentioned above for how to format the file. If what
@@ -214,7 +229,7 @@ etc.) each time a link to an image file is required.
     \item \emph{Author headshot or headshots}: This will be a link to the picture that will
         display next to your name. You can either provide an image and link to
         that file name inside the ``\texttt{images}'' folder, or use
-        ``\texttt{/images/headshot.png}'' for a picture of a cute hedgehog instead.
+        ``\texttt{/images/hedgehog.png}'' for a picture of a cute hedgehog instead.
 
         You can always check what the name of the file you provided is if you've
         forgotten by looking for yourself at ``\dishurl{images/}''.
@@ -248,7 +263,7 @@ from italics and bolding to tables, links and images:
 
 \url{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}
 
-Here's a site that lets you type in markdown and shows you what it would
+Here's a site that lets you type in Markdown and shows you what it would
 look like on the web, with some built in examples.
 
 \url{https://stackedit.io/editor}
