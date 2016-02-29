@@ -1,0 +1,21 @@
+{
+    "title": "A Very Interesting Title: Maybe with a colon?",
+    "url_title": "minimal-example",
+    "featured_image_src": "./images/Smoking4.jpg",
+    "blurb": "A subtitle that can be a fragment but should end with a period.",
+    "description": "After reading this, I should really want to read your article. I should be absolutely entranced. Man, I'm excited just thinking about it. You're writing about some cool science, right? Cool. Lorem ipsum I'm out of stuff to say and it's really late and I'm tired. Oh, and definitely don't end this section with anything like 'click here to read more', the website template will do that part for you.",
+    "teams": "forty-two"
+    "authors": [{
+        "name": "Julien Roth",
+        "nickname": "Julien Roth",
+        "headshot_src": "/images/hedgehog.png"
+    }],
+    "illustrators": [{
+        "name": "Andrea Chaikovsky",
+        "nickname": "Andrea Chaikovsky",
+        "headshot_src": "/images/hedgehog.png"
+    }],
+    "smaller_img_src": "/images/placeholder-2to1.jpg",
+    "square_img_src": "/images/placeholder-1to1.jpg"
+}
+

@@ -68,11 +68,15 @@
 \begin{document}
 \maketitle
 
-\section{Important Notice}
-For now, the website is being hosted at \dishurl{}. Everywhere in this document where this
-URL is mentioned, it will be changed whenever we get our final URL, whatever
-that may be (probably to something like
-\url{http://dishonscience.stanford.edu/}).
+\section{Short Version}
+Make a Markdown version of your article named ``post.md'', put all your images
+in a ``images'' folder in the same directory, copy the file
+\dishurl{/documents/minimal-example/post\_info.json}, and fill in the fields, so
+you get a folder that looks like Figure~\ref{fig:folder-structure}.
+
+Zip it all up and send it to the Editor. If you want to be fancy, make sure to
+include versions of your article's main picture in 3:1, 2:1, and 1:1 aspect
+ratios using the relevant fields of ``post\_info.json''.
 
 \section{What Can Go in My Article?}
 The Dish on Science is a Stanford graduate student blogging group.
@@ -201,44 +205,71 @@ etc.) each time a link to an image file is required.
 
 \noindent{}The required fields are:\@
 \begin{itemize}
-    \item \emph{Post Title}: Try to keep below 200 characters.
-    \item \emph{Main Post Image}: A link to the main image that will be
+    \item \emph{Post Title} (\texttt{"title"}): Must be below 200 characters.
+    \item \emph{Post URL} (\texttt{"url\_title"}): Must be below 200 characters.
+    \item \emph{Main Post Image} (\texttt{"featured\_image\_src"}): A link to the main image that will be
         displayed alongside links to the article and at the top of the article.
-    \item \emph{Post ``Blurb''}: A short, sub-sentence-long description of what
+        This image will look best if made with an aspect ratio of 5:2 width to
+        height, at least 300px of height, and at least 800px of width. A stock
+        example can be found at \dishurl{/images/placeholder-5to2.jpg}.
+    \item \emph{Post ``Blurb''} (\texttt{"blurb"}): A short, sub-sentence-long description of what
         the article is about. If you want your article to have a subtitle, this
         is the most appropriate place.
-    \item \emph{Post Description}: A short paragraph that will be displayed
+    \item \emph{Post Description} (\texttt{"description"}): A short paragraph that will be displayed
         beneath your article's image when listing articles. This should be your
         call to action, and after reading this, a visitor to the site should
         want to click on your article to read more. The text ``(Click to read
         more\ldots{})'' will be automatically included after this description, so do
         not include it yourself.
-    \item \emph{Team Name}: The official name of the team or teams that have edited the
+    \item \emph{Team Name} (\texttt{"teams"}): The official name of the team or teams that have edited the
         post.
 \end{itemize}
 
 \noindent{}The following (optional) fields are also allowed.
 \begin{itemize}
-    \item \emph{Author name or names}: Please use your legal name to make this consistent. If
-        you submit one article as ``Bob Caldwell'' and another as ``Bobby
-        Caldwell'', there will be no way of assigning these to the same person.
-        If this field is omitted, the group name will be used as a stand in for
-        the author name.
-    \item \emph{Author nickname or nicknames}: One per author. This will be the name that is
-        actually displayed on the site next to your (optional) picture.
-    \item \emph{Author headshot or headshots}: This will be a link to the picture that will
-        display next to your name. You can either provide an image and link to
-        that file name inside the ``\texttt{images}'' folder, or use
-        ``\texttt{/images/hedgehog.png}'' for a picture of a cute hedgehog instead.
+    \item \emph{Author information} (\texttt{"authors"}):
+        \begin{itemize}
+            \item \emph{Author name} (\texttt{"name"}): Please use your full legal name to make this consistent. If
+                you submit one article as ``Bob Caldwell'' and another as ``Bobby
+                Caldwell'', there will be no way for the web server to know that
+                these should be assigned to the same person.
+                If this field is omitted, the group name will be used as a stand in for
+                the author name.
+            \item \emph{Author nickname} (\texttt{"nickname"}): One per author. This will be the name that is
+                actually displayed on the site next to your (optional) picture. It can
+                be different for each article you write if you wish.
+            \item \emph{Author headshot} (\texttt{"headshot\_src"}): This will
+                be a link to the picture that will display next to your name.
+                You can  provide an image with your article and link to that
+                file name
+                inside the ``\texttt{./images}'' folder, or use
+                ``\texttt{/images/hedgehog.png}'' for a picture of a cute
+                hedgehog instead.
 
-        You can always check what the name of the file you provided is if you've
-        forgotten by looking for yourself at ``\dishurl{images/}''.
-        For example, after finding my picture at
-        ``\dishurl{/images/bruno-beltran-2015.png}'', I would use
-        ``\texttt{/images/bruno-beltran-2015.png}''.
-    \item \emph{Squared Post Image}: A link to a cropped version of the post image that
-        can be used as a thumbnail for the post. If this is not included, a
-        square thumbnail will automagically be generated from the ``Main Post Image''.
+                You can always check what the name of the file you already
+                provided is if you've forgotten by right clicking on your image
+                in a previous article and selecting ``Copy Link Location''. If
+                you do this, please use the fully qualified URL---i.e.\ starting
+                with ``http://''. You can choose to use a
+                different picture of yourself for each post your write if you so wish.
+        \end{itemize}
+    \item \emph{Illustrator information} (\texttt{"illustrators"}): Same as
+        the ``author'' fields, but for the illustrator.
+    \item \emph{2-by-1 Post Image} (\texttt{"smaller\_img\_src"}): A link to a cropped version of the post image that
+        will be used when the post is displayed on the left sidebar. This image
+        must have an aspect ratio 2:1 of width:height or it will be ignored by
+        the server. If it is not less than
+        200px in height, it will be downsampled. If this is not included, it
+        will automagically be generated from the ``Main Post Image''. A stock
+        example can be found at
+        \dishurl{/images/placeholder-2to1.jpg}.
+    \item \emph{Post Thumbnail} (\texttt{"square\_image\_src"}): A link to a cropped version of the post image
+        that can be used as a thumbnail for the post. This image must have an
+        aspect ratio of 1:1 or it will be ignored. If it is larger than 50px in
+        height, it will be downsampled. A stock
+        example can be found at
+        \dishurl{/images/placeholder-1to1.jpg}.
+
 \end{itemize}
 
 
@@ -282,7 +313,7 @@ might want to try using an automatic conversion tool like
 
 \subsubsection{Images}\label{sec:image-links}
 In order to get an image in your article, simply include it in the
-\texttt{``images''} subfolder of your post as demonstrated by
+\texttt{"images"} subfolder of your post as demonstrated by
 Figure~\ref{fig:folder-structure}. Then, the usual syntax for including a
 picture in a Markdown document should work using the relative file path
 (i.e.\ starting with ``\texttt{./images/}'').
