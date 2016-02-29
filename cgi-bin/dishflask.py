@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from flask import Flask, render_template, url_for, send_from_directory
 from collections import namedtuple
 import random
@@ -6,6 +7,9 @@ import json
 import codecs
 from glob import glob
 from dateutil.parser import parse
+
+app_dir = "/var/www/thedishonscience.com"
+www_dir = os.path.join(app_dir, "www")
 
 app = Flask(__name__, static_url_path='')
 
@@ -23,15 +27,17 @@ thedish = TheDish(official_name='The Dish on Science',
 
 # load all the team information from a global file
 Team = namedtuple('Team', ['url', 'name', 'blurb', 'description', 'logo_src'])
-team_data = open('/var/www/thedishonscience.com/blog-teams.json').read()
-teams = json.loads(team_data, object_hook=lambda d: namedtuple('Team', d.keys())(*d.values())).teams
+team_data_file = os.path.join(app_dir, 'blog-teams.json')
+team_data = codecs.open(team_data_file, 'r', encoding='utf-8').read()
+teams = json.loads(team_data, encoding='utf-8', object_hook=lambda d: namedtuple('Team', d.keys())(*d.values())).teams
 
 class Post(object):
     """Knows about a blog post for The Dish."""
 
     def __init__(self, post_directory):
         """ Read JSON into self.__dict__ and pull in HTML of post"""
-        post_data = open(os.path.join(post_directory, 'post_info.json')).read()
+        post_file = os.path.join(post_directory, 'post_info.json')
+        post_data = codecs.open(post_file, 'r', encoding='utf-8').read()
         data = json.loads(post_data, object_hook=lambda d: namedtuple('Post', d.keys())(*d.values()))
         self.__dict__ = data.__dict__.copy()
         self.publication_date = parse(self.publication_date)
@@ -47,8 +53,8 @@ class Post(object):
 
 
 # load posts from posts directory
-post_directories = os.listdir('/var/www/thedishonscience.com/posts')
-recent_posts = [Post(os.path.join('/var/www/thedishonscience.com', 'posts', post_directory)) for post_directory in post_directories]
+post_directories = os.listdir(os.path.join(www_dir, 'posts'))
+recent_posts = [Post(os.path.join(www_dir, 'posts', post_directory)) for post_directory in post_directories]
 popular_posts = list(recent_posts)
 random.shuffle(popular_posts)
 
@@ -80,6 +86,7 @@ def show_dictionary_page():
 @app.route('/index.htm')
 @app.route('/index.html')
 @app.route('/home')
+@app.route('/cgi-bin/')
 def show_home_page():
     return render_default()
 
@@ -110,5 +117,9 @@ def send_post(post_name):
                             post=matching_post[0],
                             error=None)
 
+# print("Content-Type: text/html")
+# print
+app.debug = True
+app.template_folder = '/var/www/thedishonscience.com/www/templates'
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=False)

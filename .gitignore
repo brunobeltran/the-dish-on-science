@@ -6,3 +6,4 @@ images
 *.out
 *.bbl
 *.blg
+db_private
