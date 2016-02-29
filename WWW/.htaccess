@@ -1,8 +1,8 @@
 #Options +ExecCGI
 #AddHandler cgi-script .py
 RewriteEngine On
-RewriteRule ^/?$ / [R]
+#RewriteRule ^/?$ / [R]
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
