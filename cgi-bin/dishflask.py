@@ -22,11 +22,11 @@ app.template_folder = os.path.join(www_dir, 'templates')
 TheDish = namedtuple('TheDish', ['official_name', 'subtitle', 'long_name',
                      'blurb', 'description', 'url', 'logo_src'])
 thedish = TheDish(official_name='The Dish on Science',
-                  subtitle='as told by graduate students',
-                  long_name='The Dish on Science: As Told by Graduate Students',
-                  blurb='A science blogging club for graduate students.',
+                  subtitle='as told by Stanford graduate students',
+                  long_name='The Dish on Science: as Told by Stanford Graduate Students',
+                  blurb='A science blogging club for Stanford graduate students.',
                   description='Started by Sam Piekos, The Dish on Science (The Dish for short) offers an avenue for frustrated graduate students to write about the things that they love on the days when those things decide to hate them.',
-                  url='http://brunobeltran.org/',
+                  url='http://thedishonscience.stanford.edu/',
                   logo_src='./images/logo-bruno-dish-9.png')
 # usused since Author is just a field of post for now
 # Author = namedtuple('Author', ['name', 'headshot_src'])

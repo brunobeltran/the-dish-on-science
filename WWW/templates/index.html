@@ -4,33 +4,34 @@
      license (html5up.net/license)
 -->
 <!--
-	Future Imperfect by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Future Imperfect by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 
 <!-- top level jinja input variables: "thedish", "teams" and "posts", which should be
      of types Class TheDish, array of Class Team, and array of Class Post, respectively.
 -->
 <html>
-	<head>
+    <head>
     <title>{% block title %}The Dish on Science{% endblock %}</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="/assets/css/main.css" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="/assets/css/main.css" />
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <!-- open graph tags allow e.g. facebook to show a preview of the site -->
         <meta property="og:url"           content="{{ thedish.url }}" />
         <meta property="og:type"          content="website" />
         <meta property="og:title"         content="{{ thedish.official_name }}" />
         <meta property="og:description"   content="{{ thedish.long_name }}" />
-        <!-- <meta property="og:description"   content="The Dish on Science: As Told by Graduate Students" /> -->
+        <!-- <meta property="og:description"   content="The Dish on Science: As
+             Told by Stanford Graduate Students" /> -->
         <meta property="og:image" content="{{ thedish.logo_src }}" />
-	</head>
-	<body>
+    </head>
+    <body>
         <!-- Load Facebook SDK for JavaScript
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
@@ -41,7 +42,7 @@
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
         -->
-		<!-- Wrapper -->
+        <!-- Wrapper -->
         <div id="wrapper">
 
             <!-- Header -->
@@ -286,12 +287,12 @@
 
         </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/skel.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+            <script src="assets/js/main.js"></script>
 
-	</body>
+    </body>
 </html>
