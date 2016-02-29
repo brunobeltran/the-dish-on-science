@@ -8,7 +8,9 @@ import codecs
 from glob import glob
 from dateutil.parser import parse
 
-app_dir = "/var/www/thedishonscience.com"
+
+cgi_dir = os.path.dirname(os.path.realpath(__file__))
+app_dir = os.path.abspath(os.path.join(cgi_dir, os.path.pardir))
 www_dir = os.path.join(app_dir, "WWW")
 
 app = Flask(__name__, static_url_path='')
