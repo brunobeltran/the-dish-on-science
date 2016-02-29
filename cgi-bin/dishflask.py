@@ -8,14 +8,14 @@ import codecs
 from glob import glob
 from dateutil.parser import parse
 
-app_dir = "/afs/ir/group/thedishonscience"
+app_dir = "/var/www/thedishonscience.com"
 www_dir = os.path.join(app_dir, "WWW")
 
 app = Flask(__name__, static_url_path='')
 # print("Content-Type: text/html")
 # print
 app.debug = True
-app.template_folder = '/afs/ir/group/thedishonscience/WWW/templates'
+app.template_folder = os.path.join(www_dir, 'templates')
 
 TheDish = namedtuple('TheDish', ['official_name', 'subtitle', 'long_name',
                      'blurb', 'description', 'url', 'logo_src'])
