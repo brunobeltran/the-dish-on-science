@@ -8,6 +8,7 @@
     ** include link to science dictionary at bottom of the pop-out menu and
     ** move facebook like and twitter buttons to the post itself, and make them point to each specific article instead of to the webpage as a whole
     ** increase spacing slightly between three "menu" bars and the "Close menu" text
+    ** set up google analytics
   * Large Goals
     ** set up a SQL server using sqlalchemy to store the articles
       *** Create database

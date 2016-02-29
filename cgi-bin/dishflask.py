@@ -8,10 +8,14 @@ import codecs
 from glob import glob
 from dateutil.parser import parse
 
-app_dir = "/var/www/thedishonscience.com"
-www_dir = os.path.join(app_dir, "www")
+app_dir = "/afs/ir/group/thedishonscience"
+www_dir = os.path.join(app_dir, "WWW")
 
 app = Flask(__name__, static_url_path='')
+# print("Content-Type: text/html")
+# print
+app.debug = True
+app.template_folder = '/afs/ir/group/thedishonscience/WWW/templates'
 
 TheDish = namedtuple('TheDish', ['official_name', 'subtitle', 'long_name',
                      'blurb', 'description', 'url', 'logo_src'])
@@ -27,7 +31,7 @@ thedish = TheDish(official_name='The Dish on Science',
 
 # load all the team information from a global file
 Team = namedtuple('Team', ['url', 'name', 'blurb', 'description', 'logo_src'])
-team_data_file = os.path.join(app_dir, 'blog-teams.json')
+team_data_file = os.path.join(www_dir, 'assets', 'info', 'blog-teams.json')
 team_data = codecs.open(team_data_file, 'r', encoding='utf-8').read()
 teams = json.loads(team_data, encoding='utf-8', object_hook=lambda d: namedtuple('Team', d.keys())(*d.values())).teams
 
@@ -117,9 +121,5 @@ def send_post(post_name):
                             post=matching_post[0],
                             error=None)
 
-# print("Content-Type: text/html")
-# print
-app.debug = True
-app.template_folder = '/var/www/thedishonscience.com/www/templates'
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=False)
