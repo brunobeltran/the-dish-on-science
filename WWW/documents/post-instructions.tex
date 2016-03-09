@@ -71,7 +71,7 @@
 \section{Short Version}
 Make a Markdown version of your article named ``post.md'', put all your images
 in a ``images'' folder in the same directory, copy the file
-\dishurl{/documents/minimal-example/post\_info.json}, and fill in the fields, so
+\dishurl{documents/minimal-example/post\_info.json}, and fill in the fields, so
 you get a folder that looks like Figure~\ref{fig:folder-structure}.
 
 Zip it all up and send it to the Editor. If you want to be fancy, make sure to
@@ -207,11 +207,14 @@ etc.) each time a link to an image file is required.
 \begin{itemize}
     \item \emph{Post Title} (\texttt{"title"}): Must be below 200 characters.
     \item \emph{Post URL} (\texttt{"url\_title"}): Must be below 200 characters.
-    \item \emph{Main Post Image} (\texttt{"featured\_image\_src"}): A link to the main image that will be
+        Must be all lowercase letters and words should be separated by single
+        hyphens (i.e.\ the ``-'' character, ASCII character \texttt{0x2D}). Do
+        not use spaces in the post URL.
+    \item \emph{Main Post Image} (\texttt{"five\_by\_two\_image\_src"}): A link to the main image that will be
         displayed alongside links to the article and at the top of the article.
         This image will look best if made with an aspect ratio of 5:2 width to
         height, at least 300px of height, and at least 800px of width. A stock
-        example can be found at \dishurl{/images/placeholder-5to2.jpg}.
+        example can be found at \dishurl{images/placeholder-5to2.jpg}.
     \item \emph{Post ``Blurb''} (\texttt{"blurb"}): A short, sub-sentence-long description of what
         the article is about. If you want your article to have a subtitle, this
         is the most appropriate place.
@@ -240,7 +243,7 @@ etc.) each time a link to an image file is required.
                 be different for each article you write if you wish.
             \item \emph{Author headshot} (\texttt{"headshot\_src"}): This will
                 be a link to the picture that will display next to your name.
-                You can  provide an image with your article and link to that
+                You can provide an image with your article and link to that
                 file name
                 inside the ``\texttt{./images}'' folder, or use
                 ``\texttt{/images/hedgehog.png}'' for a picture of a cute
@@ -255,20 +258,20 @@ etc.) each time a link to an image file is required.
         \end{itemize}
     \item \emph{Illustrator information} (\texttt{"illustrators"}): Same as
         the ``author'' fields, but for the illustrator.
-    \item \emph{2-by-1 Post Image} (\texttt{"smaller\_img\_src"}): A link to a cropped version of the post image that
+    \item \emph{2-by-1 Post Image} (\texttt{"two\_by\_one\_image\_src"}): A link to a cropped version of the post image that
         will be used when the post is displayed on the left sidebar. This image
         must have an aspect ratio 2:1 of width:height or it will be ignored by
         the server. If it is not less than
         200px in height, it will be downsampled. If this is not included, it
         will automagically be generated from the ``Main Post Image''. A stock
         example can be found at
-        \dishurl{/images/placeholder-2to1.jpg}.
-    \item \emph{Post Thumbnail} (\texttt{"square\_image\_src"}): A link to a cropped version of the post image
+        \dishurl{images/placeholder-2to1.jpg}.
+    \item \emph{Post Thumbnail} (\texttt{"one\_by\_one\_image\_src"}): A link to a cropped version of the post image
         that can be used as a thumbnail for the post. This image must have an
         aspect ratio of 1:1 or it will be ignored. If it is larger than 50px in
         height, it will be downsampled. A stock
         example can be found at
-        \dishurl{/images/placeholder-1to1.jpg}.
+        \dishurl{images/placeholder-1to1.jpg}.
 
 \end{itemize}
 
