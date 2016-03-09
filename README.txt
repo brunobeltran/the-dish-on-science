@@ -17,7 +17,7 @@ also free to use under the same CCA 3.0 license.
 
 Database:
 ---------
-CREATE TABLE teams (
+CREATE TABLE team (
     team_id INTEGER NOT NULL,
     PRIMARY KEY (team_id),
     name VARCHAR(100) NOT NULL,
@@ -25,18 +25,18 @@ CREATE TABLE teams (
     blurb VARCHAR(200) NOT NULL,
     description VARCHAR(2000) NOT NULL
 )
-CREATE TABLE authors (
+CREATE TABLE author (
     author_id INTEGER NOT NULL,
     PRIMARY KEY (author_id),
     name VARCHAR(100),
     default_picture_src VARCHAR(100)
 )
-CREATE_TABLE team_authors (
+CREATE_TABLE team_author (
     author_id INTEGER references authors(author_id),
     team_id INTEGER references teams(team_id),
     constraint pk_author_teams primary key (team_id, author_id)
 )
-CREATE TABLE posts (
+CREATE TABLE post (
     post_id INTEGER NOT NULL,
     PRIMARY KEY (post_id),
     title VARCHAR(200) NOT NULL,
@@ -47,12 +47,12 @@ CREATE TABLE posts (
     image_src VARCHAR(200) NOT NULL,
     square_image_src VARCHAR(200) NOT NULL
 )
-CREATE TABLE post_authors (
+CREATE TABLE post_author (
     post_id INTEGER references posts(post_id),
     author_id INTEGER references authors(author_id),
     constraint pk_author_teams primary key (post_id, author_id)
 )
-CREATE TABLE post_teams (
+CREATE TABLE post_team (
     post_id INTEGER references posts(post_id),
     team_id INTEGER references teams(team_id),
     constraint pk_author_teams primary key (post_id, team_id)

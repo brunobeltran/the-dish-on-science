@@ -1,5 +1,8 @@
 * TODO Finish website
   * Immediate Goals
+    ** try to co-opt someone per article to read it from an outside group, to prevent groupthink
+    ** add style guide for references, in-line lists, using e.g. <h3> tags (###) for section titles, where to put captions, etc.
+    ** collect footnote-clicking statistics ;)
     ** twitter button should go to twitter page
     ** article should be shareable via twitter
     ** put "topics" next to the three bars for team names
@@ -21,9 +24,11 @@
       *** hook up author links
     ** don't let website fail on startup if there's a bad post file
   * Strech Goals
+    ** Wikipedia style pop-up links for desktop version
     ** ?Login system? + comments
     ** Post list page
     ** Science dictionary
+      *** pop-up definitions inline
     ** Search box
   * URL Scheme:
     http://thedishonscience.com/topics/$topic_name
