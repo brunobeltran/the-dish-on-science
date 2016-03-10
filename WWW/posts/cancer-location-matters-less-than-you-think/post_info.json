@@ -1,0 +1,15 @@
+{
+    "url_title": "cancer-location-matters-less-than-you-think",
+    "publication_date": "2016-01-26",
+    "authors": [{
+        "name": "Alyssa Kaiser",
+        "headshot_src": "/images/hedgehog.png"
+    }],
+    "five_by_two_image_src": "/images/placeholder1.jpg",
+    "one_by_one_image_src": "/images/placeholder1.jpg",
+    "description": "Imagine for a moment that you’re an oncologist, a doctor specializing in cancer diagnosis and treatment. You’re assigned ten patients: five with lung cancer and five with pancreatic cancer. Now, I want you to group these patients into two categories for treatment.",
+    "blurb": "An old saying goes out of style in cancer research",
+    "title": "(It's not all about) Location, Location, Location",
+    "teams": ["translational-biology"]
+}
+

@@ -1,0 +1,13 @@
+{
+    "title": "Invasion of the Cell Snatchers",
+    "url_title": "invasion-cell-snatchers",
+    "five_by_two_image_src": "/posts/invasion-cell-snatchers/images/invasion.jpg",
+    "blurb": "How cells control each other.",
+    "description": "How can cells that are very far apart in the body influence each other? The cells in our multicellular body can control each other from a distance. This article is about a novel form of cell-to-cell communication that involves sending out little packets of information that can ‘reprogram’ the recipient cell, much like the invasion of a body by an alien force. This type of communication, using structures called exosomes,control both communication during health, but also during disease.",
+    "teams": "Cell Biology",
+    "authors": [{
+        "name": "Fiorella Grandi",
+        "nickname": "Fiorella Grandi",
+        "headshot_src": "/posts/invasion-cell-snatchers/images/Grandi.jpg"
+    }]
+}

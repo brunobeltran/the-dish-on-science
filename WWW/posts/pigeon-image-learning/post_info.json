@@ -1,0 +1,20 @@
+{
+    "publication_date": "2016-03-10",
+    "title": "Coo coo - the doctor is in",
+    "url_title": "pigeon-image-learning",
+    "five_by_two_image_src": "/posts/pigeon-image-learning/images/experimental-set-up.png",
+    "blurb": "What pigeons can teach us about the future of medical imaging and diagnostics.",
+    "description": "Clinicians spend years training to accurately interpret medical imaging like X-rays in order to recognize and diagnose diseases. However, a recent research article identifies an unlikely candidate for interpreting medical images: Columba livia, an animal you might recognize as the common pigeon. Researchers in this study showed that, with food reward and several days of practice, it is possible to train pigeons to tell the difference between healthy and cancerous tissue.",
+    "teams": ["biochemistry-and-bioinformatics"],
+    "authors": [{
+        "name": "Melissa Ko",
+        "nickname": "Melissa Ko",
+        "headshot_src": "/images/hedgehog.png"
+    }],
+    "illustrators": [{
+        "name": "Melissa Ko",
+        "nickname": "Melissa Ko",
+        "headshot_src": "/images/hedgehog.png"
+    }]
+}
+

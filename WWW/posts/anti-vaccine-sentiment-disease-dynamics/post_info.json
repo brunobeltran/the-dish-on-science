@@ -1,10 +1,11 @@
 {
+    "publication_date": "2016-03-10",
     "title": "Quantifying the effects of anti-vaccine sentiment on the spread of disease",
     "url_title": "anti-vaccine-sentiment-disease-dynamics",
-    "five_by_two_image_src": "./images/sirmodel.png",
+    "five_by_two_image_src": "/posts/anti-vaccine-sentiment-disease-dynamics/images/sirmodel.png",
     "blurb": "Using Twitter and models of disease transmission and anti-vaccine opinion formation to better understand the effect that human behavior has on public health.",
-    "description": "After reading this, I should really want to read your article. I should be absolutely entranced. Man, I'm excited just thinking about it. You're writing about some cool science, right? Cool. Lorem ipsum I'm out of stuff to say and it's really late and I'm tired. Oh, and definitely don't end this section with anything like 'click here to read more', the website template will do that part for you.",
-    "teams": ["forty-two"]
+    "description": "Anti-vaccine sentiment is as old as vaccination itself.  In 1801, Edward Jenner published his [results][1] of the success of his early experiments on the smallpox vaccine, and by 1802, enough people were scared of it that political cartoonist James Gillray produced an extremely unsubtle satirical painting entitled \"The Cow-Pock---or---the Wonderful Effects of the New Inoculation!\"",
+    "teams": ["forty-two"],
     "authors": [{
         "name": "Rohan Mehta",
         "nickname": "Rohan Mehta",
@@ -14,5 +15,5 @@
         "name": "Rohan Mehta",
         "nickname": "Rohan Mehta",
         "headshot_src": "/images/hedgehog.png"
-    }],
+    }]
 }

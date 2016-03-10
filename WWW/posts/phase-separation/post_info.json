@@ -1,0 +1,17 @@
+{
+    "publication_date": "2016-03-10",
+    "title": "More Than Just a Liquid",
+    "url_title": "phase-separation",
+    "five_by_two_image_src": "/posts/phase-separation/images/crowding.jpg",
+    "blurb": "Cells tweak their liquid composition to respond to the world around them.",
+    "description": "Think about your cells. Are they solid? Not really. A cell can be thought of as a bag (made of this stuff called the plasma membrane) that’s full of all the things that make you, you – your DNA, protein, and all sorts of different things. It’s really, really crowded (see the picture above for an idea of what the inside of a cell might look like). And for the most part, this <em>you stuff</em>, is more of a liquid than a solid, although there are some components, particularly the proteins responsible for cell structure, that behave more like solids. Some cellular contents, like DNA for example, are bundled up in different compartments, called organelles made of the same plasma membrane that surrounds the whole cell, but the rest of it is all packed into the inner-cellular space and referred to collectively as the cytoplasm But this implies that all of these essential biological components are just thrown together in a big bowl of cytoplasm soup, and that’s just not the case. If you look at all of life, some cells are free-living and some cells work together to make complex organisms like plants and animals. But all cells need to understand and interact with whatever’s around them, whether this means looking for microscopic prey or sending nutrients to neighboring cells to keep an organ working. A bag full of random soup just isn’t going to be able to do all the things that cells need to do.",
+    "teams": ["general-biology"],
+    "authors": [{
+        "name": "Ray Futia",
+        "nickname": "Ray Futia",
+        "headshot_src": "/images/headgehog.png"
+    }]
+}
+
+
+
