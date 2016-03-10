@@ -54,6 +54,7 @@ def show_dictionary_page():
 @app.route('/home', methods=['GET'])
 @app.route('/cgi-bin/', methods=['GET'])
 def show_home_page():
+    #return send_from_directory(www_dir, 'index.html')
     if 'start' in request.args:
         start = max(0, request.args['start'])
     else:
