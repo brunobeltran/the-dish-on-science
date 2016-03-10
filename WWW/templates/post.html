@@ -4,17 +4,18 @@
 <article class="post">
     <header>
         <div class="title">
-            <h2><a href="{{ post.url_title }}">{{ post.title }}</a></h2>
+            <h2>{{ post.title }}</h2>
             <p>{{ post.blurb }}</p>
         </div>
         <div class="meta">
             <time class="published" datetime="{{ post.publication_date.strftime('%Y-%m-%d') }}">{{ post.publication_date.strftime('%B %d, %Y') }}</time>
 {% for author in post.authors %}
+            <!--TODO: implement author page <span class="name">{{ author.name }}</span><img src="{{ author.headshot_src }}" alt="" /> -->
             <a href="#" class="author"><span class="name">{{ author.name }}</span><img src="{{ author.headshot_src }}" alt="" /></a>
 {% endfor %}
         </div>
     </header>
-    <a href="{{ post.url_title }}" class="image featured"><img src="{{ post.featured_image_src }}" alt="" /></a>
+    <img class="image featured" src="{{ post.five_by_two_image_src }}" alt="Featured Article Image" />
     {{ post.html|safe }}
     <footer>
         <ul class="stats">

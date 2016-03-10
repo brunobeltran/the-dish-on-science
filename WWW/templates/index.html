@@ -17,7 +17,11 @@
     <title>{% block title %}The Dish on Science{% endblock %}</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+        <!-- <script type="text/javascript" src="/assets/js/mathjax.js"></script> -->
+        <script type="text/javascript" async
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
         <link rel="stylesheet" href="/assets/css/main.css" />
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -50,7 +54,7 @@
                 <h1><a href="/">{{ thedish.official_name }}</a></h1>
                 <nav class="links">
                     <ul>
-                        <li><a href="science-dictionary">Science Dictionary</a></li>
+                        <!-- <li><a href="science-dictionary">Science Dictionary</a></li> -->
                         <li><a href="#about-us">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -124,7 +128,7 @@
                     <article class="post">
                         <header>
                             <div class="title">
-                                <h2><a href="{{ post.url_title }}">{{ post.title }}</a></h2>
+                                <h2><a href="/posts/{{ post.url_title }}">{{ post.title }}</a></h2>
                                 <p>{{ post.blurb }}</p>
                             </div>
                             <div class="meta">
@@ -134,11 +138,11 @@
         {% endfor %}
                             </div>
                         </header>
-                        <a href="{{ post.url_title }}" class="image featured"><img src="{{ post.featured_image_src }}" alt="" /></a>
-                        <p>{{ post.description }}</p>
+                        <a href="/posts/{{ post.url_title }}" class="image featured"><img src="{{ post.five_by_two_image_src }}" alt="" /></a>
+                        <p>{{ post.description|safe }}</p>
                         <footer>
                             <ul class="actions">
-                                <li><a href="{{ post.url_title }}" class="button big">Continue Reading</a></li>
+                                <li><a href="/posts/{{ post.url_title }}" class="button big">Continue Reading</a></li>
                             </ul>
                             <ul class="stats">
                                 {% for team in post.teams %}
@@ -203,13 +207,13 @@
                     <!-- Mini Post -->
                         <article class="mini-post">
                             <header>
-                                <h3><a href="{{ post.url_title }}">{{ post.title }}</a></h3>
+                                <h3><a href="/posts/{{ post.url_title }}">{{ post.title }}</a></h3>
                                 <time class="published" datetime="{{ post.publication_date.strftime('%Y-%m-%d') }}">{{ post.publication_date.strftime('%B %d, %Y') }}</time>
             {% for author in post.authors %}
                                 <a href="{{ author.headshot_src }}" class="author"><img src="{{ post.authors.headshot_src }}" alt="" /></a>
             {% endfor %}
                             </header>
-                            <a href="{{ post.url_title }}" class="image featured"><img src="{{ post.featured_image_src }}" alt="" /></a>
+                            <a href="/posts/{{ post.url_title }}" class="image featured"><img src="{{ post.five_by_two_image_src }}" alt="" /></a>
                         </article>
         {% endif %}
         {% if loop.index == num_popular_posts_big + 1 %}
@@ -225,10 +229,10 @@
                         <li>
                             <article>
                                 <header>
-                                    <h3><a href="{{ post.url_title }}">{{ post.title }}</a></h3>
+                                    <h3><a href="/posts/{{ post.url_title }}">{{ post.title }}</a></h3>
                                     <time class="published" datetime="{{ post.publication_date.strftime('%Y-%m-%d') }}">{{ post.publication_date.strftime('%B %d, %Y') }}</time>
                                 </header>
-                                <a href="{{ post.url_title }}" class="image featured"><img src="{{ post.featured_image_square_src }}" alt="" /></a>
+                                <a href="/posts/{{ post.url_title }}" class="image featured"><img src="{{ post.two_by_one_image_src }}" alt="" /></a>
                             </article>
                         </li>
         {% endif %}
