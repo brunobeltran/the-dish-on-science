@@ -40,6 +40,7 @@ team_table = Table('team', metadata,
 author_table = Table('author', metadata,
     Column('id', sa.Integer, primary_key=True, nullable=False),
     Column('name', sa.String(100), nullable=False),
+    Column('nickname', sa.String(100)),
     Column('url_name', sa.String(100), nullable=False, index=True, unique=True),
     Column('blurb', sa.String(200)),
     Column('description', sa.String(200)),
@@ -52,7 +53,7 @@ post_table = Table('post', metadata,
     Column('blurb', sa.String(200)),
     Column('description', sa.String(200)),
     Column('publication_date', sa.Date, nullable=False),
-    Column('five_by_two_image_src', sa.String(200)),
+    Column('five_by_two_image_src', sa.String(200), nullable=False),
     Column('two_by_one_image_src', sa.String(200)),
     Column('one_by_one_image_src', sa.String(200)),
     Column('view_count', sa.Integer, nullable=False))
@@ -74,21 +75,13 @@ myDB = URL(drivername='mysql', username='gthedishonscie', host='localhost',
     os.path.join(sql_dir, '.mylogin.cnf')})
 #TODO find prettier way to do this
 connection_url = str(myDB) + "&charset=utf8"
-engine = sa.create_engine(name_or_url=connection_url, echo=True)
+engine = sa.create_engine(name_or_url=connection_url, echo=False)
 metadata.create_all(engine)
-
-# get all the teams into the database
-for team in teams:
-    insert_new_team(team)
-
-# get all the posts into the database
-for post in all_posts:
-    insert_new_post(post)
 
 def insert_new_team(team):
     conn = engine.connect()
     # first make sure the team exists
-    select_if_exists_team = select([team_table]
+    select_if_exists_team = select([team_table.c.id]
         ).where(team_table.c.url_name == team.url_name)
     res = conn.execute(select_if_exists_team)
     team_id = res.fetchone()
@@ -135,7 +128,7 @@ def insert_new_team(team):
             res.close()
     conn.close()
 
-def insert_new_post(post)
+def insert_new_post(post):
     conn = engine.connect()
     url_title = post.url_title
     select_if_exists_post = select([post_table.c.id]
@@ -166,7 +159,7 @@ def insert_new_post(post)
         author_id = res.fetchone()
         res.close()
         if author_id is None:
-            ins = author_table.insert().values(name=name, url_name=url_name)
+            ins = author_table.insert().values(name=author.name, url_name=url_name)
             res = conn.execute(ins)
             author_id = res.inserted_primary_key
             res.close()
@@ -186,7 +179,7 @@ def insert_new_post(post)
             res.close()
     # all teams should also be in the database by now
     for team in post.teams:
-        select_team = select([team_table.id]).where(team_table.c.url_name ==
+        select_team = select([team_table.c.id]).where(team_table.c.url_name ==
             team.url_name)
         team_id = conn.execute(select_team).fetchone()[0]
         select_if_exists_post_team = select([post_team_table]
@@ -202,30 +195,85 @@ def insert_new_post(post)
             res.close()
     conn.close()
 
-def get_sorted_posts_by_field(field_name, offset, limit, reverse=-1):
-    print('hi')
-
-def get_recent_posts_team(offset, limit):
-    print('hi')
+def get_recent_posts_team(team_url_name, offset, limit):
+    conn = engine.connect()
+    select_team_id = select([team_table.c.id]
+        ).where(team_table.c.url_name == team_url_name)
+    team_id = conn.execute(select_team_id).fetchone()
+    # if the requested team does not exist
+    if team_id is None:
+        return None
+    # otherwise get the actual id to compare against from the results
+    team_id = team_id[0]
+    select_recent_posts_team = select([post_table.c.url_title]
+        ).order_by(post_table.c.publication_date.desc()
+        ).select_from(post_table.join(post_team_table)
+        ).where(post_team_table.c.team_id == team_id
+        ).offset(offset
+        ).limit(limit)
+    results = conn.execute(select_recent_posts_team)
+    url_titles = results.fetchall()
+    results.close()
+    conn.close()
+    if url_titles is None:
+        return None
+# TODO use the database row to make the Post entry instead of re-reading the
+# post_info.json file
+    posts = [Post(os.path.join(www_dir, 'posts', url_title[0]))
+                  for url_title in url_titles]
+    return posts
 
 def get_recent_posts(offset, limit):
-    return get_sorted_posts_by_field('publication_date', offset, limit)
+    conn = engine.connect()
+    select_recent_posts_team = select([post_table.c.url_title]
+        ).order_by(post_table.c.publication_date.desc()
+        ).offset(offset
+        ).limit(limit)
+    results = conn.execute(select_recent_posts_team)
+    url_titles = results.fetchall()
+    results.close()
+    conn.close()
+    if url_titles is None:
+        return None
+# TODO use the database row to make the Post entry instead of re-reading the
+# post_info.json file
+    posts = [Post(os.path.join(www_dir, 'posts', url_title[0]))
+                  for url_title in url_titles]
+    return posts
 
 def get_popular_posts(offset, limit):
-    return get_sorted_posts_by_field('view_count', offset, limit)
+    conn = engine.connect()
+    select_recent_posts_team = select([post_table.c.url_title]
+        ).order_by(post_table.c.view_count.desc()
+        ).offset(offset
+        ).limit(limit)
+    results = conn.execute(select_recent_posts_team)
+    url_titles = results.fetchall()
+    results.close()
+    conn.close()
+    if url_titles is None:
+        return None
+# TODO use the database row to make the Post entry instead of re-reading the
+# post_info.json file
+    posts = [Post(os.path.join(www_dir, 'posts', url_title[0]))
+                  for url_title in url_titles]
+    return posts
 
 def get_team_by_name(team_name):
-    return [team for team in teams if team.name == team_name]
+    matching_teams = [team for team in teams if team.name == team_name or team.url_name == team_name]
+    if not matching_teams:
+        return None
+    return matching_teams[0]
 
 def get_post_by_name(post_name):
     conn = engine.connect()
     url_title = post_name
-    select_if_exists_post = select([post_table]
+    select_if_exists_post = select([post_table.c.url_title]
         ).where(post_table.c.url_title == url_title)
     res = conn.execute(select_if_exists_post)
-    post_row = res.fetchone()
+    url_title = res.fetchone()
     res.close()
-    if post_row is None:
+    if url_title is None:
         return None
     update = post_table.update().where(
         post_table.c.url_title == url_title
@@ -233,5 +281,13 @@ def get_post_by_name(post_name):
     conn.execute(update)
     res.close()
     conn.close()
-    return post_row
+    return Post(os.path.join(www_dir, 'posts', url_title[0]))
+
+# get all the teams into the database
+for team in teams:
+    insert_new_team(team)
+
+# get all the posts into the database
+for post in all_posts:
+    insert_new_post(post)
 

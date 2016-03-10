@@ -25,6 +25,9 @@
     ** don't let website fail on startup if there's a bad post file
   * Strech Goals
     ** Wikipedia style pop-up links for desktop version
+    ** make it so that an author can actually have a different headshot for each post they make
+    ** and actually have a different nickname for each post
+    ** and make it so that declaring authorship is actually optional. I don't want to do it via a "faux" author which matches the team name, because then the author page would for that faux author would be very confusing. maybe make it via a "faux" author called "Team Name (anonymous)"
     ** ?Login system? + comments
     ** Post list page
     ** Science dictionary

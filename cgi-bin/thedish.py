@@ -3,7 +3,9 @@ import os
 import json
 import codecs
 from dateutil.parser import parse
+import time
 from glob import glob
+import re
 
 cgi_dir = os.path.dirname(os.path.realpath(__file__))
 app_dir = os.path.abspath(os.path.join(cgi_dir, os.path.pardir))
@@ -18,18 +20,17 @@ thedish = TheDish(official_name='The Dish on Science',
                   blurb='A science blogging club for Stanford graduate students.',
                   description='Started by Sam Piekos, The Dish on Science (The Dish for short) offers an avenue for frustrated graduate students to write about the things that they love on the days when those things decide to hate them.',
                   url='http://thedishonscience.stanford.edu/',
-                  logo_src='./images/dish-logo.png')
+                  logo_src='/images/dish-logo.png')
 
 
 # usused since Author is just a field of post for now
 # Author = namedtuple('Author', ['name', 'headshot_src'])
 
-Team = namedtuple('Team', ['url', 'name', 'blurb', 'description', 'logo_src'])
+Team = namedtuple('Team', ['url_name', 'name', 'blurb', 'description', 'logo_src'])
 # load all the team information from a global file
 team_data_file = os.path.join(www_dir, 'assets', 'info', 'blog-teams.json')
 team_data = codecs.open(team_data_file, 'r', encoding='utf-8').read()
 teams = json.loads(team_data, encoding='utf-8', object_hook=lambda d: namedtuple('Team', d.keys())(*d.values())).teams
-
 
 default_post_dict_keys = ['title', 'url_title', 'blurb', 'description',
                           'publication_date', 'five_by_two_image_src',
@@ -47,10 +48,12 @@ class Post(object):
         data = json.loads(post_data, object_hook=lambda d: namedtuple('Post', d.keys())(*d.values()))
         self.__dict__ = default_post_dict.copy()
         self.__dict__.update(data.__dict__)
+        if not self.publication_date:
+            self.publication_date = time.strftime("%Y-%m-%d")
         self.publication_date = parse(self.publication_date)
         self.url = '/posts/' + str(self.url_title)
         self.absolute_url = thedish.url + self.url
-        self.teams = [team for team in teams if team.name in self.teams]
+        self.teams = [team for team in teams if team.name in self.teams or team.url_name in self.teams]
         html_file = glob(os.path.join(post_directory, '*.html'))
         if html_file:
 # glob returns a list of files, even if that list is of length 1
@@ -60,4 +63,6 @@ class Post(object):
 
 # load posts from posts directory
 post_directories = os.listdir(os.path.join(www_dir, 'posts'))
-all_posts = [Post(os.path.join(www_dir, 'posts', post_directory)) for post_directory in post_directories]
+all_posts = [Post(os.path.join(www_dir, 'posts', post_directory))
+             for post_directory in post_directories
+             if not re.match('.*\.zip$', post_directory) ]
