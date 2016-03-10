@@ -4,7 +4,7 @@
 <article class="post">
     <header>
         <div class="title">
-            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <h2><a href="{{ post.url_title }}">{{ post.title }}</a></h2>
             <p>{{ post.blurb }}</p>
         </div>
         <div class="meta">
@@ -14,12 +14,12 @@
 {% endfor %}
         </div>
     </header>
-    <a href="{{ post.url }}" class="image featured"><img src="{{ post.featured_image_src }}" alt="" /></a>
+    <a href="{{ post.url_title }}" class="image featured"><img src="{{ post.featured_image_src }}" alt="" /></a>
     {{ post.html|safe }}
     <footer>
         <ul class="stats">
             {% for team in post.teams %}
-            <li><a href="/topics/{{ team.url }}">{{ team.name }}</a></li>
+            <li><a href="/topics/{{ team.url_name }}">{{ team.name }}</a></li>
             {% endfor %}
             <!--
             <li><div class="fb-like"

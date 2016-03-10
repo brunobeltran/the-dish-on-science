@@ -9,8 +9,9 @@
         ],
         "blurb": "Biochemistry and bioinformatics in society",
         "description": "One of the greatest powers of research is harnessing symbiotic relationships among different fields, and biological research is no exception. With the growth of bioinformatics, a field dedicated to developing computational methods for biology, collecting extremely large datasets has become easier and more widespread. As a result, biochemical methods are increasingly informed by these datasets, and in turn, the complexity of biochemical systems provides an excellent source of material for bioinformatic analysis. Our group \"Biochemistry and Bioinformatics in Society\" is interested in exploring this interface between biochemistry and bioinformatics. Specifically, we will be sharing insights into the impact that discoveries from this interface have on various aspects of society, such as policy and healthcare/medicine.",
+        "thumbnail_src": "/images/biochemistry-logo.png",
         "logo_src": "/images/biochemistry-logo.png",
-        "url": "biochemistry-and-bioinformatics"
+        "url_name": "biochemistry-and-bioinformatics"
     },
 
     {
@@ -24,8 +25,9 @@
         ],
         "blurb": "Biology is awesome!",
         "description": "Biology is awesome!",
+        "thumbnail_src": "/images/math-group-logo.jpg",
         "logo_src": "/images/math-group-logo.jpg",
-        "url": "general-biology"
+        "url_name": "general-biology"
     },
 
     {
@@ -40,8 +42,9 @@
         ],
         "blurb": "Studying the building blocks of life",
         "description": "All organisms are composed of one or more cells. Although most living things we see are multicellular (made up of many cells) these are only a small fraction of all organisms on Earth. The vast majority of organisms are unicellular (only one cell), like the bacteria in your gut or the yeast that brew your beer. We humans are multicellular organisms made up of 3 trillion cells with more than 200 different cell types! The cost of this complexity is that when one or more cell types fail to do their job we get sick.<br /><br />Cell biology seeks to understand how cells work and what happens when something goes wrong in a cell. By identifying what is causing a cell to not do its job, scientists can get a better idea about the inner life of the cell. They can also identify targets for therapies to fix what is wrong with the cell. These articles encompass the study of everything from tiny cellular machines to entire organs.",
+        "thumbnail_src": "/images/cell-bio-logo.png",
         "logo_src": "/images/cell-bio-logo.png",
-        "url": "cell-biology"
+        "url_name": "cell-biology"
     },
 
     {
@@ -54,8 +57,9 @@
         ],
         "blurb": "Biology is awesome!",
         "description": "Biology is awesome!",
+        "thumbnail_src": "/images/genomics-logo.png",
         "logo_src": "/images/genomics-logo.png",
-        "url": "genomics"
+        "url_name": "genomics"
     },
 
     {
@@ -68,8 +72,9 @@
         ],
         "blurb": "The scoop on your body's Department of Defense",
         "description": "We live in a world filled with bacteria, viruses, and other deadly pathogens. In fact, many of them are trying to invade your body right now.  If this thought makes you nervous, feel reassured that your body has its own Department of Defense - your immune system. This network works hard round the clock to protect you from harmful invaders. When a pathogen launches an attack, your immune system organizes a beautifully coordinated counter-attack to destroy the pathogen and keep you healthy. Unfortunately, your immune system can make mistakes, including: not destroying diseased or harmful cells (infections and cancer), reacting to non-harmful substances (allergies), or going rogue and attacking your own cells (autoimmune diseases). The immune system is fascinating and complex, and we want to share with you what's going on in the field of immunology.",
+        "thumbnail_src": "/images/immune-system-logo.png",
         "logo_src": "/images/immune-system-logo.png",
-        "url": "immune-system"
+        "url_name": "immune-system"
     },
 
     {
@@ -86,8 +91,9 @@
         ],
         "blurb": "Explore the largest habitat on Earth",
         "description": "Marine biology is the study of life in the ocean, from the smallest microbes to the largest animals to ever live on Earth. It is the collective effort of scientists from many fields to explore, understand, and conserve the diversity of life in in the world's largest ecosystem. Oceans cover 71% of our planet's surface, and provide 99% of its livable habitat by volume. They are the largest space in our universe known to be inhabited by living organisms, yet we know less about the deepest reaches of our oceans than we do about the surface of Mars. This vast marine space is home to an enormous diversity of strange and wonderful organisms, so much so that hundreds of new species are discovered every year. We depend on this biodiversity: 3 billion people rely on marine and coastal biodiversity for their livelihoods, and 2.6 billion people rely on the ocean for their primary source of protein. Human impacts on ocean ecosystems are increasing, and marine biologists are working to understand how sea creatures adapt to changing environments, and develop sustainable solutions. In this blog, we will discuss the latest scientific discoveries, cool critters, and current issues from Earth's living oceans.",
+        "thumbnail_src": "/images/marine-biology-logo.png",
         "logo_src": "/images/marine-biology-logo.png",
-        "url": "marine-biology"
+        "url_name": "marine-biology"
     },
 
     {
@@ -98,12 +104,13 @@
             "KC Farrell",
             "Ilana Arbisser",
             "Katie Bodner",
-            "Rohan Mehta"
+            "Rohan Sushrut Mehta"
         ],
         "blurb": "Making sense of the patterns of life, (the universe, and everything)",
         "description": "Mathematics is humanity's tool for describing the world around us. We will discuss examples of math not only as a powerful tool for predicting the future, but also as an art form by which we can discover the many beautiful patterns in nature.",
+        "thumbnail_src": "/images/math-group-logo.jpg",
         "logo_src": "/images/math-group-logo.jpg",
-        "url": "math-and-quantitative-biology"
+        "url_name": "math-and-quantitative-biology"
     },
 
     {
@@ -118,8 +125,9 @@
         ],
         "blurb": "Biology is awesome!",
         "description": "Biology is awesome!",
+        "thumbnail_src": "/images/monumental-discoveries-logo.png",
         "logo_src": "/images/monumental-discoveries-logo.png",
-        "url": "monumental-scientific-discoveries"
+        "url_name": "monumental-scientific-discoveries"
     },
 
     {
@@ -132,8 +140,9 @@
         ],
         "blurb": "Biology is awesome!",
         "description": "Biology is awesome!",
+        "thumbnail_src": "/images/neuroscience-logo.png",
         "logo_src": "/images/neuroscience-logo.png",
-        "url": "neuroscience"
+        "url_name": "neuroscience"
     },
 
     {
@@ -147,8 +156,9 @@
         ],
         "blurb": "Biology is awesome!",
         "description": "Biology is awesome!",
+        "thumbnail_src": "/images/translational-biology-logo.png",
         "logo_src": "/images/translational-biology-logo.png",
-        "url": "translational-biology"
+        "url_name": "translational-biology"
     }
 ]}
 

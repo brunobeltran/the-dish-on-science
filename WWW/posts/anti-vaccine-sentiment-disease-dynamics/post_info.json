@@ -1,0 +1,18 @@
+{
+    "title": "Quantifying the effects of anti-vaccine sentiment on the spread of disease",
+    "url_title": "anti-vaccine-sentiment-disease-dynamics",
+    "five_by_two_image_src": "./images/sirmodel.png",
+    "blurb": "Using Twitter and models of disease transmission and anti-vaccine opinion formation to better understand the effect that human behavior has on public health.",
+    "description": "After reading this, I should really want to read your article. I should be absolutely entranced. Man, I'm excited just thinking about it. You're writing about some cool science, right? Cool. Lorem ipsum I'm out of stuff to say and it's really late and I'm tired. Oh, and definitely don't end this section with anything like 'click here to read more', the website template will do that part for you.",
+    "teams": ["forty-two"]
+    "authors": [{
+        "name": "Rohan Mehta",
+        "nickname": "Rohan Mehta",
+        "headshot_src": "/images/hedgehog.png"
+    }],
+    "illustrators": [{
+        "name": "Rohan Mehta",
+        "nickname": "Rohan Mehta",
+        "headshot_src": "/images/hedgehog.png"
+    }],
+}

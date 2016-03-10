@@ -1,0 +1,15 @@
+{
+    "url_title": "a-gut-feeling",
+    "publication_date": "2016-01-29",
+    "authors": [{
+        "name": "Anna Cunningham",
+        "headshot_src": "/images/hedgehog.png"
+    }],
+    "five_by_two_image_src": "/images/placeholder1.jpg",
+    "one_by_one_image_src": "/images/placeholder1.jpg",
+    "description": "Did you know that our bodies are mostly bacteria? For every human cell in our body, there are ten tiny microbes living on our skin, in our mouth, or throughout our digestive tract. Humans and bacteria have evolved together for thousands of years. We have a symbiotic relationship with our bacteria: they rely on us for a safe environment and a regular food supply, and in turn, they help us digest our food and produce chemicals that increase our evolutionary fitness as a species. The bacterial population in our gut alone weighs 2-3 pounds, which is about the same weight as the brain! In fact, our gut bacteria may actually have a bigger effect on our brains than we realize.",
+    "blurb": "Did you know that our bodies are mostly bacteria?",
+    "title": "A Gut Feeling",
+    "teams": "biochemistry-and-bioinformatics"
+}
+
