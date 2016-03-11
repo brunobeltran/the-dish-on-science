@@ -1652,6 +1652,7 @@
             border-radius: 100%;
             display: block;
             width: 4em;
+            min-width: 4em;
         }
 
         .author:hover .name {
