@@ -23,10 +23,10 @@
             "Carlos Medina",
             "Jonathon Wosen"
         ],
-        "blurb": "Biology is awesome!",
-        "description": "Biology is awesome!",
-        "thumbnail_src": "/images/math-group-logo.jpg",
-        "logo_src": "/images/math-group-logo.jpg",
+        "blurb": "Everything you wanted to know about life, from Antibodies to Zebras.",
+        "description": "General Biology encompasses all aspects of the life sciences. We will explore the world around us with a very broad scope, investigating everything from the microbes that live within us to the ecosystems we ourselves inhabit. All of life is subject to the same natural forces. We will describe the myriad of different ways that life responds to these forces, the progress being made in expanding our understanding through biological research, and how this insight is being applied in the field and in the lab.",
+        "thumbnail_src": "/images/general-biology-logo.png",
+        "logo_src": "/images/general-biology-logo.png",
         "url_name": "general-biology"
     },
 
