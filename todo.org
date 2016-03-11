@@ -1,16 +1,16 @@
 * TODO Finish website
   * Immediate Goals
+    ** increase spacing slightly between three "menu" bars and the "Close menu" text
+    ** put "topics" next to the three bars for team names
     ** try to co-opt someone per article to read it from an outside group, to prevent groupthink
     ** add style guide for references, in-line lists, using e.g. <h3> tags (###) for section titles, where to put captions, etc.
     ** collect footnote-clicking statistics ;)
     ** twitter button should go to twitter page
     ** article should be shareable via twitter
-    ** put "topics" next to the three bars for team names
     ** Make sure to uncomment Stanford's name after club app goes through (2 places)
     ** sort team names in pop-out menu
     ** include link to science dictionary at bottom of the pop-out menu and
     ** move facebook like and twitter buttons to the post itself, and make them point to each specific article instead of to the webpage as a whole
-    ** increase spacing slightly between three "menu" bars and the "Close menu" text
     ** set up google analytics
   * Large Goals
     ** set up a SQL server using sqlalchemy to store the articles

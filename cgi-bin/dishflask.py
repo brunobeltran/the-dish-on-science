@@ -9,7 +9,7 @@ from dishsql import get_popular_posts, get_recent_posts, get_team_by_name, \
                     get_post_by_name, get_recent_posts_team
 
 app = Flask(__name__, static_url_path='')
-app.debug = True
+app.debug = False
 app.template_folder = os.path.join(www_dir, 'templates')
 
 posts_per_page = 10
