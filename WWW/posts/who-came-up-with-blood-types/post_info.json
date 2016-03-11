@@ -3,13 +3,13 @@
     "publication_date": "2016-01-29",
     "authors": [{
         "name": "Kyler Lugo",
-        "headshot_src": "/images/hedgehog.png"
+        "headshot_src": "/images/dinosaur.png"
     }, {
         "name": "Susanna Brantley",
-        "headshot_src": "/images/hedgehog.png"
+        "headshot_src": "/images/penguin.png"
     }, {
         "name": "Gillie Agmon",
-        "headshot_src": "/images/hedgehog.png"
+        "headshot_src": "/images/elephant.png"
     }],
     "five_by_two_image_src": "/images/placeholder2.jpg",
     "one_by_one_image_src": "/images/placeholder2.jpg",
