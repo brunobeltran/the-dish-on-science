@@ -3076,8 +3076,8 @@
                         color: #aaaaaa;
                         overflow: hidden;
                         position: relative;
-                        text-indent: 4em;
-                        /* width: 12em; */
+                        /* text-indent: 4em; */
+                        width: 8.7em;
                     }
 
                         #header .main ul li > a:before {
@@ -3096,7 +3096,7 @@
                             left: 0;
                             line-height: inherit;
                             position: absolute;
-                            text-align: center;
+                            text-align: left;
                             text-indent: 0;
                             top: 0;
                             width: inherit;
@@ -3572,7 +3572,7 @@
   height:3.5em; /* fixed header height*/
   margin:-3.5em 0 0; /* negative fixed header height */
 }
-.fa-bars:before {
+a#topics-menu.fa-bars:before {
   padding: 0em 0em 0em 1em;
   text-align: left;
 }
