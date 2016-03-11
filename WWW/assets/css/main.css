@@ -529,7 +529,7 @@
 
     }
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1199px) {
 
         .row > * {
             padding: 0 0 0 1em;
@@ -1440,7 +1440,7 @@
 
         }
 
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1199px) {
 
             body, input, select, textarea {
                 font-size: 12pt;
@@ -2272,7 +2272,7 @@
                     content: '\f053';
                 }
 
-            @media screen and (max-width: 1280px) {
+            @media screen and (max-width: 1199px) {
 
                 ul.actions.pagination {
                     text-align: center;
@@ -2529,7 +2529,7 @@
         margin: 0 0 2em 0;
     }
 
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1199px) {
 
             .mini-posts {
                 display: -moz-flex;
@@ -2618,9 +2618,9 @@
             .post > header .meta {
                 padding: 3.75em 3em 1.75em 3em ;
                 border-left: solid 1px rgba(160, 160, 160, 0.3);
-                min-width: 17em;
+                min-width: 15em;
                 text-align: right;
-                width: 17em;
+                width: 15em;
             }
 
                 .post > header .meta > * {
@@ -3195,7 +3195,7 @@
 
         }
 
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1199px) {
 
             #wrapper {
                 display: block;
@@ -3242,7 +3242,7 @@
             padding-top: 0;
         }
 
-        @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1199px) {
 
             #sidebar {
                 border-top: solid 1px rgba(160, 160, 160, 0.3);
@@ -3307,7 +3307,7 @@
         display: inline-block;
     }
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1199px) {
 
         #team {
             margin: 0 0 3em 0;
@@ -3394,7 +3394,7 @@
         font-size: 0.8em;
     }
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1199px) {
 
         #intro {
             margin: 0 0 3em 0;

@@ -72,8 +72,11 @@
                         <!-- change to id=menu, href=#, and use jquery to bind
                         the function so it works regardless of what page we're
                         on -->
-                        <a class="fa-bars" href="#menu" id="topics-menu"><span style="position:
-                        relative; padding-right: 1em; margin-left: -2em;">Post Topics</span></a>
+                        <a class="fa-bars" href="#menu" id="topics-menu">
+                            <div style="position: relative; padding-right: 1em; margin-left: -2em;">
+                                Post Topics
+                            </div>
+                        </a>
                         </li>
                     </ul>
                 </nav>
@@ -95,7 +98,7 @@
                 <section>
                     <ul class="links">
                         <li><a class="fa-bars" href="#menu"><span
-                                style="padding-left: 1em">Close Menu</span></a></li>
+                                style="padding-left: 0.75em">Close Menu</span></a></li>
                         {% for team in teams %}
                         <li>
                             <a href="/topics/{{ team.url_name }}">
