@@ -59,6 +59,7 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+{% block nav_menu %}
                 <nav class="main">
                     <ul>
                         <!-- <li class="search">
@@ -71,10 +72,11 @@
                         <!-- change to id=menu, href=#, and use jquery to bind
                         the function so it works regardless of what page we're
                         on -->
-                        <a class="fa-bars" href="#menu">Topics</a>
+                        <a class="fa-bars" href="#menu"><span style="position: relative; padding: 0em 1em 0em 0em;">Post Topics</span></a>
                         </li>
                     </ul>
                 </nav>
+{% endblock %}
             </header>
 
             <!-- Menu -->
@@ -91,7 +93,7 @@
                 <!-- Links -->
                 <section>
                     <ul class="links">
-                        <li><a class="fa-bars" href="#menu">  Close Menu</a></li>
+                        <li><a class="fa-bars" href="#menu"><span style="padding-left: 0.5em">Close Menu</span></a></li>
                         {% for team in teams %}
                         <li>
                             <a href="/topics/{{ team.url_name }}">

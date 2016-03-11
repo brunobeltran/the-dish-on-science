@@ -3077,7 +3077,7 @@
                         overflow: hidden;
                         position: relative;
                         text-indent: 4em;
-                        width: 4em;
+                        /* width: 12em; */
                     }
 
                         #header .main ul li > a:before {
@@ -3087,6 +3087,7 @@
                             font-style: normal;
                             font-weight: normal;
                             text-transform: none !important;
+                            text-align: left;
                         }
 
                         #header .main ul li > a:before {
@@ -3570,4 +3571,8 @@
   display:block;
   height:3.5em; /* fixed header height*/
   margin:-3.5em 0 0; /* negative fixed header height */
+}
+.fa-bars:before {
+  padding: 0em 0em 0em 1em;
+  text-align: left;
 }

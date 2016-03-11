@@ -1,5 +1,6 @@
 * TODO Finish website
   * Immediate Goals
+    ** put an error on empty team pages saying that there's no articles here right now
     ** increase spacing slightly between three "menu" bars and the "Close menu" text
     ** put "topics" next to the three bars for team names
     ** try to co-opt someone per article to read it from an outside group, to prevent groupthink

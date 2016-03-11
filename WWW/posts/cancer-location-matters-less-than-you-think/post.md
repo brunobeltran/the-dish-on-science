@@ -10,8 +10,7 @@ However, unlike the car analogy, which requires one “mutation” to achieve un
 
 > ![](https://stanfordhealthcare.org/content/dam/SHC/clinics/stanford-cancer-genetics/images/stanfordcancergenetics-diagram-cellmutation.jpg)
 
-**Figure 1: [Multiple mutations are needed to create a cancer cell.
-source](https://stanfordhealthcare.org/medical-clinics/cancer-genetics-program/understanding-genetics/how-genes-cause-cancer.html)**
+**Figure 1: [Multiple mutations are needed to create a cancer cell.](https://stanfordhealthcare.org/medical-clinics/cancer-genetics-program/understanding-genetics/how-genes-cause-cancer.html)**
 
 As technology advances, identifying a tumor’s mutations is becoming more and more accessible. We can now take a sample from a patient’s tumor and identify which mutations in its DNA are likely drivers of abnormal growth. To do this, we sequence DNA isolated from cancer cells. DNA-sequencing is a method that “[reads](https://www.genome.gov/10001177)” all the letters in a cell’s DNA. With this information, we are able to identify similarities and differences between tumors besides the tissue in which they’re located.
 

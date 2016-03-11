@@ -55,8 +55,8 @@
             "Ben Kotopka",
             "Piper Keyes"
         ],
-        "blurb": "Biology is awesome!",
-        "description": "Biology is awesome!",
+        "blurb": "The code of life.",
+        "description": "How does our DNA make us who we are?  What changes in our DNA can lead to disease?  How can we edit DNA?  These are just some of the many questions that the field of genomics is trying to address using quickly improving technologies that are making it easier every day to read, edit, and understand DNA sequences.  Our blogging team will be discussing how genomics scientists are trying to untangle these and more questions and the key technologies that make addressing these questions possible.",
         "thumbnail_src": "/images/genomics-logo.png",
         "logo_src": "/images/genomics-logo.png",
         "url_name": "genomics"
@@ -155,8 +155,8 @@
             "Hannah Rosen",
             "Alexa Wnorowski"
         ],
-        "blurb": "Biology is awesome!",
-        "description": "Biology is awesome!",
+        "blurb": "Cutting edge bench-to-bedside medical research translated into accessible terms",
+        "description": "Translational medicine is a field aimed at combining disciplines, resources, expertise, and techniques to improve the way we prevent, diagnose, and treat diseases.  It starts with basic laboratory research, where scientists study the mechanisms by which diseases make us sick and identify ways that we can intervene and prevent illness.  From these findings, new methods of prevention, diagnosis, and treatment are developed and tested in a clinical setting.  Once they are validated as safe and effective in clinical trials, new treatments are introduced to the public.  Because of the complex nature of disease, collaborations between scientists of diverse backgrounds, as well as frequent interactions with clinicians, is essential for making new discoveries and translating them into tomorrow's medicines.",
         "thumbnail_src": "/images/translational-biology-logo.png",
         "logo_src": "/images/translational-biology-logo.png",
         "url_name": "translational-biology"
