@@ -30,7 +30,7 @@ for post_zip in ${app_dir}/${posts_dir}/*.zip; do
     else
         echo Found a post.html file! Leaving it as-is.
     fi
-    # then insert the post data into the MySQL server
+    echo "Inserting new post into MySQL server..."
     python ./cgi-bin/insert_post.py "$post_dir"
     echo Cleaning up...removing zip file.
     rm $post_zip
