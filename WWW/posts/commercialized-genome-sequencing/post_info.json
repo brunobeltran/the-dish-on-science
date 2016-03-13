@@ -8,6 +8,6 @@
     "authors": [{
         "name": "Jeremy Work",
         "nickname": "Jeremy Work",
-        "headshot_src": "./WWW/images/elephant.png"
+        "headshot_src": "/images/elephant.png"
     }]
 }
