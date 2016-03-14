@@ -112,18 +112,18 @@ If you want more information about the topic of incorporating human behavior int
 12. Funk, Sebastian, et al. "Nine challenges in incorporating the dynamics of behaviour in infectious diseases models." _Epidemics_ 10 (2015): 21-25.
 13. Wang, Zhen, et al. "Coupled diseasebehavior dynamics on complex networks: A review." _Physics of life reviews_ 15 (2015): 1-29.
 
-[1]:(http://archive.samj.org.za/1945%20VOL%20XIX%20Jan-Dec/Articles/10%20October/2.2%20AN%20ENQUIRY%20INTO%20THE%20CAUSES%20AND%20EFFECTS%20OF%20VARIOLAE%20VACCINAE.%20J.J.%20DuPr'e%20Le%20Roux%20and%20W.F.%20Rhodes.pdf)
-[2]:(http://shm.oxfordjournals.org/content/5/3/369.full.pdf)
-[3]:(http://www.sciencedirect.com/science/article/pii/S0140673697043341)
-[4]:(http://www.cdc.gov/mmwr/preview/mmwrhtml/mm6406a5.htm?s_cid=mm6406a5_w)
-[5]:(http://dx.plos.org/10.1371/journal.pmed.0040073)
-[6]:(http://www.ncbi.nlm.nih.gov/pubmed/25373435)
-[7]:(http://rsif.royalsocietypublishing.org/content/early/2010/05/25/rsif.2010.0142.full.pdf+html)
-[website]:(http://www.salathegroup.com/)
-[8]:(http://rsif.royalsocietypublishing.org/content/5/29/1505.full.pdf+html)
-[9]:(http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002199#s3)
-[10]:(http://link.springer.com/article/10.1140%2Fepjds16)
-[11]:(http://pediatrics.aappublications.org/content/133/4/e835.short)
-[12]:(http://www.sciencedirect.com/science/article/pii/S1755436514000541)
-[13]:(http://www.sciencedirect.com/science/article/pii/S1571064515001372)
-[xkcdswineflu]:(https://xkcd.com/574/)
+[1]: http://archive.samj.org.za/1945%20VOL%20XIX%20Jan-Dec/Articles/10%20October/2.2%20AN%20ENQUIRY%20INTO%20THE%20CAUSES%20AND%20EFFECTS%20OF%20VARIOLAE%20VACCINAE.%20J.J.%20DuPr'e%20Le%20Roux%20and%20W.F.%20Rhodes.pdf
+[2]: http://shm.oxfordjournals.org/content/5/3/369.full.pdf
+[3]: http://www.sciencedirect.com/science/article/pii/S0140673697043341
+[4]: http://www.cdc.gov/mmwr/preview/mmwrhtml/mm6406a5.htm?s_cid=mm6406a5_w
+[5]: http://dx.plos.org/10.1371/journal.pmed.0040073
+[6]: http://www.ncbi.nlm.nih.gov/pubmed/25373435
+[7]: http://rsif.royalsocietypublishing.org/content/early/2010/05/25/rsif.2010.0142.full.pdf+html
+[website]: http://www.salathegroup.com/
+[8]: http://rsif.royalsocietypublishing.org/content/5/29/1505.full.pdf+html
+[9]: http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002199#s3
+[10]: http://link.springer.com/article/10.1140%2Fepjds16
+[11]: http://pediatrics.aappublications.org/content/133/4/e835.short
+[12]: http://www.sciencedirect.com/science/article/pii/S1755436514000541
+[13]: http://www.sciencedirect.com/science/article/pii/S1571064515001372
+[xkcdswineflu]: https://xkcd.com/574/
