@@ -1,14 +1,12 @@
 * TODO Finish website
   * Immediate Goals
+    ** split long author names across two lines
     ** put an error on empty team pages saying that there's no articles here right now
-    ** increase spacing slightly between three "menu" bars and the "Close menu" text
-    ** put "topics" next to the three bars for team names
     ** try to co-opt someone per article to read it from an outside group, to prevent groupthink
     ** add style guide for references, in-line lists, using e.g. <h3> tags (###) for section titles, where to put captions, etc.
     ** collect footnote-clicking statistics ;)
     ** twitter button should go to twitter page
     ** article should be shareable via twitter
-    ** Make sure to uncomment Stanford's name after club app goes through (2 places)
     ** sort team names in pop-out menu
     ** include link to science dictionary at bottom of the pop-out menu and
     ** move facebook like and twitter buttons to the post itself, and make them point to each specific article instead of to the webpage as a whole
@@ -17,13 +15,11 @@
     ** set up a SQL server using sqlalchemy to store the articles
       *** Create database
       *** various things become more manageable once this is done:
-        **** actually sort posts
-        **** actually track pageviews
+        **** FIX: actually track pageviews
         **** pagination.
-        **** Make sure to switch to first 5 most popular posts and first 10 most recent posts
     ** make a page to look at a specific author's articles, with optional bio at top
       *** hook up author links
-    ** don't let website fail on startup if there's a bad post file
+    ** don't let website fail on startup if there's a bad post file. In general, scan website code for any places where a bad post might cause the website to fail, and have an error logged, but make sure the website still renders correctly with the offending article just not showing or something
   * Strech Goals
     ** Wikipedia style pop-up links for desktop version
     ** make it so that an author can actually have a different headshot for each post they make
