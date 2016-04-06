@@ -74,7 +74,7 @@ Before submitting an article to the Editor, please follow the following steps:
     \item Fill out the
         \href{\dishurlplain{documents/post\_info.xlsx}}{post information
             Excel sheet}. See Section~\ref{sec:excel} for more information.
-    \item Copy and paste the article text into Stackedit
+    \item Copy and paste the article text into StackEdit
     (\url{https://stackedit.io/editor}) and make sure that it looks
     correct when interpreted as Markdown, see Section~\ref{sec:markdown} for more
     information.
@@ -88,9 +88,9 @@ Before submitting an article to the Editor, please follow the following steps:
     \item Make a main folder for your blog post. Give it the same name as what
         you put in the ``URL'' field of the Excel document.
 
-    \item Save your post from Stackedit as \texttt{post.md} in this folder.
+    \item Save your post from StackEdit as \texttt{post.md} in this folder.
         \begin{itemize}
-            \item To export from Stackedit, click on the hashtag in the top left
+            \item To export from StackEdit, click on the hashtag in the top left
                 corner, select ``Export to Disk'' and click on ``As Markdown''.
         \end{itemize}
     \item Save all your images in a subfolder called \texttt{images}. Make sure
@@ -139,6 +139,16 @@ who the copyright is assigned to. Do not mistake the article being available
 from a separate site as meaning that it is okay to steal pictures from it. Many
 good, well-meaning blogs have been sued for exactly this practice.
 
+If you do procure permission from the owner of content that you want to use in
+your post, say a peer or PI that you are acquaintances with, please include a
+copy of the permission in writing in your submission folder when you send your
+article to the editor.
+
+Finally, if you \textit{absolutely must} get permission from an academic journal
+to use a figure from a paper that you can't just reproduce, please contact the
+head of The Dish or the editor so that she or he may procure permission in the
+name of the organization.
+
 As an important aside, realize that this document is not legally binding in any
 way and its author is not a lawyer, so please use your own best judgement as
 necessary to obey all relevant laws and regulations.
@@ -161,7 +171,7 @@ places where this document is ambiguous, these examples should serve as an
 official reference.
 
 For an article with desired URL
-\dishurl{posts/post-name-url}, the folder structure in
+\dishurlplain{posts/post-name-url}, the folder structure in
 Figure~\ref{fig:folder-structure} is required. The
 editor will expect to recieve a single file, \texttt{post-url-name.zip}, with
 the entire contents of \texttt{post-url-name} folder.
@@ -243,15 +253,15 @@ etc.) each time a link to an image file is required.
     \item \emph{Post Description} : A short paragraph that will be displayed
         beneath your article's image when listing articles. This should be your
         call to action, and after reading this, a visitor to the site should
-        want to click on your article to read more. The text ``(Click to read
-        more\ldots{})'' will be automatically included after this description, so do
+        want to click on your article to read more. The text ``(Continue
+        reading\ldots{})'' will be automatically included after this description, so do
         not include it yourself. This can be at most 500 characters including
         spaces. Shorter is usually better.
     \item \emph{Team Name}: The official url of the team or teams that have edited the
         post. For example, this might be ``biochemistry-and-bioinformatics'' or
         ``general-biology'', but \textbf{not} ``Biochemistry / Bioinformatics'' or
         ``Biology (General)''. You can find your teams official URL by navigating
-        to your team's page on \url{\dishurlplain{}} and copying the part of the URL
+        to your team's page on \dishurl{} and copying the part of the URL
         that comes after \texttt{/topics/}.
 \end{itemize}
 
@@ -262,20 +272,39 @@ etc.) each time a link to an image file is required.
             \item \emph{Author name}: Please use your full legal name to make this consistent. If
                 you submit one article as ``Bob Caldwell'' and another as ``Bobby
                 Caldwell'', there will be no way for the web server to know that
-                these should be assigned to the same person.
+                these should be assigned to the same person. You should think of
+                this as your private username for The Dish.
                 If this field is omitted, the group name will be used as a stand in for
                 the author name.
             \item \emph{Author nickname} : One per author. This will be the name that is
                 actually displayed on the site next to your (optional) picture. It can
-                be different for each article you write if you wish.
+                be different for each article you write if you wish. You are
+                free to use spellings that require non-standard unicode
+                characters (e.g. Japanese, Hebrew, or Greek script is okay).
             \item \emph{Author headshot} : This will be a link to the picture
                 that will display next to your name.  You can provide an image
                 with your article and link to that file name inside the
-                ``\texttt{./images}'' folder, or leave blank for a picture of a
+                ``\texttt{./images}'' folder. You have several options if you
+                don't want to actually put a picture of yourself. You can use
+                any of
+                \begin{itemize}
+                    \item \texttt{./images/cow.png}
+                    \item \texttt{./images/dinosaur.png}
+                    \item \texttt{./images/elephant.png}
+                    \item \texttt{./images/hedgehog.png}
+                    \item \texttt{./images/monkey.png}
+                    \item \texttt{./images/panda.png}
+                    \item \texttt{./images/paperplane.png}
+                    \item \texttt{./images/penguin.png}
+                    \item \texttt{./images/turkey.png}
+                \end{itemize}
+                or leave this field blank for a random picture of a
                 cute animal.
         \end{itemize}
+        Note that if there are multiple authors, you can simply use a new Excel
+        column for each author.
     \item \emph{Illustrator information} : Same as
-        the ``author'' fields, but for the illustrator.
+        the ``author'' fields, but for the illustrator(s).
     \item \emph{2x1 (WxH) Image File Name} : A link to a cropped version of the post image that
         will be used when the post is displayed on the left sidebar. This image
         must have an aspect ratio 2:1 of width:height or it will be ignored by
@@ -328,11 +357,27 @@ that a relatively efficient way to get the article formatted is to just copy/pas
 from Word into \href{https://stackedit.io/editor}{StackEdit} and fix the few problems that appear. More advanced users
 might want to try using an automatic conversion tool like
 \href{http://pandoc.org/demos.html}{Pandoc} or the
-\href{http://www.writage.com/}{``Writage''} plugin.
+\href{http://www.writage.com/}{``Writage''} plugin. Regardless of how you choose
+to write the Markdown text, please always check the formatting on StackEdit.
+
+\textit{Important tip:} \textbf{DO NOT use Word. DO NOT use TextEdit.}
+Word and TextEdit will corrupt your markdown file, just like they corrupt FASTA
+files if you try to edit then save them. For any small changes after you
+download the Markdown file from StackEdit, please use one of the following
+programs:
+\begin{itemize}
+    \item On Windows, I
+recommend downloading \href{https://notepad-plus-plus.org/}{Notepad++},
+or just using Notepad if you don't feel like downloading a new program.
+    \item On Mac, I recommend just downloading
+\href{https://itunes.apple.com/us/app/textwrangler/id404010395?mt=12}{TextWrangler}.
+    \item On Linux, any reasonalbe distro's default editor should work. I prefer
+Vim.
+\end{itemize}
 
 \subsubsection{Images}\label{sec:image-links}
 In order to get an image in your article, simply include it in the
-\texttt{"images"} subfolder of your post as demonstrated in
+``\texttt{images}'' subfolder of your post as demonstrated in
 Figure~\ref{fig:folder-structure}. Then, the usual syntax for including a
 picture in a Markdown document should work using the relative file path
 (i.e.\ starting with ``\texttt{./images/}'').
@@ -356,7 +401,11 @@ program that you're using can find the image. For example, when using
 the images to an online file sharing program like Dropbox and use the dropbox
 link instead of \texttt{./images/image1.png} in the example above while you're
 writing the article. Just make sure that the version of the Markdown file that you
-submit to the editor has the links formatted as in the example above.
+submit to the editor has the links formatted as in the example above, and not
+dropbox links.
+
+\textit{Important:} \textbf{Do not link to external sites. All images used in the article must be
+included in the images folder.}
 
 Finally, remember that on the web, portable formats are king. Vectorized graphics are
 especially nice to have. In rough order of decreasing preference, please use one
@@ -380,14 +429,15 @@ when viewed across 6 inches of screen (width). Use any web-friendly format.
         \href{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}{cheatsheet}
         under ``headers'' for more details.
     \item References should be in Science format, and each reference in the
-        article to the citation should link to it in the citation section, and
-        the citation should link to the article's page if available.
+        article to a citation should link to that citation the references
+        section. Each citation in the references section should in turn be a
+        link to the article's page if available.
     \item Figures should be included by simply including the image, leaving
         blank link, and bolding the text of the caption.
     \item For an example of how to include footnotes, see Rohan's article at
-        \url{\dishurlplain{posts/discovering-the-perils-of-smoking/}} and the
+        \dishurl{posts/anti-vaccine-sentiment-disease-dynamics/} and the
         associated markdown file at
-        \url{\dishurlplain{documents/existing-posts/discovering-the-perils-of-smoking/post.md}}.
+        \dishurl{documents/existing-posts/anti-vaccine-sentiment-disease-dynamics/post.md}.
 
 \end{enumerate}
 
