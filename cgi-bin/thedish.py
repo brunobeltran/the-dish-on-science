@@ -18,7 +18,7 @@ thedish = TheDish(official_name='The Dish on Science',
                   subtitle='as told by Stanford graduate students',
                   long_name='The Dish on Science: as told by Stanford graduate students',
                   blurb='A science blogging club for Stanford graduate students.',
-                  description='Started by Sam Piekos, The Dish on Science (The Dish for short) offers an avenue for frustrated graduate students to write about the things that they love on the days when those things decide to hate them.',
+                  description='The Dish on Science (The Dish for short) is a science outreach group that aims to bring you quality, understandable coverage of cutting edge scientific research, stories of impactful moments in the history of science, and more. In short, we want to share how excited we are about all the amazing science that we read about on a daily basis!',
                   url='http://thedishonscience.stanford.edu/',
                   logo_src='/images/dish-logo.png')
 
