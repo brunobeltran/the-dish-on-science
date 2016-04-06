@@ -1,5 +1,6 @@
 * TODO Finish website
   * Immediate Goals
+    ** make description field 500 characters, blurb 100 characters. Make actual fields big enough for biggest existing article desription.
     ** split long author names across two lines
     ** put an error on empty team pages saying that there's no articles here right now
     ** try to co-opt someone per article to read it from an outside group, to prevent groupthink

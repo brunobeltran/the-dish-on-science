@@ -68,15 +68,37 @@
 \begin{document}
 \maketitle
 
-\section{Short Version}
-Make a Markdown version of your article named ``post.md'', put all your images
-in a ``images'' folder in the same directory, copy the file
-\dishurl{documents/minimal-example/post\_info.json}, and fill in the fields, so
-you get a folder that looks like Figure~\ref{fig:folder-structure}.
+\section{Summary}
+Before submitting an article to the Editor, please follow the following steps:
+\begin{enumerate}
+    \item Fill out the
+        \href{\dishurlplain{documents/post\_info.xlsx}}{post information
+            Excel sheet}. See Section~\ref{sec:excel} for more information.
+    \item Copy and paste the article text into Stackedit
+    (\url{https://stackedit.io/editor}) and make sure that it looks
+    correct when interpreted as Markdown, see Section~\ref{sec:markdown} for more
+    information.
+        \begin{itemize}
+            \item Make sure references and external links are hyperlinked
+                properly.
+            \item Make sure that your figures appear where you want them to be.
+            \item Make sure you follow all conventions in
+                Section~\ref{sec:conventions}.
+        \end{itemize}
+    \item Make a main folder for your blog post. Give it the same name as what
+        you put in the ``URL'' field of the Excel document.
 
-Zip it all up and send it to the Editor. If you want to be fancy, make sure to
-include versions of your article's main picture in 3:1, 2:1, and 1:1 aspect
-ratios using the relevant fields of ``post\_info.json''.
+    \item Save your post from Stackedit as \texttt{post.md} in this folder.
+        \begin{itemize}
+            \item To export from Stackedit, click on the hashtag in the top left
+                corner, select ``Export to Disk'' and click on ``As Markdown''.
+        \end{itemize}
+    \item Save all your images in a subfolder called \texttt{images}. Make sure
+        that the image name matches the link in the \texttt{post.md} Markdown
+        file.
+    \item Put your post information Excel document into the folder, zip it, and
+        email to the editor for review.
+\end{enumerate}
 
 \section{What Can Go in My Article?}
 The Dish on Science is a Stanford graduate student blogging group.
@@ -171,13 +193,13 @@ the entire contents of \texttt{post-url-name} folder.
     [\ldots{}]
   ]
   [post.md]
-  [post\_info.json ]
+  [post\_info.xlsx]
 ]
 \end{forest}
 \caption{Post folder structure guidelines.}\label{fig:folder-structure}
 \end{figure}
 
-The \texttt{post\_info.json} and \texttt{post.md} files must have
+The \texttt{post\_info.xlsx} and \texttt{post.md} files must have
 \textbf{exactly those names}. The image files can be called anything, as long as
 they're correctly linked to in the article, but the
 folder containing them must be called \texttt{images}. See Section~\ref{sec:image-links}
@@ -190,85 +212,81 @@ prevent the server from attempting to compile one for you from \texttt{post.md}.
 You may assume that the webserver has read-only access to arbitrary
 subdirectories of your post directory.
 
-\subsection{How to Make \texttt{\textbf{post\_info.json}}}
-Please see the examples mentioned above for how to format the file. If what
-exactly should be changed or updated is not clear to you, the file is in the
-very popular \href{http://www.xul.fr/ajax-javascript-json.html}{JSON} file
-format, which is well explained in various places on the web, such as
-\url{http://www.xul.fr/ajax-javascript-json.html}.
+\subsection{How to Fill in post\_info.xlsx}\label{sec:excel}
+Please see the examples mentioned above for how to fill in the file. If any
+field does not apply to your article, please \textit{leave it blank}. \textbf{Do
+not} put
+extraneous ``N/A'' marks in cells that you do not use.
 
-In what follows, all image links should be made relative to the article
+All image links should be made relative to the article
 directory. More explicitly, please use
-\begin{verbatim}"./images/image-file-name.png"\end{verbatim}
+``./images/\textbf{image-file-name}.\textbf{png}''
 filling in the correct filename and extension (\texttt{.svg}, \texttt{.jpg},
 etc.) each time a link to an image file is required.
 
 \noindent{}The required fields are:\@
 \begin{itemize}
-    \item \emph{Post Title} (\texttt{"title"}): Must be below 200 characters.
-    \item \emph{Post URL} (\texttt{"url\_title"}): Must be below 200 characters.
+    \item \emph{Post Title} : Must be below 200 characters.
+    \item \emph{Post URL} : Must be below 200 characters.
         Must be all lowercase letters and words should be separated by single
         hyphens (i.e.\ the ``-'' character, ASCII character \texttt{0x2D}). Do
         not use spaces in the post URL.
-    \item \emph{Main Post Image} (\texttt{"five\_by\_two\_image\_src"}): A link to the main image that will be
+    \item \emph{5x2 (WxH) Image File Name} : A link to the main image that will be
         displayed alongside links to the article and at the top of the article.
         This image will look best if made with an aspect ratio of 5:2 width to
         height, at least 300px of height, and at least 800px of width. A stock
         example can be found at \dishurl{images/placeholder-5to2.jpg}.
-    \item \emph{Post ``Blurb''} (\texttt{"blurb"}): A short, sub-sentence-long description of what
+    \item \emph{Post ``Blurb''} : A short, sub-sentence-long description of what
         the article is about. If you want your article to have a subtitle, this
-        is the most appropriate place.
-    \item \emph{Post Description} (\texttt{"description"}): A short paragraph that will be displayed
+        is the most appropriate place. This can be at most 100 characters
+        including spaces.
+    \item \emph{Post Description} : A short paragraph that will be displayed
         beneath your article's image when listing articles. This should be your
         call to action, and after reading this, a visitor to the site should
         want to click on your article to read more. The text ``(Click to read
         more\ldots{})'' will be automatically included after this description, so do
-        not include it yourself.
-    \item \emph{Team Name} (\texttt{"teams"}): The official url of the team or teams that have edited the
-        post. For example, this might be "biochemistry-and-bioinformatics" or
-        "general-biology", but \textbf{not} "Biochemistry / Bioinformatics" or
-        "Biology (General)".
+        not include it yourself. This can be at most 500 characters including
+        spaces. Shorter is usually better.
+    \item \emph{Team Name}: The official url of the team or teams that have edited the
+        post. For example, this might be ``biochemistry-and-bioinformatics'' or
+        ``general-biology'', but \textbf{not} ``Biochemistry / Bioinformatics'' or
+        ``Biology (General)''. You can find your teams official URL by navigating
+        to your team's page on \url{\dishurlplain{}} and copying the part of the URL
+        that comes after \texttt{/topics/}.
 \end{itemize}
 
 \noindent{}The following (optional) fields are also allowed.
 \begin{itemize}
-    \item \emph{Author information} (\texttt{"authors"}):
+    \item \emph{Author information}:
         \begin{itemize}
-            \item \emph{Author name} (\texttt{"name"}): Please use your full legal name to make this consistent. If
+            \item \emph{Author name}: Please use your full legal name to make this consistent. If
                 you submit one article as ``Bob Caldwell'' and another as ``Bobby
                 Caldwell'', there will be no way for the web server to know that
                 these should be assigned to the same person.
                 If this field is omitted, the group name will be used as a stand in for
                 the author name.
-            \item \emph{Author nickname} (\texttt{"nickname"}): One per author. This will be the name that is
+            \item \emph{Author nickname} : One per author. This will be the name that is
                 actually displayed on the site next to your (optional) picture. It can
                 be different for each article you write if you wish.
-            \item \emph{Author headshot} (\texttt{"headshot\_src"}): This will
-                be a link to the picture that will display next to your name.
-                You can provide an image with your article and link to that
-                file name
-                inside the ``\texttt{./images}'' folder, or use
-                ``\texttt{/images/hedgehog.png}'' for a picture of a cute
-                hedgehog instead.
-
-                You can always check what the name of the file you already
-                provided is if you've forgotten by right clicking on your image
-                in a previous article and selecting ``Copy Link Location''. If
-                you do this, please use the fully qualified URL---i.e.\ starting
-                with ``http://''. You can choose to use a
-                different picture of yourself for each post your write if you so wish.
+            \item \emph{Author headshot} : This will be a link to the picture
+                that will display next to your name.  You can provide an image
+                with your article and link to that file name inside the
+                ``\texttt{./images}'' folder, or leave blank for a picture of a
+                cute animal.
         \end{itemize}
-    \item \emph{Illustrator information} (\texttt{"illustrators"}): Same as
+    \item \emph{Illustrator information} : Same as
         the ``author'' fields, but for the illustrator.
-    \item \emph{2-by-1 Post Image} (\texttt{"two\_by\_one\_image\_src"}): A link to a cropped version of the post image that
+    \item \emph{2x1 (WxH) Image File Name} : A link to a cropped version of the post image that
         will be used when the post is displayed on the left sidebar. This image
         must have an aspect ratio 2:1 of width:height or it will be ignored by
         the server. If it is not less than
         200px in height, it will be downsampled. If this is not included, it
-        will automagically be generated from the ``Main Post Image''. A stock
+        will automagically be generated from the ``5x2 (WxH) Image File Name''.
+        It will likely look bad. The website author takes no responsibility for
+        how ridiculous the cropped image looks if you don't crop it yourself. A stock
         example can be found at
         \dishurl{images/placeholder-2to1.jpg}.
-    \item \emph{Post Thumbnail} (\texttt{"one\_by\_one\_image\_src"}): A link to a cropped version of the post image
+    \item \emph{1x1 (WxH) Image File Name (Thumbnail)} : A link to a cropped version of the post image
         that can be used as a thumbnail for the post. This image must have an
         aspect ratio of 1:1 or it will be ignored. If it is larger than 50px in
         height, it will be downsampled. A stock
@@ -277,21 +295,17 @@ etc.) each time a link to an image file is required.
 
 \end{itemize}
 
-
-\subsection{How to Make \texttt{\textbf{post.md}}}
+\subsection{How to Make \texttt{\textbf{post.md}}}\label{sec:markdown}
 
 \subsubsection{Basic Markdown}
 
-Each group is free to (and should) use whatever format (e.g.\ Word, plain text,
+Each group is free to (and should) use whatever format (e.g.\ Word, Google Docs, plain text,
 LaTeX+git) makes it easiest for your groups to get the articles written and
 reviewed. When it comes time for you to submit, however, the process of making
 the article look like you want it to on the webpage will require that you use a web-friendly
 format. In order to minimize the amount of work this will take both for the
 authors and the editor, we will use ``Markdown'' syntax to specify the article's
-formatting. Don't be afraid, this does not involve programming, learning a new
-language, or knowing how to cartwheel. The syntax should feel familiar to anyone
-that has posted in a forum, on reddit, on Github, or on other website that allows
-formatting comments/posts.
+formatting.
 
 The best way to explain how it works is to simply point you to a cheat
 sheet that shows you how to do everything you could possibly want,
@@ -311,14 +325,14 @@ paragraph, and everything else can be looked up easily on the
 
 Various people have found
 that a relatively efficient way to get the article formatted is to just copy/paste
-from word into \href{https://stackedit.io/editor}{StackEdit} and fix the few problems that appear. More advanced users
+from Word into \href{https://stackedit.io/editor}{StackEdit} and fix the few problems that appear. More advanced users
 might want to try using an automatic conversion tool like
 \href{http://pandoc.org/demos.html}{Pandoc} or the
 \href{http://www.writage.com/}{``Writage''} plugin.
 
 \subsubsection{Images}\label{sec:image-links}
 In order to get an image in your article, simply include it in the
-\texttt{"images"} subfolder of your post as demonstrated by
+\texttt{"images"} subfolder of your post as demonstrated in
 Figure~\ref{fig:folder-structure}. Then, the usual syntax for including a
 picture in a Markdown document should work using the relative file path
 (i.e.\ starting with ``\texttt{./images/}'').
@@ -329,8 +343,8 @@ the syntax
 
 \begin{verbatim}![alt text](./images/image1.png "hover text")\end{verbatim}
 
-The text \texttt{alt text} will then appear as a stand-in if the image fails to
-load or loads too slowly, and the text \texttt{hover text} will appear if the
+The text ``\texttt{alt text}'' will then appear as a stand-in if the image fails to
+load or loads too slowly, and the text ``\texttt{hover text}'' will appear if the
 reader hovers their mouse over the image.
 
 When composing the article, it might be helpful to use an external tool like
@@ -348,9 +362,34 @@ Finally, remember that on the web, portable formats are king. Vectorized graphic
 especially nice to have. In rough order of decreasing preference, please use one
 SVG, PNG, or JPG/JPEG formatted files. If you have a graphic in another format,
 for example from illustrator/inkscape, photoshop/gimp, or powerpoint (shame on
-you!) then please convert it to one of the three above formats unless you
-understand the implications.
+you!) then please convert it to one of the three above formats.
 
+\emph{For advanced users only:} Please
+export your graphic in the format that optimizes file size while preserving image quality
+when viewed across 6 inches of screen (width). Use any web-friendly format.
+
+\subsubsection{Conventions}\label{sec:conventions}
+\begin{enumerate}
+    \item Include neither the title of the article nor the authors' nor
+        illustrators' names in the \texttt{post.md} file. They will be included
+        authomatically by the website.
+    \item All section titles should use ``level 3'' headers, i.e.\ lines with section
+        titles should start with three ``\texttt{\#}'' characters in the
+        \texttt{post.md} file. For each level of sub-section, add another
+        ``\texttt{\#}'' character. See the
+        \href{https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet}{cheatsheet}
+        under ``headers'' for more details.
+    \item References should be in Science format, and each reference in the
+        article to the citation should link to it in the citation section, and
+        the citation should link to the article's page if available.
+    \item Figures should be included by simply including the image, leaving
+        blank link, and bolding the text of the caption.
+    \item For an example of how to include footnotes, see Rohan's article at
+        \url{\dishurlplain{posts/discovering-the-perils-of-smoking/}} and the
+        associated markdown file at
+        \url{\dishurlplain{documents/existing-posts/discovering-the-perils-of-smoking/post.md}}.
+
+\end{enumerate}
 
 %%% End document
 \end{document}
