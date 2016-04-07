@@ -8,7 +8,10 @@ RewriteRule "^/$" "/index.html"
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteRule ^(.*)$ /cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
-RewriteRule ^(.*)$ /cgi-bin/dishflask.cgi/$1 [L,PT]
+RewriteRule ^(.*)$ /cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^posts/.+/.+$
 RewriteRule ^(posts/.+)$ /cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^topics/.+/.+$
+RewriteRule ^(topics/.+)$ /cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]

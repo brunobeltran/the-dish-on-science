@@ -1,6 +1,7 @@
 * TODO Finish website
   * Immediate Goals
-    ** Fix articles not having the correct date
+    ** FIX URL rewriting for topics directories
+    ** FIX articles not having the correct date
     ** make description field 500 characters, blurb 100 characters. Make actual fields big enough for biggest existing article desription.
     ** split long author names across two lines
     ** put an error on empty team pages saying that there's no articles here right now
