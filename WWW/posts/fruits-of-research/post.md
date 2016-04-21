@@ -1,12 +1,8 @@
 In *Pirates of the Caribbean: Curse of the Black Pearl*, the pirates were doomed to live forever undead, appearing like skeletons in the moonlight (Figure 1). A daytime version of this curse is scurvy or “the plague of the Sea” which has killed hundreds of sailors<sup>1</sup>. Scurvy is a terrifying disease with symptoms of “skin black as ink”, difficulty breathing, rigid limbs, and rotting gum tissue<sup>1</sup>. The horrible bad breath caused by scurvy was not the origin of sailor’s having filthy mouths, but supports the stereotype. The mental symptoms are also frightening. Our bodies have safeguards in place, like dams, to prevent us from feeling too much by limiting our senses<sup>2</sup>. Scurvy damages these sensory safeguards<sup>1</sup>. Furthermore, the afflicted sailors could not handle their exacerbated depression and homesick feelings, becoming devastated to the point of madness and suicide<sup>1</sup>. Since no one knew the origin of the disease, it was hard to diagnose and was easily mistaken for diseases like syphilis, leprosy and sometimes just plain old insanity<sup>1</sup>. Fortunately for sailors and explorers, vitamin C cures scurvy<sup>3</sup>.
 
-![Figure 1](./images/vitaminC.png)
-[Figure 1](http://greensuperfoods.us/wp-content/uploads/2014/10/vitamin-c.jpg): Vitamin C Rich Fruit
-
 Fruits and vegetables such as oranges, strawberries, watermelon, pineapple, green peppers, broccoli, and tomatoes are great sources of vitamin C<sup>4</sup>. So, to put a new twist on an old phrase, “When life hands you lemons…” at least you can prevent scurvy.
 
 ### How Vitamin C Keep Us Healthy:
-
 
 Why is vitamin C so essential to our health that? Vitamin C in its active form of **ascorbic acid** helps keep us healthy us by:
 
@@ -30,18 +26,28 @@ Vitamin C *does* help the immune system in other ways. It helps your body’s T 
 Basically, vitamin C acts like a drill sergeant that turns the T cells from trainees into soldiers, ready to do battle with the enemy. Vitamin C also works as a power booster by helping you to produce more immune cells. For example, natural killer cells reproduce more quickly when ascorbic acid is available which lets the NK cells kill virus infected cells and tumors more efficiently<sup>10</sup>. Vitamin C’s antioxidant properties also help prevent cells from dying during inflammation, limiting damage caused by fighting off an infection<sup></sup>11.
 The take away message I have learned, after looking through the studies and research papers about vitamin C, is that it’s important to eat enough fruits and vegetables so to take in enough vitamin C to support your immune system. So, the old adage “An apple a day keeps the doctor away” certainly fits with an orange and scurvy… just not with the common cold (Figure 2)
 
-![Figure 2](./images/vitaminC2.png)
-[Figure 2](http://res.freestockphotos.biz/pictures/9/9292-citrus-fruit-isolated-on-a-white-background-pv.jpg): Apples and Oranges
+![Figure 1](./images/vitaminC2.png)
+[Figure 1](http://res.freestockphotos.biz/pictures/9/9292-citrus-fruit-isolated-on-a-white-background-pv.jpg): Apples and Oranges
 
 ### References
 [1] Lamb, J. BBC - History - British History in depth: Captain Cook and the Scourge of Scurvy. BBC (2011) at <http://www.bbc.co.uk/history/british/empire_seapower/captaincook_scurvy_01.shtml>
+
 [2] von Bekesy, G. Similarities of inhibition in the different sense organs. Am. Psychol. 24, 707–719 (1969).
+
 [3] BBC - History - Historic Figures: James Lind (1716 - 1794). BBC (2014) at <http://www.bbc.co.uk/history/historic_figures/lind_james.shtml>
+
 [4] King, M. W. Vitamins: Critical Enzyme Co-Factors. The Medical Biochemistry Page (2015) at <http://themedicalbiochemistrypage.org/vitamins.php>
+
 [5] Vitamin C. National Institutes of Health Office of Dietary Supplements (2013) at <https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/>
+
 [6] Economo, Christine and Clay, W. D. Food, Nutrition, and Agriculture: Nutritional and health benefits of citrus fruits. in Agriculture and Consumer Protection (Food and Agricultural Organization of United Nations, 1998). at <http://www.fao.org/docrep/x2650t/x2650t03.htm>
+
 [7]  Allan, G. M. & Arroll, B. Prevention and treatment of the common cold: making sense of the evidence. CMAJ 186, 190–9 (2014).
+
 [8] Pauling, L. The significance of the evidence about ascorbic acid and the common cold. Proc. Natl. Acad. Sci. U. S. A. 68, 2678–81 (1971).
+
 [9] Manning, J. et al. Vitamin C promotes maturation of T-cells. Antioxid. Redox Signal. 19, 2054–67 (2013).
+
 [10] Huijskens, M. J. A. J. et al. Ascorbic acid promotes proliferation of natural killer cell populations in culture systems applicable for natural killer cell therapy. Cytotherapy 17, 613–20 (2015).
+
 [11] Wintergerst, E. S., Maggini, S. & Hornig, D. H. Immune-enhancing role of vitamin C and zinc and effect on clinical conditions. Ann. Nutr. Metab. 50, 85–94 (2006).
