@@ -1,15 +1,15 @@
 #!/bin/bash
 
+# move to the script's directory
+app_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $app_dir
+
 # activate the venv in charge of holding the markdown conversion stuff
 . venv-markdown-converter/bin/activate
 set -eu
 
 # single configuration variable: the directory with all the posts in it
 posts_dir=./WWW/posts
-
-# move to the script's directory
-app_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cd $app_dir
 
 # new posts will be zip files dropped into the posts folder
 for post_zip in ${app_dir}/${posts_dir}/*.zip; do

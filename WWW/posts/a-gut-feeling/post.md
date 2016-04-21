@@ -25,7 +25,7 @@ There are several hormones that are responsible for regulating our mood: seroton
 How can we use what we already know about our gut microbiome to help us? Anxiety disorders are the most common mental illness in the US, affecting 18% of adults. Depression (major depressive disorder) is the leading cause of disability. Modifying our gut bacteria using probiotics could be a game-changer in the treatment of these disorders. For example, most anti-depressants work by modifying how the brain responds to a specific hormone such as serotonin, dopamine, or norepinephrine. Instead of changing our brains to combat a hormonal imbalance, imagine using a probiotic supplement to help our gut bacteria regain balanced regulation of all three of these hormones.
 
 
-Our relationship with our gut bacteria is highly complex, and the studies mentioned here are only the tip of the iceberg. As gut microbiome research grows, new discoveries will change the way we think about our gut bacteria. If you are interested in learning more about your own microbiome, you can have it analyzed through services such as ubiome.com.
+Our relationship with our gut bacteria is highly complex, and the studies mentioned here are only the tip of the iceberg. As gut microbiome research grows, new discoveries will change the way we think about our gut bacteria. If you are interested in learning more about your own microbiome, you can have it analyzed through services such as [ubiome.com](ubiome.com).
 
 
 [^1]: These mice are actually called NIH Swiss and BALB/c; names were changed to B and S, respectively, for simplicity.
