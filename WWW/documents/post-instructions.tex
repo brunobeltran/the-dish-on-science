@@ -217,8 +217,9 @@ for how to correctly link to your images.
 
 \emph{For advanced users only:} for full control of the article using custom
 HTML, CSS, or JavaScript, simply include a your own \texttt{post.html} in
-the top level \texttt{post-url-name} directory. This will
-prevent the server from attempting to compile one for you from \texttt{post.md}.
+the top level \texttt{post-url-name} directory, and name your Markdown file (if
+you used one) something besides \texttt{post.md}. This will prevent the server
+from trying to compile a HTML file for you from the \texttt{post.md} file.
 You may assume that the webserver has read-only access to arbitrary
 subdirectories of your post directory.
 
@@ -276,11 +277,6 @@ etc.) each time a link to an image file is required.
                 this as your private username for The Dish.
                 If this field is omitted, the group name will be used as a stand in for
                 the author name.
-            \item \emph{Author nickname} : One per author. This will be the name that is
-                actually displayed on the site next to your (optional) picture. It can
-                be different for each article you write if you wish. You are
-                free to use spellings that require non-standard unicode
-                characters (e.g. Japanese, Hebrew, or Greek script is okay).
             \item \emph{Author headshot} : This will be a link to the picture
                 that will display next to your name.  You can provide an image
                 with your article and link to that file name inside the

@@ -1,12 +1,6 @@
 {"teams": [
     {
         "name": "Biochemistry / Bioinformatics",
-        "members": [
-            "Joy Wan",
-            "Jeremy Work",
-            "Anna Cunningham",
-            "Melissa Ko"
-        ],
         "blurb": "Biochemistry and bioinformatics in society",
         "description": "One of the greatest powers of research is harnessing symbiotic relationships among different fields, and biological research is no exception. With the growth of bioinformatics, a field dedicated to developing computational methods for biology, collecting extremely large datasets has become easier and more widespread. As a result, biochemical methods are increasingly informed by these datasets, and in turn, the complexity of biochemical systems provides an excellent source of material for bioinformatic analysis. Our group \"Biochemistry and Bioinformatics in Society\" is interested in exploring this interface between biochemistry and bioinformatics. Specifically, we will be sharing insights into the impact that discoveries from this interface have on various aspects of society, such as policy and healthcare/medicine.",
         "thumbnail_src": "/images/biochemistry-logo.png",
@@ -16,14 +10,7 @@
 
     {
         "name": "Biology (General)",
-        "members": [
-            "Ray Futia",
-            "Sandra Cristea",
-            "Connie Fung",
-            "Carlos Medina",
-            "Jonathon Wosen"
-        ],
-        "blurb": "Everything you wanted to know about life, from Antibodies to Zebras.",
+        "blurb": "Everything you wanted to know about life, from Antibodies to Zebras",
         "description": "General Biology encompasses all aspects of the life sciences. We will explore the world around us with a very broad scope, investigating everything from the microbes that live within us to the ecosystems we ourselves inhabit. All of life is subject to the same natural forces. We will describe the myriad of different ways that life responds to these forces, the progress being made in expanding our understanding through biological research, and how this insight is being applied in the field and in the lab.",
         "thumbnail_src": "/images/general-biology-logo.png",
         "logo_src": "/images/general-biology-logo.png",
@@ -32,14 +19,6 @@
 
     {
         "name": "Cell Biology",
-        "members": [
-            "Samantha Piekos",
-            "Saumya Sankaran",
-            "Matias Kaplan",
-            "Fiorella Grandi",
-            "Jenny Hsu",
-            "Amy Tarangelo"
-        ],
         "blurb": "Studying the building blocks of life",
         "description": "All organisms are composed of one or more cells. Although most living things we see are multicellular (made up of many cells) these are only a small fraction of all organisms on Earth. The vast majority of organisms are unicellular (only one cell), like the bacteria in your gut or the yeast that brew your beer. We humans are multicellular organisms made up of 3 trillion cells with more than 200 different cell types! The cost of this complexity is that when one or more cell types fail to do their job we get sick.<br /><br />Cell biology seeks to understand how cells work and what happens when something goes wrong in a cell. By identifying what is causing a cell to not do its job, scientists can get a better idea about the inner life of the cell. They can also identify targets for therapies to fix what is wrong with the cell. These articles encompass the study of everything from tiny cellular machines to entire organs.",
         "thumbnail_src": "/images/cell-bio-logo.png",
@@ -49,13 +28,7 @@
 
     {
         "name": "Genomics",
-        "members": [
-            "Alicia Schep",
-            "Ragini Phansalkar",
-            "Ben Kotopka",
-            "Piper Keyes"
-        ],
-        "blurb": "The code of life.",
+        "blurb": "The code of life",
         "description": "How does our DNA make us who we are?  What changes in our DNA can lead to disease?  How can we edit DNA?  These are just some of the many questions that the field of genomics is trying to address using quickly improving technologies that are making it easier every day to read, edit, and understand DNA sequences.  Our blogging team will be discussing how genomics scientists are trying to untangle these and more questions and the key technologies that make addressing these questions possible.",
         "thumbnail_src": "/images/genomics-logo.png",
         "logo_src": "/images/genomics-logo.png",
@@ -64,12 +37,6 @@
 
     {
         "name": "Immune System",
-        "members": [
-            "Kelly Jane McGill",
-            "Bryan Xie",
-            "Jiaying Toh",
-            "Miles Linde"
-        ],
         "blurb": "The scoop on your body's Department of Defense",
         "description": "We live in a world filled with bacteria, viruses, and other deadly pathogens. In fact, many of them are trying to invade your body right now.  If this thought makes you nervous, feel reassured that your body has its own Department of Defense - your immune system. This network works hard round the clock to protect you from harmful invaders. When a pathogen launches an attack, your immune system organizes a beautifully coordinated counter-attack to destroy the pathogen and keep you healthy. Unfortunately, your immune system can make mistakes, including: not destroying diseased or harmful cells (infections and cancer), reacting to non-harmful substances (allergies), or going rogue and attacking your own cells (autoimmune diseases). The immune system is fascinating and complex, and we want to share with you what's going on in the field of immunology.",
         "thumbnail_src": "/images/immune-system-logo.png",
@@ -79,33 +46,15 @@
 
     {
         "name": "Marine Biology",
-        "members": [
-            "Diana LaScala-Gruenewald",
-            "Nat Clarke",
-            "Natalie Low",
-            "Julia Mason",
-            "Elan Joseph Portner",
-            "Diana Li",
-            "David Cade",
-            "Hannnah Rosen"
-        ],
         "blurb": "Explore the largest habitat on Earth",
         "description": "Marine biology is the study of life in the ocean, from the smallest microbes to the largest animals to ever live on Earth. It is the collective effort of scientists from many fields to explore, understand, and conserve the diversity of life in in the world's largest ecosystem. Oceans cover 71% of our planet's surface, and provide 99% of its livable habitat by volume. They are the largest space in our universe known to be inhabited by living organisms, yet we know less about the deepest reaches of our oceans than we do about the surface of Mars. This vast marine space is home to an enormous diversity of strange and wonderful organisms, so much so that hundreds of new species are discovered every year. We depend on this biodiversity: 3 billion people rely on marine and coastal biodiversity for their livelihoods, and 2.6 billion people rely on the ocean for their primary source of protein. Human impacts on ocean ecosystems are increasing, and marine biologists are working to understand how sea creatures adapt to changing environments, and develop sustainable solutions. In this blog, we will discuss the latest scientific discoveries, cool critters, and current issues from Earth's living oceans.",
-        "thumbnail_src": "/images/marine-biology-logo.png",
+        "thumbnail_src": "/images/marine-biology-logo.svg",
         "logo_src": "/images/marine-biology-logo.svg",
         "url_name": "marine-biology"
     },
 
     {
         "name": "Forty-two",
-        "members": [
-            "Bruno Beltran",
-            "Jay Bhasin",
-            "KC Farrell",
-            "Ilana Arbisser",
-            "Katie Bodner",
-            "Rohan Sushrut Mehta"
-        ],
         "blurb": "Making sense of the patterns of life, (the universe, and everything)",
         "description": "Mathematics is humanity's tool for describing the world around us. We will discuss examples of math not only as a powerful tool for predicting the future, but also as an art form by which we can discover the many beautiful patterns in nature.",
         "thumbnail_src": "/images/math-group-logo.jpg",
@@ -115,15 +64,7 @@
 
     {
         "name": "Monumental Scientific Discoveries",
-        "members": [
-            "Julien Roth",
-            "Kyler Lugo",
-            "Andrea Chaikovsky",
-            "Susanna Brantley",
-            "Amanda Papakyrikos",
-            "Gillie Agmon"
-        ],
-        "blurb": "Influential Discoveries from the Past and How They Affect our Future",
+        "blurb": "Influential discoveries from the past and how they affect our future",
         "description": "Throughout the years, humans have continued to ask important questions about both the wide world around them and the inner workings of their own bodies and minds. These questions range in scope from those probing the origin of life to those examining the intricacies of a single cell. While not every question has yielded an interesting answer, those that did have occasionally changed the world. <br />Here, we will explore some of the most influential discoveries from our collective history. Each article will focus on a specific discovery (consisting of one or more experiments) and will guide readers through relevant facets of the discovery including: The social/political/economic environment at the time, the methodology practiced by the researchers, any debate surrounding the researchers' claims, and the impact the discovery has had (or has the potential to have).",
         "thumbnail_src": "/images/monumental-discoveries-logo.png",
         "logo_src": "/images/monumental-discoveries-logo.png",
@@ -132,13 +73,7 @@
 
     {
         "name": "Neuroscience",
-        "members": [
-            "Themasap Khan",
-            "Joshua Eggold",
-            "Michelle Pang",
-            "Johanna O'Day"
-        ],
-        "blurb": "Reading between the folds.",
+        "blurb": "Reading between the folds",
         "description": "Neuroscience is the study of the nervous system, from the molecular and electrical properties of individual nerve cells, to the complex neural circuits and networks that generate behavior, learning, and cognition. It is one of the most interdisciplinary sciences which bridges together biology, chemistry, computer science, engineering, linguistics, medicine, philosophy, psychology, and physics. By delving into the complex underpinnings of normal nervous system function, as well as its diseased state, the opportunities to conduct research in this field are endless - much like our brain’s ability to think.",
         "thumbnail_src": "/images/neuroscience-logo.png",
         "logo_src": "/images/neuroscience-logo.png",
@@ -147,14 +82,6 @@
 
     {
         "name": "Translational Biology",
-        "members": [
-            "Alyssa Kaiser",
-            "Leighton Daigh",
-            "Sarah Barnes",
-            "Chelsea Kliebert",
-            "Hannah Rosen",
-            "Alexa Wnorowski"
-        ],
         "blurb": "Cutting edge bench-to-bedside medical research translated into accessible terms",
         "description": "Translational medicine is a field aimed at combining disciplines, resources, expertise, and techniques to improve the way we prevent, diagnose, and treat diseases.  It starts with basic laboratory research, where scientists study the mechanisms by which diseases make us sick and identify ways that we can intervene and prevent illness.  From these findings, new methods of prevention, diagnosis, and treatment are developed and tested in a clinical setting.  Once they are validated as safe and effective in clinical trials, new treatments are introduced to the public.  Because of the complex nature of disease, collaborations between scientists of diverse backgrounds, as well as frequent interactions with clinicians, is essential for making new discoveries and translating them into tomorrow's medicines.",
         "thumbnail_src": "/images/translational-biology-logo.png",
