@@ -15,7 +15,7 @@ from sqlalchemy.sql.expression import and_
 from sqlalchemy.engine.url import URL
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.ext.declarative import declarative_base
-from thedish import app_dir, www_dir, posts_dir
+from thedish import app_dir, www_dir, posts_dir, thedish
 
 sql_dir = os.path.join(app_dir, "db_private")
 Base = declarative_base()
@@ -74,6 +74,10 @@ class Author(Base):
     headshot_src = Column(sa.String(200))
     posts = relationship("Post", secondary=post_author_table,
                          back_populates="authors")
+    teams = relationship("Team", secondary=author_team_table,
+                         back_populates="members")
+    almae_matres = relationship("Team", secondary=alumni_team_table,
+                                back_populates="alumni")
 
     def __repr__(self):
         return "<Author(%r, %r)>" % (
@@ -91,8 +95,10 @@ class Team(Base):
     description = Column(sa.String(1000))
     thumbnail_src = Column(sa.String(200))
     logo_src = Column(sa.String(200))
-    members = relationship("Author", secondary=author_team_table)
-    alumni = relationship("Author", secondary=alumni_team_table)
+    members = relationship("Author", secondary=author_team_table,
+                         back_populates="teams")
+    alumni = relationship("Author", secondary=alumni_team_table,
+                         back_populates="almae_matres")
     posts = relationship("Post", secondary=post_team_table,
                          back_populates="teams")
 
@@ -208,6 +214,16 @@ class Post(Base):
                             for a in init['illustrators']]
             init['illustrators'] = [a if a is not None else init['illustrators'][i] for i,a
                             in enumerate(illustrators_in_db)]
+        else:
+            init['illustrators'] = []
+        # writing an article for a team makes you part of that team
+        for team in init['teams']:
+            for author in init['authors']:
+                if team not in author.teams:
+                    author.teams.append(team)
+            for illustrator in init['illustrators']:
+                if team not in illustrator.teams:
+                    illustrator.teams.append(team)
 # for now, post count will always restart at zero when an article is
 # reconstructed from its JSON specification. TODO: put in correct view counts
 # from e.g. google analytics upon recreation. Maybe somethign like the
@@ -284,7 +300,7 @@ class Post(Base):
 #connection_url = str(myDB) + "&charset=utf8"
 #connection_url = "mysql://gthedishonscie:***REMOVED***@g-thedishonscience-dish-website.sudb.stanford.edu/g_thedishonscience_dish_website?charset=utf8"
 connection_url = "mysql+pymysql://gthedishonscie:***REMOVED***@localhost/g_thedishonscience_dish_website?charset=utf8"
-engine = sa.create_engine(name_or_url=connection_url, echo=True)
+engine = sa.create_engine(name_or_url=connection_url, echo=False)
 Base.metadata.create_all(engine)
 Session.configure(bind=engine)
 #metadata.create_all(engine)
@@ -302,91 +318,54 @@ def session_scope():
     finally:
         session.close()
 
-def get_recent_posts_team(team_url_name, offset, limit):
-    conn = engine.connect()
-    select_team_id = select([team_table.c.id]
-        ).where(team_table.c.url_name == team_url_name)
-    team_id = conn.execute(select_team_id).fetchone()
-    # if the requested team does not exist
-    if team_id is None:
+def pc_to_ol(page, count):
+    return (count*(page - 1), count)
+
+def get_recent_posts_team(team_url_name, page, count, session):
+    offset, limit = pc_to_ol(page, count)
+    team = get_team_by_name(team_url_name)
+    if team is None:
         return None
-    # otherwise get the actual id to compare against from the results
-    team_id = team_id[0]
-    select_recent_posts_team = select([post_table.c.url_title]
-        ).order_by(post_table.c.publication_date.desc()
-        ).select_from(post_table.join(post_team_table)
-        ).where(post_team_table.c.team_id == team_id
-        ).offset(offset
-        ).limit(limit)
-    results = conn.execute(select_recent_posts_team)
-    url_titles = results.fetchall()
-    results.close()
-    conn.close()
-    if url_titles is None:
-        return None
-    posts = [Post.from_urltitle(url_title[0], session)
-                  for url_title in url_titles]
+    posts = (session
+             .query(Post)
+             .with_parent(team, 'teams')
+             .order_by(sa.desc(Post.publication_date))
+             .offset(offset)
+             .limit(limit)
+             .all())
     return posts
 
-def get_recent_posts(offset, limit):
-    conn = engine.connect()
-    select_recent_posts_team = select([post_table.c.url_title]
-        ).order_by(post_table.c.publication_date.desc()
-        ).offset(offset
-        ).limit(limit)
-    results = conn.execute(select_recent_posts_team)
-    url_titles = results.fetchall()
-    results.close()
-    conn.close()
-    if url_titles is None:
-        return None
-# TODO use the database row to make the Post entry instead of re-reading the
-# post_info.json file
-    posts = [Post.from_urltitle(url_title[0], session)
-                  for url_title in url_titles]
+def get_recent_posts(page, count, session):
+    offset, limit = pc_to_ol(page, count)
+    posts = (session
+             .query(Post)
+             .order_by(sa.desc(Post.publication_date))
+             .offset(offset)
+             .limit(limit)
+             .all())
     return posts
 
-def get_popular_posts(offset, limit):
-    conn = engine.connect()
-    select_recent_posts_team = select([post_table.c.url_title]
-        ).order_by(post_table.c.view_count.desc()
-        ).offset(offset
-        ).limit(limit)
-    results = conn.execute(select_recent_posts_team)
-    url_titles = results.fetchall()
-    results.close()
-    conn.close()
-    if url_titles is None:
-        return None
-# TODO use the database row to make the Post entry instead of re-reading the
-# post_info.json file
-    posts = [Post.from_urltitle(url_title[0], session)
-                  for url_title in url_titles]
+def get_popular_posts(page, count, session):
+    offset, limit = pc_to_ol(page, count)
+    posts = (session
+             .query(Post)
+             .order_by(sa.desc(Post.view_count))
+             .offset(offset)
+             .limit(limit)
+             .all())
     return posts
 
-def get_team_by_name(team_name):
-    matching_teams = [team for team in teams if team.name == team_name or team.url_name == team_name]
-    if not matching_teams:
-        return None
-    return matching_teams[0]
+def get_team_by_name(team_name, session):
+    return session.query(Team).filter_by(url_name=team_name).first()
 
-def get_post_by_name(post_name):
-    conn = engine.connect()
-    url_title = post_name
-    select_if_exists_post = select([post_table.c.url_title]
-        ).where(post_table.c.url_title == url_title)
-    results = conn.execute(select_if_exists_post)
-    url_title = results.fetchone()
-    results.close()
-    if url_title is None:
-        return None
-    update = post_table.update().where(
-        post_table.c.url_title == url_title
-        ).values({post_table.c.view_count: post_table.c.view_count+1})
-    conn.execute(update)
-    results.close()
-    conn.close()
-    return Post(os.path.join(www_dir, 'posts', url_title[0]))
+def get_post_by_name(post_name, session):
+    post = session.query(Post).filter_by(url_title=post_name).first()
+    post.view_count += 1
+    session.add(post)
+    return post
+
+def get_all_teams(session):
+    return session.query(Team).all()
 
 def build_all_teams(session):
     """Construct all team rows from a global file, blog-teams.json."""
