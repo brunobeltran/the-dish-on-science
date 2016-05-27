@@ -1,5 +1,6 @@
 * TODO Finish website
   * Immediate Goals
+    ** add the correct afs permissions hooks after the article is added to the website
     ** FIX articles not having the correct date
     ** the author lists with many authors look ugly when width of screen gets small, figure out how to reflow
     ** make description field 500 characters, blurb 100 characters. Make actual fields big enough for biggest existing article desription.
