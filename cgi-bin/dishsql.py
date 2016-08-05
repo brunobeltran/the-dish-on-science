@@ -76,6 +76,7 @@ author_team_table = Table('author_team', metadata,
 #TODO find prettier way to do this
 #connection_url = str(myDB) + "&charset=utf8"
 connection_url = "mysql://gthedishonscie:***REMOVED***@g-thedishonscience-dish-website.sudb.stanford.edu/g_thedishonscience_dish_website?charset=utf8"
+#connection_url = "mysql+pymysql://gthedishonscie:asdflkjzxcv.,masdflkj@localhost/g_thedishonscience_dish_website?charset=utf8"
 engine = sa.create_engine(name_or_url=connection_url, echo=False)
 metadata.create_all(engine)
 
@@ -276,10 +277,10 @@ def get_post_by_name(post_name):
     res.close()
     if url_title is None:
         return None
-    update = post_table.update().where(
-        post_table.c.url_title == url_title
-        ).values({post_table.c.view_count: post_table.c.view_count+1})
-    conn.execute(update)
+#    update = post_table.update().where(
+#        post_table.c.url_title == url_title
+#        ).values({post_table.c.view_count: post_table.c.view_count+1})
+#    conn.execute(update)
     res.close()
     conn.close()
     return Post(os.path.join(www_dir, 'posts', url_title[0]))

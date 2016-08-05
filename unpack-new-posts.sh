@@ -17,8 +17,8 @@ for post_zip in ${app_dir}/${posts_dir}/*.zip; do
     unzip $post_zip -d ${app_dir}/${posts_dir}
     echo "UNZIPPING COMPLETE!"
     post_url=${post_zip%.zip}
-    post_url=$(basename $post_url)
-    post_dir=${app_dir}/${posts_dir}/${post_url}
+    post_url=$(basename $post_url) #name of post without .zip or foldername
+    post_dir=${app_dir}/${posts_dir}/${post_url} #foldername of post
     # just in case people dragged over crap, clean it up
     echo "REMOVING MAC CRUD FILES"
     rm -rf ${app_dir}/${posts_dir}/__MAC* ${app_dir}/${posts_dir}/.DS_*
