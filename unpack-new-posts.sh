@@ -6,6 +6,7 @@ cd $app_dir
 
 # activate the venv in charge of holding the markdown conversion stuff
 . venv-markdown-converter/bin/activate
+# enable bash error checking and exit on failure
 set -eu
 
 # single configuration variable: the directory with all the posts in it

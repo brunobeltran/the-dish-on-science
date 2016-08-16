@@ -1,0 +1,16 @@
+{
+    "title": "Finding the Fountain of Youth",
+    "url_title": "fountain-of-youth",
+    "five_by_two_image_src": "/posts/fountain-of-youth/images/fountain.jpg",
+    "blurb": "Harnessing tools in your cells to find a cure for aging",
+    "description": "Have you ever wondered if we could find a cure for aging? Scientists wonder this all the time. It turns out that we might be able to harness how our own cells defy death, and to help them do this better. By working with an important enzyme called telomerase, scientists are getting closer to these goals. But how does telomerase work, and should we depend on it?",
+    "teams": "Cell Biology",
+    "authors": [{
+        "name": "Jenny Hsu",
+        "nickname": "Jenny Hsu",
+        "headshot_src": "/posts/fountain-of-youth/images/headshot.jpg"       
+    }],
+    "two_by_one_image_src": "",
+    "one_by_one_image_src": ""
+}
+
