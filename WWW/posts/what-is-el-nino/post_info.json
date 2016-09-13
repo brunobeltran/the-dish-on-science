@@ -1,0 +1,14 @@
+{
+    "title": "What is El Niño?",
+    "url_title": "what-is-el-nino",
+    "publication_date": "2016-09-13",
+    "five_by_two_image_src": "/posts/what-is-el-nino/images/pelagic_crab.jpg",
+    "blurb": "Understanding El Niño and its ocean impacts.",
+    "description": "Those of us living in California have seen El Niño flooding the local news, and the streets of Los Angeles. The name El Niño has come up in relation to recent storms and strange weather across the U.S., and you may have heard that this season's was a \"Godzilla\" El Niño, but what is El Niño, exactly?",
+    "teams": ["Marine Biology"],
+    "authors": [{
+        "name": "Julia Mason",
+        "nickname": "Julia Mason",
+        "headshot_src": "/images/hedgehog.png"
+    }]
+}
