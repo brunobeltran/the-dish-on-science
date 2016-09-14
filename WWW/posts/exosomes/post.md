@@ -1,4 +1,3 @@
-![](./images/exosomes.jpg)
 [Transmission electron microscopy image of exosomes.](http://www.edwinvanderpol.com/research)
 
 Scientists have known for decades that cells readily communicate with each other. To send signals close by, a communicative cell can nestle up to a neighbor that has the lock into which its key fits (a euphemism for [ligand-receptor binding](http://www.mindcreators.com/developmentalsim/ReceptorsLigands.htm)). To talk to other cells they aren't directly touching, cells can release substances such as [hormones](http://www.hormone.org/hormones-and-health/what-do-hormones-do). These substances enter the circulatory system and eventually are sensed by other groups of cells that can respond to that specific signal. For many years, we thought those were the only two broad ways that cells could talk to each other: by directly touching or by releasing signaling molecules.

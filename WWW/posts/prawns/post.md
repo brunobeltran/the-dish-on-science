@@ -15,10 +15,15 @@ The idea of targeting the snail population to reduce the spread of schistosomias
 To test whether their proposed strategy would actually work, Sokolow and her team ran a pilot study at the Senegal River Basin in West Africa, where a massive schistosomiasis outbreak occurred right after the construction of the Diama Dam in 1986. The dam was built at the mouth of the Senegal River to prevent saltwater from flowing upstream so that the river could be a stable freshwater source for the surrounding villages. Unexpectedly, the construction of the dam also created the perfect freshwater habitat for the snails that host schistosomes. For one, algae and plants grew abundantly in this habitat, providing a food source for the snails. Secondly, the native river prawn *Macrobrachium vollenhoveni* disappeared from the river because the dam prevented them from migrating to their breeding grounds. With an abundance of food and the absence of their prawn predators, the snail population exploded. Unfortunately, so did the incidence of schistosomiasis.
 
 To see if restoring prawns could reduce worm infections in this region, Sokolow and her team recruited two similar villages located upstream of the dam. The researchers first treated all villagers to cure them of the worm infection. Next, for one village, the researchers enclosed a part of the river that villagers use to access water, and introduced prawns to that location ("prawn-stocked"). For the other village, the researchers did nothing ("normal"). Eighteen months later, the researchers compared what happened in the presence or absence of prawns, and made several interesting observations:
-1.	The prawn-stocked village had half as many snails compared to the normal village.
-2.	The prawn-stocked village had 80% less worm-carrying snails than the normal village.
+
+1. The prawn-stocked village had half as many snails compared to the normal village.
+
+2. The prawn-stocked village had 80% less worm-carrying snails than the normal village.
+
 3. The percentage of re-infected individuals was lower in the prawn-stocked village (58%) compared to the normal village (78%).
+
 4. The odds of getting re-infected are about four times higher in the normal village compared to the prawn-stocked village.
+
 5. The people in the prawn-stocked village had less schistosome eggs in their urine compared to the normal village.
 
 These results are extremely promising, since they are consistent with the team's prediction that introducing prawns can help control and reduce snail numbers, and in turn, decrease the number of worm infections in humans. Nonetheless, the researchers still need to conduct wider scale studies to make sure that this strategy works at additional sites.
