@@ -1,0 +1,20 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/hedgehog.png",
+            "name": "Matias Kaplan",
+            "nickname": "Matias Kaplan"
+        }
+    ],
+    "blurb": "Making Minimal Life",
+    "description": "As we continue researching how life works scientists have begun trying to make simpler and simpler organisms. ",
+    "five_by_two_image_src": "/posts/cell-mechanic/images/minimalcell.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "teams": [
+        "cell-biology"
+    ],
+    "title": "Cell Mechanic",
+    "two_by_one_image_src": "",
+    "url_title": "cell-mechanic"
+}
