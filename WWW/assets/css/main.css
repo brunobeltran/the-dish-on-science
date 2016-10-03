@@ -2647,6 +2647,7 @@
 
         .post > .title.image img {
             max-height: 50em;
+            max-width: 100%;
         }
 
         .post > .image.featured {
