@@ -7,3 +7,4 @@
 *.blg
 db_private
 .backup
+venv-tdos
