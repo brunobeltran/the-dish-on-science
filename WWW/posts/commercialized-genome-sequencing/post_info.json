@@ -5,7 +5,7 @@
     "five_by_two_image_src": "/posts/commercialized-genome-sequencing/images/seq3.png",
     "blurb": "How far genome sequencing has come, and where it may take us.",
     "description": "Commercialized genome sequencing is on the rise. Ancestral knowledge and disease risk information are at our fingertips. What does this mean for medicine and our future?",
-    "teams": "Biochemistry and Bioinformatics",
+    "teams": ["biochemistry-and-bioinformatics"],
     "authors": [{
         "name": "Jeremy Work",
         "nickname": "Jeremy Work",
