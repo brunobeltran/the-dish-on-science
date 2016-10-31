@@ -48,21 +48,6 @@
     },
 
     {
-        "name": "Genomics",
-        "members": [
-            "Alicia Schep",
-            "Ragini Phansalkar",
-            "Ben Kotopka",
-            "Piper Keyes"
-        ],
-        "blurb": "The code of life.",
-        "description": "How does our DNA make us who we are?  What changes in our DNA can lead to disease?  How can we edit DNA?  These are just some of the many questions that the field of genomics is trying to address using quickly improving technologies that are making it easier every day to read, edit, and understand DNA sequences.  Our blogging team will be discussing how genomics scientists are trying to untangle these and more questions and the key technologies that make addressing these questions possible.",
-        "thumbnail_src": "/images/genomics-logo.png",
-        "logo_src": "/images/genomics-logo.png",
-        "url_name": "genomics"
-    },
-
-    {
         "name": "Immune System",
         "members": [
             "Kelly Jane McGill",
