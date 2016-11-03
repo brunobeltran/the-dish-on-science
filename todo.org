@@ -1,41 +1,26 @@
-* TODO Finish website
-  * Immediate Goals
-    ** add the correct afs permissions hooks after the article is added to the website
-    ** FIX articles not having the correct date
-    ** the author lists with many authors look ugly when width of screen gets small, figure out how to reflow
-    ** make description field 500 characters, blurb 100 characters. Make actual fields big enough for biggest existing article desription.
-    ** split long author names across two lines
-    ** put an error on empty team pages saying that there's no articles here right now
-    ** try to co-opt someone per article to read it from an outside group, to prevent groupthink
-    ** add style guide for references, in-line lists, using e.g. <h3> tags (###) for section titles, where to put captions, etc.
-    ** collect footnote-clicking statistics ;)
-    ** twitter button should go to twitter page
-    ** article should be shareable via twitter
-    ** sort team names in pop-out menu
-    ** include link to science dictionary at bottom of the pop-out menu and
-    ** move facebook like and twitter buttons to the post itself, and make them point to each specific article instead of to the webpage as a whole
-    ** set up google analytics
-  * Large Goals
-    ** set up a SQL server using sqlalchemy to store the articles
-      *** Create database
-      *** various things become more manageable once this is done:
-        **** FIX: actually track pageviews
-        **** pagination.
-    ** make a page to look at a specific author's articles, with optional bio at top
-      *** hook up author links
-    ** don't let website fail on startup if there's a bad post file. In general, scan website code for any places where a bad post might cause the website to fail, and have an error logged, but make sure the website still renders correctly with the offending article just not showing or something
-  * Strech Goals
-    ** Wikipedia style pop-up links for desktop version
-    ** make it so that an author can actually have a different headshot for each post they make
-    ** and actually have a different nickname for each post
-    ** and make it so that declaring authorship is actually optional. I don't want to do it via a "faux" author which matches the team name, because then the author page would for that faux author would be very confusing. maybe make it via a "faux" author called "Team Name (anonymous)"
-    ** ?Login system? + comments
-    ** Post list page
-    ** Science dictionary
-      *** pop-up definitions inline
-    ** Search box
-  * URL Scheme:
-    http://thedishonscience.com/topics/$topic_name
-    http://thedishonscience.com/posts/$post_name
-    http://thedishonscience.com/author/$author_name
+* Goals
+      ** Comment system:
+        -- Facebook/reddit?
+      ** try to co-opt someone per article to read it from an outside group, to prevent groupthink
+      ** make description field 500 characters, blurb 100 characters. organize legacyarticles such that we truncate their descriptions to the correct size, then from now on, strong enforcement of size.
+      ** in post-instruction.tex add style guide for references, in-line lists, using e.g. <h3> tags (###) for section titles, where to put captions, etc.
+      ALICE ** move facebook like and twitter buttons to the post itself, and make them point to each specific article instead of to the webpage as a whole
+            -- global dish on science like button should take you to dish on science facebook page, make it
+            -- make facebook page
+            -- for each article, have a like button with reasonably preompleted text/image
+            -- twitter button should go to twitter page
+            -- article should be shareable via twitter
+            -- add a "share on reddit" button
+      ALICE ** split long author names across two lines
+            -- the author lists with many authors look ugly when width of screen gets small, figure out how to reflow
+      KYLE ** pagination.
+      KYLE ** Science Dictionary
+        -- on desktop, we want definition to pop up in "right of article" div
+        -- on mobile, we probably want to pop out a pre-loaded div below the word of interest
+      BRUNO ** Put this shit on github
+            -- add the correct afs permissions hooks after the article is added to the website
+            -- Search box
+            -- make a page to look at a specific author's articles, with optional bio at top
+            -- hook up author links
+
 
