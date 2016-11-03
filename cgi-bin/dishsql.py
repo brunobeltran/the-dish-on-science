@@ -70,14 +70,15 @@ author_team_table = Table('author_team', metadata,
     Column('team_id', sa.Integer, sa.ForeignKey('team.id'), primary_key=True),
     Column('author_id', sa.Integer, sa.ForeignKey('author.id'), primary_key=True))
 
-#myDB = URL(drivername='mysql', username='gthedishonscie', host='g-thedishonscience-dish-website.sudb.stanford.edu',
-#    database='g_thedishonscience_dish_website', query={'read_default_file':
-#    os.path.join(sql_dir, '.mylogin.cnf')})
-#TODO find prettier way to do this
-#connection_url = str(myDB) + "&charset=utf8"
-connection_url = "mysql://gthedishonscie:***REMOVED***@g-thedishonscience-dish-website.sudb.stanford.edu/g_thedishonscience_dish_website?charset=utf8"
-#connection_url = "mysql+pymysql://gthedishonscie:asdflkjzxcv.,masdflkj@localhost/g_thedishonscience_dish_website?charset=utf8"
-engine = sa.create_engine(name_or_url=connection_url, echo=False)
+#connection_url = "mysql://gthedishonscie:***REMOVED***@g-thedishonscience-dish-website.sudb.stanford.edu/g_thedishonscience_dish_website?charset=utf8"
+# engine = sa.create_engine(name_or_url=connection_url, echo=False)
+# metadata.create_all(engine)
+dish_db = URL(drivername='mysql',
+              database='g_thedishonscience_dish_website',
+              query={'read_default_file':
+                     os.path.join(sql_dir, '.dishlogin.cnf')}
+             )
+engine = sa.create_engine(name_or_url=dish_db, echo=False)
 metadata.create_all(engine)
 
 def insert_new_team(team):
