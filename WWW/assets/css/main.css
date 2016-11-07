@@ -2845,6 +2845,14 @@
                 }
 
                 .post > header .meta .author .name {
+                    /* instead of hiding author name, we will hide author
+                     * picture, since nobody uses it */
+                    /* display: none; */
+                }
+
+                .post > header .meta .author > img {
+                    /* instead of hiding author name, we will hide author
+                     * picture, since nobody uses it */
                     display: none;
                 }
 
