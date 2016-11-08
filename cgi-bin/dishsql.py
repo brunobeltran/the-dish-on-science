@@ -5,6 +5,9 @@ from sqlalchemy.sql import select
 from sqlalchemy.sql.expression import and_
 from sqlalchemy.engine.url import URL
 from thedish import teams, Post, app_dir, www_dir, all_posts
+import logging
+logging.basicConfig()
+logging.Logger('dishsql.py')
 
 sql_dir = os.path.join(app_dir, "db_private")
 
@@ -25,37 +28,59 @@ sql_dir = os.path.join(app_dir, "db_private")
 #             self.id, self.name
 #         )
 
+#TODO refactor so that these aren't duplicated in dishsql
+limits = {'preferred': {}, 'max': {}}
+limits['max']['name'] = 200
+limits['max']['title'] = 200
+limits['max']['blurb'] = 400
+limits['max']['url_title'] = 200
+limits['max']['description'] = 1000
+limits['max']['path'] = 200
+
+limits['preferred']['name'] = 100
+limits['preferred']['title'] = 200
+limits['preferred']['blurb'] = 100
+limits['preferred']['url_title'] = 100
+limits['preferred']['description'] = 500
+limits['preferred']['path'] = 200
+
+def validate_length(data, name):
+    if len(data) > limits['preferred'][name]:
+        logger.warning(name + ' longer than recommended: ' + data)
+    if len(string) > limits['max'][name]:
+        logger.warning(name + ' too long to fit into database: ' + data)
+
 # metadata associated with the MySQL server we will be using to get post,
 # author, and team information
 metadata = sa.MetaData()
 team_table = Table('team', metadata,
     Column('id', sa.Integer, primary_key=True, nullable=False),
-    Column('name', sa.String(100), nullable=False),
-    Column('url_name', sa.String(100), nullable=False, index=True, unique=True),
-    Column('blurb', sa.String(200)),
-    Column('description', sa.String(200)),
-    Column('thumbnail_src', sa.String(200)),
-    Column('logo_src', sa.String(200)))
+    Column('name', sa.String(limits['max']['name']), nullable=False),
+    Column('url_name', sa.String(limits['max']['url_title']), nullable=False, index=True, unique=True),
+    Column('blurb', sa.String(limits['max']['blurb'])),
+    Column('description', sa.String(limits['max']['description'])),
+    Column('thumbnail_src', sa.String(limits['max']['path'])),
+    Column('logo_src', sa.String(limits['max']['path'])))
 
 author_table = Table('author', metadata,
     Column('id', sa.Integer, primary_key=True, nullable=False),
-    Column('name', sa.String(100), nullable=False),
-    Column('nickname', sa.String(100)),
-    Column('url_name', sa.String(100), nullable=False, index=True, unique=True),
-    Column('blurb', sa.String(200)),
-    Column('description', sa.String(200)),
-    Column('image_src', sa.String(200)))
+    Column('name', sa.String(limits['max']['name']), nullable=False),
+    Column('nickname', sa.String(limits['max']['name'])),
+    Column('url_name', sa.String(limits['max']['url_title']), nullable=False, index=True, unique=True),
+    Column('blurb', sa.String(limits['max']['blurb'])),
+    Column('description', sa.String(limits['max']['description'])),
+    Column('image_src', sa.String(limits['max']['path'])))
 
 post_table = Table('post', metadata,
     Column('id', sa.Integer, primary_key=True, nullable=False),
-    Column('title', sa.String(200), nullable=False),
-    Column('url_title', sa.String(200), nullable=False, index=True, unique=True),
-    Column('blurb', sa.String(200)),
-    Column('description', sa.String(200)),
+    Column('title', sa.String(limits['max']['title']), nullable=False),
+    Column('url_title', sa.String(limits['max']['url_title']), nullable=False, index=True, unique=True),
+    Column('blurb', sa.String(limits['max']['blurb'])),
+    Column('description', sa.String(limits['max']['description'])),
     Column('publication_date', sa.Date, nullable=False),
-    Column('five_by_two_image_src', sa.String(200), nullable=False),
-    Column('two_by_one_image_src', sa.String(200)),
-    Column('one_by_one_image_src', sa.String(200)),
+    Column('five_by_two_image_src', sa.String(limits['max']['path']), nullable=False),
+    Column('two_by_one_image_src', sa.String(limits['max']['path'])),
+    Column('one_by_one_image_src', sa.String(limits['max']['path'])),
     Column('view_count', sa.Integer, nullable=False))
 
 post_author_table = Table('post_author', metadata,

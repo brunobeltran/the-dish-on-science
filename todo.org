@@ -25,3 +25,6 @@
             -- hook up author links
 
 
+* coding todo's
+  author headshot_src, allow images to be provided with article
+  split relevant code from fix headshot src to fix image src
