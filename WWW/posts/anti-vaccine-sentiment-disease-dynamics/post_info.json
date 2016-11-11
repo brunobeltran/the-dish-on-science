@@ -8,12 +8,10 @@
     "teams": ["forty-two"],
     "authors": [{
         "name": "Rohan Mehta",
-        "nickname": "Rohan Mehta",
         "headshot_src": "/images/hedgehog.png"
     }],
     "illustrators": [{
         "name": "Rohan Mehta",
-        "nickname": "Rohan Mehta",
         "headshot_src": "/images/hedgehog.png"
     }]
 }

@@ -34,7 +34,8 @@ title_rows = [
     u'Illustrator Nickname',
     u'Illustrator Headshot File Name',
     u'2x1 (WxH) Image File Name',
-    u'1x1 (WxH) Image File Name (Thumbnail)'
+    u'1x1 (WxH) Image File Name (Thumbnail)',
+    u'Publication Date'
 ]
 class RowIdx:
     title = 6
@@ -51,6 +52,7 @@ class RowIdx:
     illustrator_headshot = 17
     two_by_one_image_src = 18
     one_by_one_image_src = 19
+    publication_date = 19
 
 
 class BadRowException(Exception):
@@ -74,6 +76,7 @@ def xlsx_to_json(xlsx_file_name, json_file_name):
     post['url_title'] = value_col[RowIdx.url_title].value
     post['blurb'] = value_col[RowIdx.blurb].value
     post['description'] = value_col[RowIdx.description].value
+    post['publication_date'] = value_col[RowIdx.publication_date].value
     post['teams'] = []
     num_teams = 0
     # while there are more teams to add, append to teams list
