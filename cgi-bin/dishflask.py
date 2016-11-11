@@ -4,8 +4,8 @@ from collections import namedtuple
 import random
 import os
 import json
-from thedish import thedish, cgi_dir, app_dir, www_dir
-from dishsql import thedish, www_dir
+from thedish import dish_info, cgi_dir, app_dir, www_dir
+import dishsql
 
 app = Flask(__name__, static_url_path='')
 app.debug = False
@@ -42,7 +42,7 @@ def teardown_request(exception=None):
 #             page_num=
 
 def render_template_with_defaults(template, recent_posts=None, popular_posts=None,
-                                  thedish=thedish, error=None,
+                                  thedish=dish_info, error=None,
                                   **kwargs):
 
     session = getattr(g, 'session', None)
@@ -51,7 +51,7 @@ def render_template_with_defaults(template, recent_posts=None, popular_posts=Non
         recent_posts = dishsql.get_recent_posts(page=1, count=posts_per_page, session=session)
     if popular_posts is None:
         popular_posts = dishsql.get_popular_posts(page=1, count=popular_posts_per_page, session=session)
-    return render_template(template, thedish=thedish, teams=teams,
+    return render_template(template, thedish=dish_info, teams=teams,
                            popular_posts=popular_posts,
                            recent_posts=recent_posts,
                            error=error, **kwargs)
@@ -99,7 +99,7 @@ def send_post(post_name):
     session = getattr(g, 'session', None)
     matching_post = dishsql.get_post_by_name(post_name, session)
     if not matching_post:
-        error_string = "No post with URL '{}posts/{}'".format(thedish.url, post_name)
+        error_string = "No post with URL '{}posts/{}'".format(dish_info.url, post_name)
         return render_template_with_defaults('index.html', error=error_string)
     return render_template_with_defaults('post.html', post=matching_post)
 

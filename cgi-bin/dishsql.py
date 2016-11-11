@@ -65,26 +65,26 @@ def replace_with_database_if_exists(obj, uniq_field, session):
     copy of its input, with all objects that were already in the database
     replaced by their fetch'd counterparts. Takes an object, a session, and a
     column to query equality by."""
-        replacement = session.query(uniq_field.class_
-            ).filter(uniq_field == obj.__dict__[uniq_field.key]
-            ).first()
-        return replacement if replacement else
-        ## here's the in-place version of the code, took a list of obj's
-        # replacements = [
-        #         session.query(uniq_field.class_)
-        #         .filter(uniq_field == elem.__dict__[uniq_field.key])
-        #         .first()
-        #         for elem in collection
-        #     ]
-        # collection = [elem if elem is not None else collection[i]
-        #               for i,elem in enumerate(replacements)]
-        # return collection
-        ## originally generalized from the following outdated,specific code
-        #init['authors'] = [Author(**(author._asdict())) for author in init['authors']]
-        #authors_in_db = [session.query(Author).filter_by(name=a.name).first()
-        #                 for a in init['authors']]
-        #init['authors'] = [a if a is not None else init['authors'][i] for i,a
-        #                   in enumerate(authors_in_db)]
+    replacement = session.query(uniq_field.class_
+        ).filter(uniq_field == obj.__dict__[uniq_field.key]
+        ).first()
+    return replacement if replacement else obj
+    ## here's the in-place version of the code, took a list of obj's
+    # replacements = [
+    #         session.query(uniq_field.class_)
+    #         .filter(uniq_field == elem.__dict__[uniq_field.key])
+    #         .first()
+    #         for elem in collection
+    #     ]
+    # collection = [elem if elem is not None else collection[i]
+    #               for i,elem in enumerate(replacements)]
+    # return collection
+    ## originally generalized from the following outdated,specific code
+    #init['authors'] = [Author(**(author._asdict())) for author in init['authors']]
+    #authors_in_db = [session.query(Author).filter_by(name=a.name).first()
+    #                 for a in init['authors']]
+    #init['authors'] = [a if a is not None else init['authors'][i] for i,a
+    #                   in enumerate(authors_in_db)]
 
 # centralized location for all size limits of our tables
 limits = {'preferred': {}, 'max': {}}
@@ -214,7 +214,7 @@ class Post(Base):
     __tablename__ = 'post'
 
     id = Column(sa.Integer, primary_key=True, nullable=False)
-    title = Column(sa.String(limit['max']['title']), nullable=False)
+    title = Column(sa.String(limits['max']['title']), nullable=False)
     url_title = Column(sa.String(limits['max']['url_title']), nullable=False, index=True, unique=True)
     blurb = Column(sa.String(limits['max']['blurb']))
     description = Column(sa.String(limits['max']['description']))
@@ -229,15 +229,22 @@ class Post(Base):
     teams = relationship("Team", secondary=post_team_table,
                          back_populates="posts")
 
+    # make a list of the methods that are to be run on a newly constructed post
+    # to check its integrity. To get around the fact that the Post class is
+    # itself non-existent at this point in time, we get the list via a
+    # classmethod that doesn't have to use the identifier "Post" explicitly
+
     # fix_url must be first, since other error loggers depend on its presence.
     # fix_teams before you fix_authors, so that the author/team associations
     # are correctly inserted. fix_authors also fixes illustrators
-    post_integrity_checkers = [Post.fix_url, Post.fix_publication_date, Post.fix_blurb,
-                               Post.fix_description, Post.fix_title,
-                               Post.fix_five_by_two_image_src,
-                               Post.fix_two_by_one_image_src,
-                               Post.fix_one_by_one_image_src,
-                               Post.fix_teams, Post.fix_authors]
+    @classmethod
+    def post_integrity_checkers(cls):
+        return  [cls.fix_url, cls.fix_publication_date, cls.fix_blurb,
+                 cls.fix_description, cls.fix_title,
+                 cls.fix_five_by_two_image_src,
+                 cls.fix_two_by_one_image_src,
+                 cls.fix_one_by_one_image_src,
+                 cls.fix_teams, cls.fix_authors]
 
     def __repr__(self):
         return "<Post(id=%r, url_title=%r)>" %(
@@ -248,7 +255,7 @@ class Post(Base):
     def __init__(self, post_dict):
         self.__dict__ = default_post_dict.copy()
         self.__dict__.update(post_dict)
-        for fix_func in post_integrity_checkers:
+        for fix_func in post_integrity_checkers():
             fix_func(self)
         self.publication_date = dateutil.parser.parse(self.publication_date)
 

@@ -33,7 +33,11 @@ posts_dir = os.path.join(www_dir, 'posts')
 #TODO remove the above lame comments after merge verified working
 # load dish information from global file
 dish_data_file = os.path.join(www_dir, 'assets', 'info', 'the-dish.json')
-dish_data = codecs.open(dish_data_file, 'r', encoding='utf-8').read()
+dish_info = json.load(codecs.open(dish_data_file, 'r', encoding='utf-8'))
+# now make the dict into a namedtuple so that we have attr access to each key
+# so that we can use our existing jinja2 templates
+dish_info = dish_info['TheDish']
+dish_info = namedtuple('TheDish', dish_info.keys())(**dish_info)
 
 
 #TODO remove these eternally unused lines after merge verified working
