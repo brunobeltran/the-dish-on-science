@@ -11,7 +11,6 @@ import logging
 logging.basicConfig()
 logger = logging.Logger('thedish.py')
 
-#TODO refactor so that these aren't duplicated in dishsql
 limits = {'preferred': {}, 'max': {}}
 limits['max']['name'] = 200
 limits['max']['title'] = 200
@@ -120,7 +119,7 @@ class Post(object):
             raise CannotFixError('Cannot fix blurb!')
 
     def fix_description(self):
-        if not validate_length(self.description, 'description')
+        if not validate_length(self.description, 'description'):
             raise CannotFixError('Cannot fix description!')
 
     def fix_teams(self):

@@ -4,7 +4,7 @@ from collections import namedtuple
 import random
 import os
 import json
-from thedish import thedish, cgi_dir, app_dir, www_dir, teams
+from thedish import thedish, www_dir, teams
 from dishsql import get_popular_posts, get_recent_posts, get_team_by_name, \
                     get_post_by_name, get_recent_posts_team
 

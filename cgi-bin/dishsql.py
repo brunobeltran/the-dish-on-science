@@ -4,7 +4,7 @@ from sqlalchemy import Table, Column
 from sqlalchemy.sql import select
 from sqlalchemy.sql.expression import and_
 from sqlalchemy.engine.url import URL
-from thedish import teams, Post, app_dir, www_dir, all_posts
+from thedish import teams, Post, app_dir, www_dir, all_posts, limits
 import logging
 logging.basicConfig()
 logging.Logger('dishsql.py')
@@ -27,22 +27,6 @@ sql_dir = os.path.join(app_dir, "db_private")
 #         return "<Author(%r, %r)>" % (
 #             self.id, self.name
 #         )
-
-#TODO refactor so that these aren't duplicated in dishsql
-limits = {'preferred': {}, 'max': {}}
-limits['max']['name'] = 200
-limits['max']['title'] = 200
-limits['max']['blurb'] = 400
-limits['max']['url_title'] = 200
-limits['max']['description'] = 1000
-limits['max']['path'] = 200
-
-limits['preferred']['name'] = 100
-limits['preferred']['title'] = 200
-limits['preferred']['blurb'] = 100
-limits['preferred']['url_title'] = 100
-limits['preferred']['description'] = 500
-limits['preferred']['path'] = 200
 
 def validate_length(data, name):
     if len(data) > limits['preferred'][name]:
@@ -311,11 +295,14 @@ def get_post_by_name(post_name):
     conn.close()
     return Post(os.path.join(www_dir, 'posts', url_title[0]))
 
-# get all the teams into the database
-for team in teams:
-    insert_new_team(team)
+# if there are no posts in the database, we're probably on a fresh install of
+# the dish, so we should populate the DB
+if get_popular_posts(offset=0, limit=1) is None:
+    # get all the teams into the database, first
+    for team in teams:
+        insert_new_team(team)
 
-# get all the posts into the database
-for post in all_posts:
-    insert_new_post(post)
+    # get all the posts into the database, hook up with correct authors/teams
+    for post in all_posts:
+        insert_new_post(post)
 
