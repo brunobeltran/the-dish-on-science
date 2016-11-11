@@ -218,6 +218,12 @@ they're correctly linked to in the article, but the
 folder containing them must be called \texttt{images}. See Section~\ref{sec:image-links}
 for how to correctly link to your images.
 
+\emph{For Windows users:} Windows often adds a \texttt{.txt} extension
+automatically to files you edit in e.g. Notepad. If you export the Markdown from
+Stackedit and don't see the \texttt{.md} extension, do not fret. It is there.
+Adding it manually by ``renaming'' the file will only cause the file to actually
+be named \texttt{post.md.txt}.
+
 \emph{For advanced users only:} for full control of the article using custom
 HTML, CSS, or JavaScript, simply include a your own \texttt{post.html} in
 the top level \texttt{post-url-name} directory. This will
@@ -228,8 +234,7 @@ subdirectories of your post directory.
 \subsection{How to Fill in post\_info.xlsx}\label{sec:excel}
 Please see the examples mentioned above for how to fill in the file. If any
 field does not apply to your article, please \textit{leave it blank}. \textbf{Do
-not} put
-extraneous ``N/A'' marks in cells that you do not use.
+not} put extraneous ``N/A'' marks in cells that you do not use.
 
 All image links should be made relative to the article
 directory. More explicitly, please use
@@ -240,7 +245,7 @@ etc.) each time a link to an image file is required.
 \noindent{}The required fields are:\@
 \begin{itemize}
     \item \emph{Post Title} : Must be below 200 characters.
-    \item \emph{Post URL} : Must be below 200 characters.
+    \item \emph{Post URL} : Must be below 100 characters.
         Must be all lowercase letters and words should be separated by single
         hyphens (i.e.\ the ``-'' character, ASCII character \texttt{0x2D}). Do
         not use spaces in the post URL.
