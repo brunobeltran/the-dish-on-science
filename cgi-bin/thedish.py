@@ -14,8 +14,8 @@ import random
 
 cgi_dir = os.path.dirname(os.path.realpath(__file__))
 app_dir = os.path.abspath(os.path.join(cgi_dir, os.path.pardir))
-www_dir = os.path.join(app_dir, "WWW")
-posts_dir = os.path.join(www_dir, 'posts')
+www_dir = os.path.join(app_dir, u"WWW")
+posts_dir = os.path.join(www_dir, u'posts')
 
 # the dish information used to be hardcoded
 # TheDish = namedtuple('TheDish', ['official_name', 'subtitle', 'long_name',

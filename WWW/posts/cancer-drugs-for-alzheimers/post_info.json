@@ -5,7 +5,7 @@
     "five_by_two_image_src": "/posts/cancer-drugs-for-alzheimers/images/alzheimers.png",
     "blurb": "Using cancer drugs to treat neurodegeneration.",
     "description": "Alzheimer's Disease is one of the most common diseases in the United States. While many existing drugs may help slow the progression of the disease, none can stop it or reverse the damage that it has already done. Several novel immunotherapies are proving efficacious in the treatment of Alzheimer’s Disease, and in particular one drug meant to target cancer may be a promising therapy for Alzheimer’s patients in the future.",
-    "teams": "translational-biology",
+    "teams": ["translational-biology"],
     "authors": [{
         "name": "Sarah E. Barnes",
         "nickname": "Sarah E. Barnes",

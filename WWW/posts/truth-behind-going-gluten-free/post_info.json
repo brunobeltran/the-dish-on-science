@@ -1,15 +1,21 @@
 {
-    "publication_date": "2016-10-01",
-    "title": "Grains of Truth: Who Actually Needs to Go Gluten Free",
-    "url_title": "truth-behind-going-gluten-free",
-    "five_by_two_image_src": "/posts/truth-behind-going-gluten-free/images/wheat.JPG",
-    "blurb": "Autoimmunity, Sensitivity, and Allergy: The three groups that need to go gluten free",
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Kelly McGill",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Autoimmunity, Sensitivity, and Allergy: The Three Groups that Need to Go Gluten Free",
     "description": "Most of us can remember hearing about new diet fads like juicing, the raw foods diet, and the baby food diet. Yet another common diet trend is the gluten free diet. However, this trend is different: some people actually need a gluten free diet for their health. In this article, we explore the differences between Celiac disease, gluten sensitivity, and wheat allergy.",
-    "teams": ["immune-system"],
-    "authors": [{
-        "name": "Kelly McGill",
-        "nickname": "Kelly McGill",
-        "headshot_src": "/images/hedgehog.png"
-    }],
-    "illustrators": []
+    "five_by_two_image_src": "./images/wheat.JPG",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/Venn_Diagram.jpg",
+    "publication_date": "2016-10-01",
+    "teams": [
+        "Immune-system"
+    ],
+    "title": "Grains of Truth: Who Actually Needs to Go Gluten Free",
+    "two_by_one_image_src": "./images/Villi_Arms.jpg",
+    "url_title": "truth-behind-going-gluten-free"
 }

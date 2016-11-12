@@ -1,10 +1,11 @@
 {
     "title": "Ocean CSI",
+    "publication_date": "2016-06-27",
     "url_title": "ocean-csi",
     "five_by_two_image_src": "/posts/ocean-csi/images/img_edna.png",
     "blurb": "Stanford researchers explore a new way of studying fish communities.",
     "description": "University of Southhampton scientist John Shepherd once said that counting fish is like counting trees, except that they keep moving around and you can’t see them because they’re underwater. And marine biologists spend a whole lot of time, effort, and money counting fish. They put on SCUBA tanks, jump into the cold ocean, and try to count and identify as many fish as possible before they run out of air. They drag big nets through the water to collect open-ocean fish. And they puzzle through jumbles of information from fisheries, historical records, and even people’s vacation photographs to try and reconstruct fish population numbers. There is little doubt that these data are vital to understanding and protecting, and managing fish populations and the ecosystems they inhabit. But most of these methods are not very efficient: They require a lot of manpower and resources to get small amounts of valuable data. Could there be a better way?.",
-    "teams": "Marine Biology",
+    "teams": ["Marine Biology"],
     "authors": [{
         "name": "Hui Ning N Low",
         "nickname": "Natalie Low",

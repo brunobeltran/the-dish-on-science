@@ -4,8 +4,11 @@ import os
 import sys
 import json
 import codecs
+import string
+import re
 from collections import namedtuple
 import dateutil.parser
+import random
 
 # for creating posts objects from a directory
 from xlsx_to_json import xlsx_to_json
@@ -31,10 +34,12 @@ import thedish
 sql_dir = os.path.join(thedish.app_dir, "db_private")
 dish_db = URL(drivername='mysql',
               database='g_thedishonscience_dish_website',
-              query={'read_default_file':
+              query={'charset': 'utf8', 'read_default_file':
                      os.path.join(sql_dir, '.dishlogin.cnf')}
+              # charset='utf8' # force utf-8 in mysql connections/sessions
              )
-engine = sa.create_engine(name_or_url=dish_db, echo=False)
+# force utf-8 outside of dbapi calls as well
+engine = sa.create_engine(name_or_url=dish_db, encoding='utf-8', echo=True)
 
 # object to hold all information about our schema and ORM
 Base = declarative_base()
@@ -107,8 +112,8 @@ limits['preferred']['path'] = 200
 def validate_length(data, name):
     if len(data) > limits['preferred'][name]:
         pass # logger.warning(name + ' longer than recommended: ' + data)
-    if len(string) > limits['max'][name]:
-        pass # logger.error(name + ' too long to fit into database: ' + data)
+    if len(data) > limits['max'][name]:
+        # logger.error(name + ' too long to fit into database: ' + data)
         return False
     return True
 
@@ -163,12 +168,11 @@ class Author(Base):
             self.id, self.name
         )
 
-    def __init__(self, name, url_name, **kwargs):
+    def __init__(self, name, **kwargs):
         self.name = name
-        self.nickname = nickname
         self.url_name = urlify(name)
         for key, val in kwargs.items():
-            setattr(self, key, value)
+            setattr(self, key, val)
 
 
 class Team(Base):
@@ -194,7 +198,7 @@ class Team(Base):
 
     def __init__(self, **kwargs):
         for key, val in kwargs.items():
-            setattr(self, key, value)
+            setattr(self, key, val)
 
 
     @classmethod
@@ -208,6 +212,9 @@ default_post_dict_keys = ['title', 'url_title', 'blurb', 'description',
                           'one_by_one_image_src' ]
 num_keys = len(default_post_dict_keys)
 default_post_dict = dict(zip(default_post_dict_keys, [None]*num_keys))
+default_post_dict['illustrators'] = []
+default_post_dict['authors'] = []
+default_post_dict['teams'] = []
 
 class Post(Base):
     """Knows about a blog post for The Dish."""
@@ -251,11 +258,17 @@ class Post(Base):
             self.id, self.url_title)
 
     # this dict should have the form one would get form loading a
-    # post_info.json file directly as a python dict
-    def __init__(self, post_dict):
-        self.__dict__ = default_post_dict.copy()
-        self.__dict__.update(post_dict)
-        for fix_func in post_integrity_checkers():
+    # post_info.json file directly as a python dict.
+    # because Post has associations to other objects (i.e. Author and Team), it
+    # doesn't really make sense for a Post to exist outside of the context of a
+    # session with the SQL server.
+    def __init__(self, post_dict, session):
+        for key, val in default_post_dict.items():
+            setattr(self, key, val)
+        for key, val in post_dict.items():
+            setattr(self, key, val)
+        self.session = session
+        for fix_func in Post.post_integrity_checkers():
             fix_func(self)
         self.publication_date = dateutil.parser.parse(self.publication_date)
 
@@ -271,16 +284,13 @@ class Post(Base):
         return session.query(Post).filter_by(url_title=url_title).first()
 
     @classmethod
-    def from_folder(cls, post_directory):
+    def from_folder(cls, post_directory, session):
         """Get a Post object from a valid path. Should not be used during
         normal website operation, only for constructing post objects to insert
         into the SQL table."""
         if not os.path.isdir(post_directory):
             return None
         url_title = os.path.basename(post_directory)
-        post = session.query(Post).filter_by(url_title=url_title).first()
-        if post is not None:
-            return post
         xlsx_file = os.path.join(post_directory, 'post_info.xlsx')
         xls_file = os.path.join(post_directory, 'post_info.xls')
         json_file = os.path.join(post_directory, 'post_info.json')
@@ -288,18 +298,18 @@ class Post(Base):
         # it
         if os.path.isfile(xlsx_file):
             xlsx_to_json(xlsx_file, json_file)
-            return cls.from_json(json_file)
+            return cls.from_json(json_file, session)
         elif os.path.isfile(xls_file):
             xlsx_to_json(xls_file, json_file)
-            return cls.from_json(json_file)
+            return cls.from_json(json_file, session)
         elif os.path.isfile(json_file):
-            return cls.from_json(json_file)
+            return cls.from_json(json_file, session)
         else:
-            pass # logger.error("The post directory {} does not have a post_info file!".format(post_directory), file=sys.stderr)
+            # logger.error("The post directory {} does not have a post_info file!".format(post_directory), file=sys.stderr)
             return None
 
     @classmethod
-    def from_json(cls, post_file):
+    def from_json(cls, post_file, session):
         """ Read JSON into a dict to pass our constructor. Should not be used
         during normal website operation, only for constructing post objects to
         insert into the SQL table."""
@@ -307,9 +317,9 @@ class Post(Base):
         try:
             post_dict = json.loads(post_data)
         except:
-            pass # logger.error("ERROR: Cannot parse the file {}!".format(post_file), file=sys.stderr)
+            # logger.error("ERROR: Cannot parse the file {}!".format(post_file), file=sys.stderr)
             return None
-        return cls(post_dict)
+        return cls(post_dict, session)
 
     @property
     def url(self):
@@ -365,8 +375,13 @@ class Post(Base):
             raise CannotFixError('Cannot fix blurb!')
 
     def fix_description(self):
+        if not self.description:
+            raise CannotFixError('No description provided!')
         if not validate_length(self.description, 'description'):
-            raise CannotFixError('Cannot fix description!')
+            new_len = limits['max']['description']
+            # logger.warning('Truncating post description!')
+            self.description = self.description[0:new_len-3] + '...'
+
 
     def fix_teams(self):
         # teams are selected from a list of known good teams, so they can't
@@ -389,35 +404,33 @@ class Post(Base):
         # force the admin can manually enter the team, as this is likely an
         # error
         for i,team in enumerate(self.teams):
-            db_team = session.query(Team).filter_by(url_name=team).first()
+            db_team = self.session.query(Team).filter_by(url_name=team).first()
             if db_team:
                 self.teams[i] = db_team
                 continue
-            db_team = session.query(Team).filter_by(name=team).first()
+            db_team = self.session.query(Team).filter_by(name=team).first()
             if db_team:
                 self.teams[i] = db_team
                 continue
             # if the string provided doesn't match the team name or url name,
             # it's not valid
             raise CannotFixError("Post {} references the team {}, which "
-                                 + "does not exist!".format(self.url_title, team))
+                                + "does not exist!".format(self.url_title, team))
 
     def fix_authors(self):
         # if no author name specified, use team name
         if not self.authors:
-            pass # logger.warning('No author names specified! Using team names instead.')
+            # logger.warning('No author names specified! Using team names instead.')
             self.authors = [Author(name=team.name, nickname=team.name,
                             headshot_src=team.logo_src) for team in self.teams]
         # open up a session for querying if the authors exist ONLY, no updating
         # will be done in this session
-        with Session() as session:
-            self.authors = [self.fix_author(author, session)
-                            for author in self.authors]
-            if not self.illustrators:
-                self.illustrators = []
-            else:
-                self.illustrators = [self.fix_author(illustrator, session)
-                                    for illustrator in self.illustrators]
+        self.authors = [self.fix_author(author) for author in self.authors]
+        if not self.illustrators:
+            self.illustrators = []
+        else:
+            self.illustrators = [self.fix_author(illustrator)
+                                for illustrator in self.illustrators]
         # writing an article for a team makes you part of that team
         for team in self.teams:
             for author in self.authors:
@@ -427,13 +440,17 @@ class Post(Base):
                 if team not in illustrator.teams:
                     illustrator.teams.append(team)
 
-    def fix_author(self, author, session):
+    def fix_author(self, author):
         # authors will likely be created for most new posts, so if we find an
         # author that did not previously exist, we will construct it
-        author = Author(name=Post.fix_author_name(author),
-                        nickname= Post.fix_author_nickname(author),
-                        headshot_src=self.fix_author_headshot_src(author))
-        author = replace_with_database_if_exists(author, Author.url_name, session)
+
+        # must fix name first, others use it for logging
+        name=Post.fix_author_name(author)
+        nickname= Post.fix_author_nickname(author)
+        headshot_src=self.fix_author_headshot_src(author)
+        author = Author(name=name, nickname=nickname, headshot_src=headshot_src)
+        author = replace_with_database_if_exists(author, Author.url_name, self.session)
+        return author
 
     def fix_author_headshot_src(self, author):
         default_images = ['/images/cow.png', '/images/dinosaur.png',
@@ -441,15 +458,22 @@ class Post(Base):
                         '/images/monkey.jpeg', '/images/panda.png',
                         '/images/paperplane.png', '/images/penguin.png',
                         '/images/turkey.png']
-        headshot_src = author.headshot_src
+        if 'headshot_src' in author:
+            headshot_src = author['headshot_src']
+        else:
+            # logger.warning("No headshot prived for author {} in post {},
+            #                "using a random default.".format(
+            #                author['name'], self.url_title)
+            rand_idx = random.randint(0, len(default_images)-1)
+            headshot_src = default_images[rand_idx]
         looks_like_default_attempt = re.compile('^/images/[^/]*')
-        looks_like_global_author_attempt = re.compile('^/images/' + author.name + '/.*')
+        looks_like_global_author_attempt = re.compile('^/images/' + author['name'] + '/.*')
         if looks_like_default_attempt.match(headshot_src):
             if headshot_src not in default_images:
-                pass # logger.warning("Looks like you're trying to use a stock animal " \
+                # logger.warning("Looks like you're trying to use a stock animal " \
                             # "image for the author " + author + ", but it " \
                             # "doesn't match any of the images available!")
-                pass # logger.warning("Replacing headshot_src with random animal for "
+                # logger.warning("Replacing headshot_src with random animal for "
                             # + str(author))
                 return default_images[random.randint(0, len(default_images)-1)]
             # they've got a valid default image, use it
@@ -459,10 +483,10 @@ class Post(Base):
         # directory
         elif looks_like_global_author_attempt.match(headshot_src):
             author_images_dir, filename = os.path.split(headshot_src)
-            author_images_dir = '/images/' + author.name
-            maybe_filename1 = os.path.join(www_dir, headshot_src)
-            maybe_filename2 = os.path.join(www_dir, author_images_dir + filename)
-            maybe_filename3 = os.path.join(www_dir, url, 'images', filename)
+            author_images_dir = '/images/' + author['name']
+            maybe_filename1 = os.path.join(thedish.www_dir, headshot_src)
+            maybe_filename2 = os.path.join(thedish.www_dir, author_images_dir + filename)
+            maybe_filename3 = os.path.join(thedish.www_dir, url, 'images', filename)
             # if the file is already in the right place:
             if os.path.isfile(maybe_filename1):
                 return headshot_src
@@ -476,7 +500,7 @@ class Post(Base):
                 shutil.copyfile(maybe_filename3, maybe_filename2)
                 return author_images_dir + filename
             else:
-                pass # logger.error('Cannot find headshot file, looks like you ' \
+                # logger.error('Cannot find headshot file, looks like you ' \
                              # + 'wanted to use a centrally saved one ' \
                              # + 'from /images/?: ' + headshot_src)
                 raise CannotFixError('Cannot find headshot_src: ' +
@@ -484,16 +508,37 @@ class Post(Base):
         # otherwise it's just a regular file, probably saved in their post's
         # images directory
         else:
-            return self.fix_image_file_name(author.headshot_src)
+            return self.fix_image_file_name(author['headshot_src'])
+
+    #TODO: update these to downsample large images, crop to get
+    # two_by_one/one_by_one from five_by_one, etc..
+    def fix_five_by_two_image_src(self):
+        self.fix_image_file_name(self.five_by_two_image_src)
+
+    def fix_two_by_one_image_src(self):
+        if self.two_by_one_image_src:
+            self.fix_image_file_name(self.two_by_one_image_src)
+        else:
+            self.two_by_one_image_src = self.five_by_two_image_src
+
+    def fix_one_by_one_image_src(self):
+        if self.one_by_one_image_src:
+            self.fix_image_file_name(self.one_by_one_image_src)
+        else:
+            self.one_by_one_image_src = self.five_by_two_image_src
+
 
     def fix_image_file_name(self, file_name):
         looks_like_local_attempt = re.compile('(\./).*')
         # looks_like_absolute_attempt = re.compile('.*/posts/.*/images/.*')
         unfixable = False
         if looks_like_local_attempt.match(file_name):
-            supposed_file = os.path.join(www_dir, self.url, file_name)
+            # don't forget to strip the / from self.url, os.path.join ignores
+            # all arguments that come before the first one that it thinks looks
+            # like an absolute path
+            supposed_file = os.path.join(thedish.www_dir, self.url[1:], file_name)
             if not os.path.isfile(supposed_file):
-                pass # logger.error("Looks like you referred to an image with a " \
+                # logger.error("Looks like you referred to an image with a " \
                              # + "relative URL, but the image does not appear " \
                              # + " to exist: " \
                              # + file_name)
@@ -501,25 +546,31 @@ class Post(Base):
             # make into absolute path for website
             return supposed_file
         else: # if looks_like_absolute_attempt.match(file_name):
-            supposed_file = os.path.join(www_dir, file_name)
+            # if it's a properly formatted absolute url, it should start with
+            if file_name[0] == '/':
+                supposed_file = os.path.join(thedish.www_dir, file_name[1:])
+            # but try to do the right thing even if it doesn't
+            else:
+                supposed_file = os.path.join(thedish.www_dir, file_name)
             if not os.path.isfile(supposed_file):
-                pass # logger.error("Looks like you're trying to use a post-specific " \
+                # logger.error("Looks like you're trying to use a post-specific " \
                                 # + "author headshot, but the file does not exist: " \
                                 # + file_name)
                 raise CannotFixError('Cannot find image file: ' + file_name)
 
     @staticmethod
     def fix_author_name(author):
-        if not validate_length(author.name, 'name'):
-            raise CannotFixError("Can't fix the author name: " + author.name + "!")
-        return author.name
+        if 'name' not in author or not validate_length(author['name'], 'name'):
+            raise CannotFixError("Can't fix the author name: " + author['name'] + "!")
+        return author['name']
 
     @staticmethod
     def fix_author_nickname(author):
-        nickname = author.nickname
-        if not nickname:
-            nickname = author.name
-        if not nickname:
+        if 'nickname' in author:
+            nickname = author['nickname']
+        elif 'name' in author:
+            nickname = author['name']
+        else:
             raise CannotFixError("No name or nickname provided for this author!")
         if not validate_length(nickname, 'name'):
             raise CannotFixError("Can't fix the author nickname: " + nickname + "!")
@@ -586,7 +637,8 @@ def build_all_teams():
     """Construct all team rows from a global file, blog-teams.json."""
     team_data_file = os.path.join(thedish.www_dir, 'assets', 'info', 'blog-teams.json')
     team_data = codecs.open(team_data_file, 'r', encoding='utf-8').read()
-    teams = json.loads(team_data, encoding='utf-8')
+    # read in and unpack the top-level object "teams"
+    teams = json.loads(team_data, encoding='utf-8')['teams']
     teams = [Team(**team) for team in teams]
     return teams
 
@@ -598,12 +650,15 @@ def insert_all_teams(only_new=False):
             teams = [team for team in teams if session.query(Team).filter_by(url_name=team.url_name).first() is None]
         session.add_all(teams)
 
-def build_all_posts():
-    """Construct all post objects from the directories in :/WWW/posts"""
+def build_all_posts(session):
+    """Construct all post objects from the directories in :/WWW/posts. Doesn't
+    really make sense outside of the context of a sql session, since the posts
+    have associations with pre-existings teams which are supposed to be in the
+    Team table."""
     post_directories = [os.path.join(thedish.posts_dir, folder)
                         for folder in os.listdir(thedish.posts_dir)]
     post_directories = [post_dir for post_dir in post_directories if os.path.isdir(post_dir)]
-    return [Post.from_folder(post_dir) for post_dir in post_directories]
+    return [Post.from_folder(post_dir, session) for post_dir in post_directories]
 
 def insert_all_posts(only_new=False):
     with session_scope() as session:
@@ -612,7 +667,7 @@ def insert_all_posts(only_new=False):
             posts = [post for post in posts if session.query(Post).filter_by(url_title=post.url_title).first() is None]
         session.add_all(posts)
 
-def initialize_website():
+def initialize_website(only_new=False):
     """Insert all teams, then all posts/authors."""
-    insert_all_teams()
-    insert_all_posts()
+    insert_all_teams(only_new)
+    insert_all_posts(only_new)
