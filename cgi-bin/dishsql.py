@@ -20,9 +20,9 @@ from sqlalchemy.engine.url import URL
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy.ext.declarative import declarative_base
 import thedish
-import logging
-logging.basicConfig()
-logger = logging.Logger('dishsql.py')
+# import logging
+# logging.basicConfig()
+# logger = logging.Logger('dishsql.py')
 
 # setup object that knows how to open connection to database
 
@@ -106,9 +106,9 @@ limits['preferred']['path'] = 200
 
 def validate_length(data, name):
     if len(data) > limits['preferred'][name]:
-        logger.warning(name + ' longer than recommended: ' + data)
+        pass # logger.warning(name + ' longer than recommended: ' + data)
     if len(string) > limits['max'][name]:
-        logger.error(name + ' too long to fit into database: ' + data)
+        pass # logger.error(name + ' too long to fit into database: ' + data)
         return False
     return True
 
@@ -295,7 +295,7 @@ class Post(Base):
         elif os.path.isfile(json_file):
             return cls.from_json(json_file)
         else:
-            logger.error("The post directory {} does not have a post_info file!".format(post_directory), file=sys.stderr)
+            pass # logger.error("The post directory {} does not have a post_info file!".format(post_directory), file=sys.stderr)
             return None
 
     @classmethod
@@ -307,7 +307,7 @@ class Post(Base):
         try:
             post_dict = json.loads(post_data)
         except:
-            logger.error("ERROR: Cannot parse the file {}!".format(post_file), file=sys.stderr)
+            pass # logger.error("ERROR: Cannot parse the file {}!".format(post_file), file=sys.stderr)
             return None
         return cls(post_dict)
 
@@ -358,7 +358,7 @@ class Post(Base):
             raise CannotFixError('Cannot fix url_title!')
         allowed_chars = set(string.ascii_lowercase + string.digits + '-')
         if not set(self.url_title) <= allowed_chars:
-            logger.warning('Illegal characters in URL!: ' + self.url_title)
+            pass # logger.warning('Illegal characters in URL!: ' + self.url_title)
 
     def fix_blurb(self):
         if not validate_length(self.blurb, 'blurb'):
@@ -405,7 +405,7 @@ class Post(Base):
     def fix_authors(self):
         # if no author name specified, use team name
         if not self.authors:
-            logger.warning('No author names specified! Using team names instead.')
+            pass # logger.warning('No author names specified! Using team names instead.')
             self.authors = [Author(name=team.name, nickname=team.name,
                             headshot_src=team.logo_src) for team in self.teams]
         # open up a session for querying if the authors exist ONLY, no updating
@@ -446,11 +446,11 @@ class Post(Base):
         looks_like_global_author_attempt = re.compile('^/images/' + author.name + '/.*')
         if looks_like_default_attempt.match(headshot_src):
             if headshot_src not in default_images:
-                logger.warning("Looks like you're trying to use a stock animal " \
-                            "image for the author " + author + ", but it " \
-                            "doesn't match any of the images available!")
-                logger.warning("Replacing headshot_src with random animal for "
-                            + str(author))
+                pass # logger.warning("Looks like you're trying to use a stock animal " \
+                            # "image for the author " + author + ", but it " \
+                            # "doesn't match any of the images available!")
+                pass # logger.warning("Replacing headshot_src with random animal for "
+                            # + str(author))
                 return default_images[random.randint(0, len(default_images)-1)]
             # they've got a valid default image, use it
             return headshot_src
@@ -476,9 +476,9 @@ class Post(Base):
                 shutil.copyfile(maybe_filename3, maybe_filename2)
                 return author_images_dir + filename
             else:
-                logger.error('Cannot find headshot file, looks like you ' \
-                             + 'wanted to use a centrally saved one ' \
-                             + 'from /images/?: ' + headshot_src)
+                pass # logger.error('Cannot find headshot file, looks like you ' \
+                             # + 'wanted to use a centrally saved one ' \
+                             # + 'from /images/?: ' + headshot_src)
                 raise CannotFixError('Cannot find headshot_src: ' +
                                      headshot_src)
         # otherwise it's just a regular file, probably saved in their post's
@@ -493,19 +493,19 @@ class Post(Base):
         if looks_like_local_attempt.match(file_name):
             supposed_file = os.path.join(www_dir, self.url, file_name)
             if not os.path.isfile(supposed_file):
-                logger.error("Looks like you referred to an image with a " \
-                             + "relative URL, but the image does not appear " \
-                             + " to exist: " \
-                             + file_name)
+                pass # logger.error("Looks like you referred to an image with a " \
+                             # + "relative URL, but the image does not appear " \
+                             # + " to exist: " \
+                             # + file_name)
                 raise CannotFixError('Cannot find image file: ' + file_name)
             # make into absolute path for website
             return supposed_file
         else: # if looks_like_absolute_attempt.match(file_name):
             supposed_file = os.path.join(www_dir, file_name)
             if not os.path.isfile(supposed_file):
-                logger.error("Looks like you're trying to use a post-specific " \
-                                + "author headshot, but the file does not exist: " \
-                                + file_name)
+                pass # logger.error("Looks like you're trying to use a post-specific " \
+                                # + "author headshot, but the file does not exist: " \
+                                # + file_name)
                 raise CannotFixError('Cannot find image file: ' + file_name)
 
     @staticmethod

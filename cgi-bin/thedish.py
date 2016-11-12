@@ -7,9 +7,9 @@ import time
 from glob import glob
 import re
 import random
-import logging
-logging.basicConfig()
-logger = logging.Logger('thedish.py')
+# import logging
+# logging.basicConfig()
+# logger = logging.Logger('thedish.py')
 
 
 cgi_dir = os.path.dirname(os.path.realpath(__file__))
@@ -104,7 +104,7 @@ dish_info = namedtuple('TheDish', dish_info.keys())(**dish_info)
 #             raise CannotFixError('Cannot fix url_title!')
 #         allowed_chars = set(string.ascii_lowercase + string.digits + '-')
 #         if not set(self.url_title) <= allowed_chars:
-#             logger.warning('Illegal characters in URL!: ' + self.url_title)
+#             pass # logger.warning('Illegal characters in URL!: ' + self.url_title)
 
 #     def fix_blurb(self):
 #         if not validate_length(self.blurb, 'blurb'):
@@ -133,7 +133,7 @@ dish_info = namedtuple('TheDish', dish_info.keys())(**dish_info)
 #     def fix_authors(self):
 #         # if no author name specified, use team name
 #         if not self.authors:
-#             logger.warning('No author names specified! Using team names instead.')
+#             pass # logger.warning('No author names specified! Using team names instead.')
 #             self.authors = [Author(name=team.name, nickname=team.name,
 #                             headshot_src=team.logo_src) for team in post.teams]
 #         self.authors = [self.fix_author(author) for author in self.authors]
@@ -153,11 +153,11 @@ dish_info = namedtuple('TheDish', dish_info.keys())(**dish_info)
 #         looks_like_global_author_attempt = re.compile('^/images/' + author.name + '/.*')
 #         if looks_like_default_attempt.match(headshot_src):
 #             if headshot_src not in default_images:
-#                 logger.warning("Looks like you're trying to use a stock animal " \
-#                             "image for the author " + author + ", but it " \
-#                             "doesn't match any of the images available!")
-#                 logger.warning("Replacing headshot_src with random animal for "
-#                             + str(author))
+#                 pass # logger.warning("Looks like you're trying to use a stock animal " \
+##                             "image for the author " + author + ", but it " \
+##                             "doesn't match any of the images available!")
+#                 pass # logger.warning("Replacing headshot_src with random animal for "
+##                             + str(author))
 #                 return default_images[random.randint(0, len(default_images)-1)]
 #             # they've got a valid default image, use it
 #             return headshot_src
@@ -183,7 +183,7 @@ dish_info = namedtuple('TheDish', dish_info.keys())(**dish_info)
 #                 shutil.copyfile(maybe_filename3, maybe_filename2)
 #                 return author_images_dir + filename
 #             else:
-#                 logger.error('Cannot find headshot file, looks like you ' \
+#                 pass # logger.error('Cannot find headshot file, looks like you ' \
 #                              + 'wanted to use a centrally saved one ' \
 #                              + 'from /images/?: ' + headshot_src)
 #                 raise CannotFixError('Cannot find headshot_src: ' +
@@ -200,7 +200,7 @@ dish_info = namedtuple('TheDish', dish_info.keys())(**dish_info)
 #         if looks_like_local_attempt.match(file_name):
 #             supposed_file = os.path.join(www_dir, self.url, file_name)
 #             if not os.path.isfile(supposed_file):
-#                 logger.error("Looks like you referred to an image with a " \
+##                 pass # logger.error("Looks like you referred to an image with a " \
 #                              + "relative URL, but the image does not appear " \
 #                              + " to exist: " \
 #                              + file_name)
@@ -210,9 +210,9 @@ dish_info = namedtuple('TheDish', dish_info.keys())(**dish_info)
 #         else: # if looks_like_absolute_attempt.match(file_name):
 #             supposed_file = os.path.join(www_dir, file_name)
 #             if not os.path.isfile(supposed_file):
-#                 logger.error("Looks like you're trying to use a post-specific " \
-#                                 + "author headshot, but the file does not exist: " \
-#                                 + file_name)
+#                 pass # logger.error("Looks like you're trying to use a post-specific " \
+##                                 + "author headshot, but the file does not exist: " \
+##                                 + file_name)
 #                 raise CannotFixError('Cannot find image file: ' + file_name)
 
 #     @staticmethod

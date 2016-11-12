@@ -4,8 +4,8 @@ import logging
 import xlrd
 import json
 
-logging.basicConfig()
-logger = logging.Logger('xlsx_to_json')
+# logging.basicConfig()
+# logger = logging.Logger('xlsx_to_json')
 
 sheet_idx = 0
 title_col_idx = 2
@@ -91,7 +91,7 @@ def xlsx_to_json(xlsx_file_name, json_file_name):
         post['teams'].append(team_name)
         num_teams = num_teams + 1
     if not post['teams']:
-        logger.warning('No team name specified for post ' + post_directory + '!')
+        pass # logger.warning('No team name specified for post ' + post_directory + '!')
     post['authors'] = []
     num_authors = 0
     # while there are more authors to add, append to authors list
@@ -135,7 +135,7 @@ def xlsx_to_json(xlsx_file_name, json_file_name):
 if __name__ == '__main__':
     post_directory = os.path.abspath(sys.argv[1])
     post_name = os.path.basename(post_directory)
-    logger.info('Using post_directory = ' + post_directory)
+    pass # logger.info('Using post_directory = ' + post_directory)
     xlsx_file = os.path.join(post_directory, 'post_info.xlsx')
     outfile_name = os.path.join(post_directory, 'post_info.json')
     xlsx_to_json(xlsx_file, outfile_name)
