@@ -28,3 +28,4 @@
 * coding todo's
   author headshot_src, allow images to be provided with article
   split relevant code from fix headshot src to fix image src
+  put in correct view counts from e.g. google analytics upon recreation. ?Maybe somethign like the instructions at?: https://developers.google.com/analytics/devguides/reporting/core/v4/choosing_which_version_of_the_analytics_reporting_api_to_use
