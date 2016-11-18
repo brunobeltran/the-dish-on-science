@@ -102,6 +102,7 @@ limits['max']['title'] = 200
 limits['max']['blurb'] = 400
 limits['max']['url_title'] = 200
 limits['max']['description'] = 1000
+limits['max']['team_description'] = 1250 # to accomodate marine-biology
 limits['max']['path'] = 200
 
 limits['preferred']['name'] = 200
@@ -239,7 +240,7 @@ class Team(Base):
     url_name = Column('url_name', sa.String(limits['max']['url_name']),
                       nullable=False, index=True, unique=True)
     blurb = Column('blurb', sa.String(limits['max']['blurb']))
-    description = Column('description', sa.String(limits['max']['description']))
+    description = Column('description', sa.String(limits['max']['team_description']))
     thumbnail_src = Column('thumbnail_src', sa.String(limits['max']['path']))
     logo_src = Column('logo_src', sa.String(limits['max']['path']))
     members = relationship("Author", secondary=author_team_table,
