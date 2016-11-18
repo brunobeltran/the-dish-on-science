@@ -18,7 +18,9 @@
         -- on desktop, we want definition to pop up in "right of article" div
         -- on mobile, we probably want to pop out a pre-loaded div below the word of interest
       BRUNO ** Put this shit on github
+            -- Move dishsql to ORM backend
             --DONE-- make author names show up on mobile
+            -- "mip map" all site images
             -- popular posts image sizes are heterogenous
             -- actual names are used in post template intead of nicknames, whoops
             -- add the correct afs permissions hooks after the article is added to the website
