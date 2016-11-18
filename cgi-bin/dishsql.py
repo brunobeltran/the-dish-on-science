@@ -460,17 +460,17 @@ def fix_five_by_two_image_src(post_dict):
     or not post_dict['five_by_two_image_src']:
         CannotFixError('No main article image (five_by_two_image_src) provided'
                        + 'for article: ' + post_dict['url_title'])
-    fix_image_file_name(post_dict, post_dict['five_by_two_image_src'])
+    post_dict['five_by_two_image_src'] = fix_image_file_name(post_dict, post_dict['five_by_two_image_src'])
 
 def fix_two_by_one_image_src(post_dict):
     if 'two_by_one_image_src' in post_dict and post_dict['two_by_one_image_src']:
-        fix_image_file_name(post_dict, post_dict['two_by_one_image_src'])
+        post_dict['two_by_one_image_src'] = fix_image_file_name(post_dict, post_dict['two_by_one_image_src'])
     else:
         post_dict['two_by_one_image_src'] = post_dict['five_by_two_image_src']
 
 def fix_one_by_one_image_src(post_dict):
     if 'one_by_one_image_src' in post_dict and post_dict['one_by_one_image_src']:
-        fix_image_file_name(post_dict, post_dict['one_by_one_image_src'])
+        post_dict['one_by_one_image_src'] = fix_image_file_name(post_dict, post_dict['one_by_one_image_src'])
     else:
         post_dict['one_by_one_image_src'] = post_dict['five_by_two_image_src']
 
@@ -485,7 +485,7 @@ def fix_image_file_name(post_dict, file_name):
         # don't forget to strip the / from self.url, os.path.join ignores
         # all arguments that come before the first one that it thinks looks
         # like an absolute path
-        supposed_file = os.path.join(thedish.www_dir, 'posts', post_dict['url_title'], file_name)
+        supposed_file = os.path.normpath(os.path.join(thedish.www_dir, 'posts', post_dict['url_title'], file_name))
         if not os.path.isfile(supposed_file):
             # logger.error("Looks like you referred to an image with a " \
                             # + "relative URL, but the image does not appear " \
@@ -493,6 +493,7 @@ def fix_image_file_name(post_dict, file_name):
                             # + file_name)
             raise CannotFixError('Cannot find image file: ' + file_name)
         # make into absolute path for website
+        file_name = os.path.normpath(os.sep + os.path.join('posts', post_dict['url_title'], file_name))
     else: # if looks_like_absolute_attempt.match(file_name):
         # if it's a properly formatted absolute url, it should start with
         if file_name[0] == '/':
@@ -505,7 +506,7 @@ def fix_image_file_name(post_dict, file_name):
                             # + "author headshot, but the file does not exist: " \
                             # + file_name)
             raise CannotFixError('Cannot find image file: ' + file_name)
-    return supposed_file
+    return file_name
 
 
 class Post(Base):

@@ -19,10 +19,12 @@
         -- on mobile, we probably want to pop out a pre-loaded div below the word of interest
       BRUNO ** Put this shit on github
             --DONE-- make author names show up on mobile
+            -- popular posts image sizes are heterogenous
+            -- actual names are used in post template intead of nicknames, whoops
             -- add the correct afs permissions hooks after the article is added to the website
             -- Search box
             -- make a page to look at a specific author's articles, with optional bio at top
-            -- hook up author links
+            -- hook up author name links wherever the author name appears
 
 
 * coding todo's
