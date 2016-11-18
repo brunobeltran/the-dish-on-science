@@ -664,7 +664,7 @@ class Post(Base):
 
     @property
     def post_directory(self):
-        return os.path.join(posts_dir, self.url_title)
+        return os.path.join(thedish.posts_dir, self.url_title)
 
     @property
     def html(self):
@@ -717,12 +717,12 @@ def pc_to_ol(page, count):
 
 def get_recent_posts_team(team_url_name, page, count, session):
     offset, limit = pc_to_ol(page, count)
-    team = get_team_by_name(team_url_name)
+    team = get_team_by_name(team_url_name, session)
     if team is None:
         return None
     posts = (session
              .query(Post)
-             .with_parent(team, 'teams')
+             .with_parent(team, 'posts')
              .order_by(sa.desc(Post.publication_date))
              .offset(offset)
              .limit(limit)

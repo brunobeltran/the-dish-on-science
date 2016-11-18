@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # debug mode modules
 import sys
 sys.stderr = sys.stdout
@@ -15,6 +15,6 @@ app = dishflask.app
 try:
     CGIHandler().run(app)
     logging.info("running app")
-except Exception, e:
+except Exception as e:
     logging.info(traceback.format_exc([10]))
     logging.info('Problem in cgiappserver-prod with CGIHandler().run(): %s' % e)

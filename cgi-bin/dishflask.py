@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 from flask import Flask, render_template, url_for, send_from_directory, request, g
 from collections import namedtuple
 import random
@@ -59,17 +59,20 @@ def render_template_with_defaults(template, recent_posts=None, popular_posts=Non
 @app.route('/topics/<team_name>/', methods=['GET'])
 def show_team_page(team_name):
     session = getattr(g, 'session', None)
-    try:
-        page = int(request.args['page'])
-    except: # ValueError from int conversion, or KeyError from dict access
+    if 'page' in request.args:
+        try:
+            page = int(request.args['page'])
+        except ValueError:
+            page = 1
+        page = max(1, request.args['page'])
+    else:
         page = 1
-    page = max(1, request.args['page'])
     matching_team = dishsql.get_team_by_name(team_name, session)
     if not matching_team:
         error_string = "There is no page for the topic '{}'.".format(team_name)
         return render_template_with_defaults('index.html', error=error_string)
-    recent_posts = get_recent_posts_team(team_url_name=team_name, page=page,
-                                         count=posts_per_page)
+    recent_posts = dishsql.get_recent_posts_team(team_url_name=team_name, page=page,
+                                                 count=posts_per_page, session=session)
     return render_template_with_defaults('team.html', team=matching_team,
                                          recent_posts=recent_posts)
 

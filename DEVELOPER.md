@@ -9,8 +9,8 @@ installation with the table properties specified in the variable
 dishsql.dish_db.
 2) an apache server setup in a configuration compatible with the example conf
 file, the-dish.conf
-3) a working flask installation, python 2.7, and undocumented set of required
-modules, including mysql-python, sqlalchemy, enum34, and flask. Missing stuff can be
+3) a working flask installation, python 3, and undocumented set of required
+modules, including xlrd, markdown, pymysql, sqlalchemy, enum34, and flask. Missing stuff can be
 inferred by running
 $ python cgi-bin/dishflask.py
 
