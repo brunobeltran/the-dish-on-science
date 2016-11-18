@@ -695,7 +695,7 @@ class Post(Base):
 
     @staticmethod
     def fix_author_nickname(author):
-        if 'nickname' in author:
+        if 'nickname' in author and author['nickname']:
             nickname = author['nickname']
         elif 'name' in author:
             nickname = author['name']
