@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/hedgehog.png",
+            "name": "Julia Mason",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Scientists discover new and mysterious crab behavior in an important underwater habitat.",
+    "description": "A trip to the depths of the ocean is rarely dull, but last April, a group of scientists exploring Panama\u2019s waters in a manned submersible found something \"unexpected and mesmerizing.\"",
+    "five_by_two_image_src": "./images/PinedaAUVcrabs.png",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2016-11-18",
+    "teams": [
+        "Marine-Biology"
+    ],
+    "title": "A crazed crowd of crabs",
+    "two_by_one_image_src": "",
+    "url_title": "seamount-crab-swarm"
+}

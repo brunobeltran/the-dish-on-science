@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Anna Cunningham",
+            "nickname": ""
+        }
+    ],
+    "blurb": "How to predict drug-drug interactions.",
+    "description": "When people take multiple prescription drugs at the same time, dangerous drug-drug interactions can occur. Scientists are working to predict drug-drug interactions before they happen in people \u2013 by teaching computers how to read!",
+    "five_by_two_image_src": "./images/cover.png",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/cover3.png",
+    "publication_date": "2016-11-18",
+    "teams": [
+        "biochemistry-and-bioinformatics"
+    ],
+    "title": "Reading beween the lines",
+    "two_by_one_image_src": "./images/cover2.png",
+    "url_title": "drug-drug-interactions"
+}

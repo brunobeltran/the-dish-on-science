@@ -1,0 +1,19 @@
+,The Dish on Science,,
+,Post Information,,
+,Instructions:,,
+,Please fill in the values column for each relevant field. Please leave all fields that you do not use BLANK. Submissions not following instructions in the Description column will be rejected.,,
+,,,
+,Description,Fields,Values
+,100 character max (inc spaces),Post Title,"The Urchin's Tale, Part 1"
+,"100 character max, only lowercase letters and hyphens (NO SPACES!) This will be what comes after ...com/posts/ in your post's URL. Be descriptive, and separate words with hyphens.",Post URL,urchins-tale-1
+,"./images/IMAGE_FILE_NAME (include the extension). Remember, this will be used as the title image for the article, so don’t include it again within the article. Make sure it represents the article well as a whole, since it will be the visual representation of your article on the site. Also, make sure that it is high enough resolution to look good when full-screened, since it will be very large at the top of your article.",5x2 (WxH) Image File Name,./images/mainurchin.jpg
+,100 character max (inc spaces),Post Blurb,What have sea urchins taught us about how ecosystems work?
+,500 character max (inc spaces). Shorter is usually better. Aim for 200 characters.,Post Description,"If I were to ask you to name your favorite animal, chances are that it would not be a sea urchin. And I wouldn’t blame you - sea urchins are certainly not very charismatic, as far as animals go. At first glance, they come across as no more than a bunch of rock-like things with too many spikes and not enough personality. But there is much more to these weird, spiny critters than meets the eye. 
+"
+,thedishonscience.stanford.edu/topics/USE-THIS-STRING,Team Name(s),marine-biology
+,"Please use EXACTLY the same name each time you submit a new post. This is like your username. If there is more than one author, use one column per author.",Author Name(s),Natalie Low
+,"Only use this if you want to have a specific headshot just for this article. Otherwise, leave blank. By default the picture submitted with the author_info form will be used. Remember to fill out the author_info Excel form if you want a page on the website about yourself!",Author Headshot File Name(s),
+,Please use EXACTLY the same name each time you submit a new post. This is like your username.,Illustrator Name(s),
+,"Only use this if you want to have a specific headshot just for this article. Otherwise, leave blank. By default the picture submitted with the author_info form will be used. Remember to fill out the author_info Excel form if you want a page on the website about yourself!",Illustrator Headshot File Name(s),
+,"./images/IMAGE_FILE_NAME (include the extension). This should be a cropped version of your ""5x2 (WxH) Image File"" if possible. This will be used if your article makes it to the most popular list.",2x1 (WxH) Image File Name,
+,"./images/IMAGE_FILE_NAME (include the extension). This should be an image that looks good when it is very tiny, like 80px by 80px. This will be used as a thumbnail for your article when necessary, for example if someone shares your article on Facebook, this is what they'll see.",1x1 (WxH) Image File Name (Thumbnail),

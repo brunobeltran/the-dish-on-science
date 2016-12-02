@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Natalie Low",
+            "nickname": ""
+        }
+    ],
+    "blurb": "What have sea urchins taught us about how ecosystems work?",
+    "description": "If I were to ask you to name your favorite animal, chances are that it would not be a sea urchin. And I wouldn\u2019t blame you - sea urchins are certainly not very charismatic, as far as animals go. At first glance, they come across as no more than a bunch of rock-like things with too many spikes and not enough personality. But there is much more to these weird, spiny critters than meets the eye.",
+    "five_by_two_image_src": "./images/mainurchin.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2016-11-18",
+    "teams": [
+        "marine-biology"
+    ],
+    "title": "The Urchin's Tale, Part 1",
+    "two_by_one_image_src": "",
+    "url_title": "urchins-tale-1"
+}
