@@ -127,5 +127,5 @@ def page_not_found(e):
     error_string = "404! The page you have requested does not exist!"
     return render_template_with_defaults('index.html', error=error_string)
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, threaded=True)
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', debug=True, threaded=True)
