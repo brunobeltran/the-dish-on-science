@@ -11,22 +11,19 @@
             -- twitter button should go to twitter page
             -- article should be shareable via twitter
             -- add a "share on reddit" button
-      ALICE ** split long author names across two lines
             -- the author lists with many authors look ugly when width of screen gets small, figure out how to reflow
       KYLE ** pagination.
       KYLE ** Science Dictionary
         -- on desktop, we want definition to pop up in "right of article" div
         -- on mobile, we probably want to pop out a pre-loaded div below the word of interest
       BRUNO ** Put this shit on github
-            --DONE-- Move dishsql to ORM backend
-            --DONE-- make author names show up on mobile
             -- "mip map" all site images
             -- popular posts image sizes are heterogenous
-            --DONE-- actual names are used in post template intead of nicknames, whoops
             -- add the correct afs permissions hooks after the article is added to the website
             -- Search box
             -- make a page to look at a specific author's articles, with optional bio at top
             -- hook up author name links wherever the author name appears
+            -- make author names split across multi lines not revert on initialize_website by default
 
 
 * coding todo's
