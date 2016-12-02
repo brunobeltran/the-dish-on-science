@@ -151,7 +151,7 @@
                             <div class="meta">
                                 <time class="published" datetime="{{ post.publication_date.strftime('%Y-%m-%d') }}">{{ post.publication_date.strftime('%B %d, %Y') }}</time>
         {% for author in post.authors %}
-                                <a href="{{ author.headshot_src }}" class="author"><span class="name">{{ author.name }}</span><img src="{{ author.headshot_src }}" alt="" /></a>
+                                <a href="{{ author.headshot_src }}" class="author"><span class="name">{{ author.nickname }}</span><img src="{{ author.headshot_src }}" alt="" /></a>
         {% endfor %}
                             </div>
                         </header>
