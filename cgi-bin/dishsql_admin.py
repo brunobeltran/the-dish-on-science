@@ -13,7 +13,7 @@ import random
 
 # for creating posts objects from a directory
 from xlsx_to_json import xlsx_to_json
-# from markdown import markdownFromFile
+from markdown import markdownFromFile
 
 from contextlib import contextmanager
 import sqlalchemy as sa
@@ -33,7 +33,7 @@ import thedish
 # # the connection we're going to make, as a URL, looks like:
 # connection_url = "mysql://gthedishonscie:[password]@g-thedishonscience-dish-website.sudb.stanford.edu/g_thedishonscience_dish_website?charset=utf8"
 sql_dir = os.path.join(thedish.app_dir, "db_private")
-dish_db = URL(drivername='mysql',
+dish_db = URL(drivername='mysql+pymysql',
               database='g_thedishonscience_dish_website',
               query={'charset': 'utf8', 'read_default_file':
                      os.path.join(sql_dir, '.dishlogin.cnf')}
@@ -689,9 +689,9 @@ class Post(Base):
                 and os.path.getctime(md_file) > os.path.getctime(html_file)
         if should_rebuild_html:
             #md_text = codecs.open(md_file, 'r', encoding='utf-8').read()
-            # html = markdownFromFile(input=md_file, output=html_file,
-            #                         encoding='utf-8')
-            pass
+            html = markdownFromFile(input=md_file, output=html_file,
+                                    encoding='utf-8')
+            # pass
             #codecs.open(html_file, 'w', encoding='utf-8', errors='xmlcharrefreplace').write(html)
         return codecs.open(html_file, 'r', encoding='utf-8').read()
 

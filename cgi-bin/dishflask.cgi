@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # debug mode modules
 import sys
 sys.stderr = sys.stdout

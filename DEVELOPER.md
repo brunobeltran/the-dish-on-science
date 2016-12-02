@@ -10,7 +10,7 @@ dishsql.dish_db.
 2) an apache server setup in a configuration compatible with the example conf
 file, the-dish.conf
 3) a working flask installation, python 3, and undocumented set of required
-modules, including xlrd, markdown, pymysql, sqlalchemy, enum34, and flask. Missing stuff can be
+modules, including python-dateutil, xlrd, markdown, pymysql, sqlalchemy, enum34, and flask. Missing stuff can be
 inferred by running
 $ python cgi-bin/dishflask.py
 
@@ -42,3 +42,23 @@ directly.
 In particular, this means that any updates to the post's metadata *must* be
 sync'd with the sql server. Currently, the best way to do this is to manually
 synchronize updates to post_info to the sql server.
+
+
+
+
+# Production Notes
+In Stanford's server's chroot'd cgi environment, only python 2.6.6 exists, and
+it has only a predefined set of packages installed.
+
+This is why we keep a dishsql_admin, that can do things that aren't possible
+when serving the website.
+
+To install the website for the first time, or after adding a new article folder
+to posts, simply
+$ cd cgi-bin
+$ ../venv-tdos/bin/ipython
+>>> import dishsql
+>>> dishsql.initialize_website()
+where venv-tdos holds a python environment that has the requirements listed
+above installed. On corn, this can be created with the pyenv-3.4 command
+currently.
