@@ -771,6 +771,13 @@ def get_post_by_name(post_name, session):
 def get_all_teams(session):
     return session.query(Team).all()
 
+def get_num_posts(session):
+    return session.query(Post).count()
+
+def get_num_posts_team(session, team_url_name):
+    team = get_team_by_name(team_url_name, session)
+    return session.query(Post).with_parent(team, 'posts').count()
+
 def insert_all_teams(update_behavior=UpdateBehavior.update):
     """Insert all teams in global file blog-teams.json into the database."""
     with session_scope() as session:

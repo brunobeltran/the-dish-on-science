@@ -24,6 +24,8 @@
             -- make a page to look at a specific author's articles, with optional bio at top
             -- hook up author name links wherever the author name appears
             -- make author names split across multi lines not revert on initialize_website by default
+            -- popular_posts_per_page not honored
+            -- make menu/buttons work on all pages
 
 
 * coding todo's

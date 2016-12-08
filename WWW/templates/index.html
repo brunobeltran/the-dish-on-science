@@ -70,6 +70,7 @@
                     </ul>
                 </nav>
 {% block nav_menu %}
+{% if pager.page == 1 %}
                 <nav class="main">
                     <ul>
                         <!-- <li class="search">
@@ -90,6 +91,7 @@
                         </li>
                     </ul>
                 </nav>
+{% endif %}
 {% endblock %}
             </header>
 
@@ -191,12 +193,27 @@
 {% endwith %}
 
             <!-- Pagination -->
-            <!--
+        {% if pager.page == 1 and pager.page == pager.num_pages %}
                 <ul class="actions pagination">
                     <li><a href="" class="disabled button big previous">Previous Page</a></li>
-                    <li><a href="#" class="button big next">Next Page</a></li>
+                    <li><a href="" class="disabled button big next">Next Page</a></li>
                 </ul>
-            -->
+        {% elif pager.page == 1  %}
+                <ul class="actions pagination">
+                    <li><a href="" class="disabled button big previous">Previous Page</a></li>
+                    <li><a href="{{ pager.current_url }}?page={{ pager.next_page }}&count={{ pager.count }}" class="button big next">Next Page</a></li>
+                </ul>
+        {% elif pager.page == pager.num_pages %}
+                <ul class="actions pagination">
+                    <li><a href="{{ pager.current_url }}?page={{ pager.prev_page }}&count={{ pager.count }}" class="button big previous">Previous Page</a></li>
+                    <li><a href="" class="disabled button big next">Next Page</a></li>
+                </ul>
+        {% else %}
+                <ul class="actions pagination">
+                    <li><a href="{{ pager.current_url }}?page={{ pager.prev_page }}&count={{ pager.count }}" class="button big previous">Previous Page</a></li>
+                    <li><a href="{{ pager.current_url }}?page={{ pager.next_page }}&count={{ pager.count }}" class="button big next">Next Page</a></li>
+                </ul>
+        {% endif %}
 
 {% endblock %}
             </div>
@@ -214,12 +231,12 @@
                 </section>
 
                 <section id="intro">
-		    <h2>Like our articles?</h2>
+            <h2>Like our articles?</h2>
                     <form action="https://mailman.stanford.edu/mailman/subscribe/the-dish-on-science" method="POST">
                     Email Address: <input type="text" name="email" />
                     <input type="hidden" name="digest" value="0" />
-		    <input type="submit" id="subscribe" value="Subscribe!" style="margin-left: auto; margin-right:auto;" 
-		     class="button"></input>
+            <input type="submit" id="subscribe" value="Subscribe!" style="margin-left: auto; margin-right:auto;"
+             class="button"></input>
                 </section>
 
                 <!-- Mini Posts -->
