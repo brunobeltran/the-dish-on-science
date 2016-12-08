@@ -789,6 +789,12 @@ def insert_all_teams(update_behavior=UpdateBehavior.update):
         # request that all changes be committed.
         session.add_all(teams)
 
+def insert_post(post_dir, update_behavior=UpdateBehavior.update):
+    """Attempt to insert/update a post from it's directory"""
+    with session_scope() as session:
+        post = Post.from_folder(post_dir, session, update_behavior)
+        session.commit()
+
 def insert_all_posts(update_behavior=UpdateBehavior.update):
     with session_scope() as session:
         """Construct all post objects from the directories in :/WWW/posts. Doesn't

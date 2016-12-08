@@ -166,7 +166,11 @@ def xlsx_to_json(xlsx_file_name, json_file_name):
     post['description'] = value_col[idx.description].value
     # if the date string we entered got converted into a "excel date type
     # thing", convert it back into a string for storage in json
-    if sh.cell_type(idx.publication_date, values_col_idx) == xlrd.XL_CELL_DATE:
+    try:
+        ct = sh.cell_type(idx.publication_date, values_col_idx)
+    except IndexError:
+        raise BadRowException('No publication date provided!')
+    if ct == xlrd.XL_CELL_DATE:
         pdate = value_col[idx.publication_date].value
         pdate = xlrd.xldate.xldate_as_datetime(pdate, wb.datemode)
         post['publication_date'] = pdate.strftime('%Y-%m-%d')
