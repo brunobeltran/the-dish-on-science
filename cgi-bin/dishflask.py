@@ -49,7 +49,7 @@ class Paginator():
         # fill in attributes used in index.html template
         self.prev_page = max(1, self.page - 1)
         self.next_page = min(self.num_pages, self.page + 1)
-        self.current_url = request.base_url
+        self.current_url = request.path
         return
 
     @classmethod

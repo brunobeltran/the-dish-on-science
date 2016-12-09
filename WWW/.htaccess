@@ -1,17 +1,28 @@
 #Options +ExecCGI
 #AddHandler cgi-script .py
+Options +FollowSymlinks
 RewriteEngine On
-#RewriteRule ^/?$ / [R]
+
+
 RewriteBase /
-RewriteRule "^$" "/"
-RewriteRule "^/$" "/index.html"
+#RewriteRule ^/?cgi-bin/dishflask\.cgi/?(.*)$ $1 [R=301]
+RewriteRule "^$" "index.html"
+# if something isn't a file or folder, send it to dishflask.cgi to see if it can
+# be made sense of
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteRule ^(.*)$ /cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
-RewriteRule ^(.*)$ /cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
+RewriteRule ^(.*)$ cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
+# posts are kept in a folder with their name, so they will fail !-d
+# redirect requests for posts/post-name to /cgi-bin/dishflask.cgi/$1
+# here explicitly
 RewriteCond %{REQUEST_FILENAME} !-f
+# make sure to not accidentally catch posts/post-name/file
 RewriteCond %{REQUEST_URI} !^posts/.+/.+$
-RewriteRule ^(posts/.+)$ /cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
+RewriteRule ^(posts/.+)$ cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
+# in the case someone is following the old convention of giving topics, aka
+# "teams" their own folders as well (at /topics/team-name), do the same
+# processing we do for posts
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^topics/.+/.+$
-RewriteRule ^(topics/.+)$ /cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
+RewriteRule ^(topics/.+)$ cgi-bin/dishflask.cgi/$1 [T=application/x-httpd-cgi,L,PT]
+

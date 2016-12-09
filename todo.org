@@ -12,7 +12,6 @@
             -- article should be shareable via twitter
             -- add a "share on reddit" button
             -- the author lists with many authors look ugly when width of screen gets small, figure out how to reflow
-      KYLE ** pagination.
       KYLE ** Science Dictionary
         -- on desktop, we want definition to pop up in "right of article" div
         -- on mobile, we probably want to pop out a pre-loaded div below the word of interest
@@ -25,8 +24,6 @@
             -- hook up author name links wherever the author name appears
             -- make author names split across multi lines not revert on initialize_website by default
             -- popular_posts_per_page not honored
-            -- make menu/buttons work on all pages
-            -- url rewriting broken on pagination
 
 
 * coding todo's
