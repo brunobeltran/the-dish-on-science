@@ -2857,7 +2857,7 @@
                 }
 
             .post > .image.featured {
-                margin-left: -1.5em;
+                /* margin-left: -1.5em; */
                 margin-top: calc(-1.5em - 1px);
                 width: calc(100% + 3em);
             }
