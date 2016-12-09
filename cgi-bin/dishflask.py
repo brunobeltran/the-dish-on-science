@@ -28,8 +28,9 @@ def teardown_request(exception=None):
         session.close()
 
 class Paginator():
-    """Keeps track of number of pages, which one we're on, and what arrows
-    should point to."""
+    """Keeps track of number of pages, which one we're on, and what prev/next
+    page links should point to. Assumes that it gets recreated every time a
+    page is changed."""
     def __init__(self, page=1, count=posts_per_page, num_posts=None):
         # initialize to requested values
         self.page = page
@@ -42,6 +43,7 @@ class Paginator():
         # bound page and count to possible values
         self.count = max(1, self.count)
         self.num_pages = (self.num_posts // self.count)
+        self.num_pages = max(1, self.num_pages)
         if self.num_pages*self.count < self.num_posts:
             self.num_pages += 1
         self.page = max(1, self.page)
