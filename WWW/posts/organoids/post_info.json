@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/Author.png",
+            "name": "Jonathan Wosen",
+            "nickname": "Jonathan Wosen"
+        }
+    ],
+    "blurb": "Young, confident, and turning heads on the runway.",
+    "description": "Human beings make for great scientists, but crummy biological test subjects. Think about it for a minute\u2014if you were a researcher, how would you study an organism that is genetically diverse and takes decades to mature? These are only a couple of the many challenges that biologists face when studying human health and disease.",
+    "five_by_two_image_src": "./images/Front.gif",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2016-12-08",
+    "teams": [
+        "general-biology"
+    ],
+    "title": "Biology's Next Top Model: Organoids",
+    "two_by_one_image_src": "",
+    "url_title": "organoids"
+}

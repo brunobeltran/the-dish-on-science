@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/hedgehog.png",
+            "name": "Andrea Chaikovsky",
+            "nickname": "Andrea Chaikovsky"
+        }
+    ],
+    "blurb": "If we can't see DNA, how do we know what it looks like?",
+    "description": "Picture a molecule of DNA. What does it look like? You probably envisioned the twisted ladder-like structure known as the double helix. Today, \u201cdouble helix\u201d is so intertwined with our understanding of DNA that a Google image search of the phrase brings up diagram after diagram of the molecule. But how was this structure discovered? How did scientists determine such an intricate design without being able to see DNA under a microscope? The answer came largely from this picture seen above.",
+    "five_by_two_image_src": "./images/photo_51.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/photo_51_1_1.jpg",
+    "publication_date": "2016-12-08",
+    "teams": [
+        "monumental-scientific-discoveries"
+    ],
+    "title": "X Marks the Spot of the Double Helix",
+    "two_by_one_image_src": "./images/photo_51_2_1.jpg",
+    "url_title": "discoveries-rosalind"
+}
