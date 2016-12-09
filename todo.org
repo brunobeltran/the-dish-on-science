@@ -11,7 +11,6 @@
             -- twitter button should go to twitter page
             -- article should be shareable via twitter
             -- add a "share on reddit" button
-            -- the author lists with many authors look ugly when width of screen gets small, figure out how to reflow
       KYLE ** Science Dictionary
         -- on desktop, we want definition to pop up in "right of article" div
         -- on mobile, we probably want to pop out a pre-loaded div below the word of interest
