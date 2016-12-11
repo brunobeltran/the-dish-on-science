@@ -191,17 +191,17 @@
 {% endwith %}
 
             <!-- Pagination -->
-        {% if pager.page == 1 and pager.page == pager.num_pages %}
+        {% if pager.num_pages == 1 %}
                 <ul class="actions pagination">
                     <li><a href="" class="disabled button big previous">Previous Page</a></li>
                     <li><a href="" class="disabled button big next">Next Page</a></li>
                 </ul>
-        {% elif pager.page == 1  %}
+        {% elif pager.page <= 1  %}
                 <ul class="actions pagination">
                     <li><a href="" class="disabled button big previous">Previous Page</a></li>
                     <li><a href="{{ pager.current_url }}?page={{ pager.next_page }}&count={{ pager.count }}" class="button big next">Next Page</a></li>
                 </ul>
-        {% elif pager.page == pager.num_pages %}
+        {% elif pager.page >= pager.num_pages %}
                 <ul class="actions pagination">
                     <li><a href="{{ pager.current_url }}?page={{ pager.prev_page }}&count={{ pager.count }}" class="button big previous">Previous Page</a></li>
                     <li><a href="" class="disabled button big next">Next Page</a></li>
@@ -212,6 +212,7 @@
                     <li><a href="{{ pager.current_url }}?page={{ pager.next_page }}&count={{ pager.count }}" class="button big next">Next Page</a></li>
                 </ul>
         {% endif %}
+        <!-- num_pages = {{ pager.num_pages }}, page = {{ pager.page }} -->
 
 {% endblock %}
             </div>

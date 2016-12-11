@@ -103,7 +103,7 @@ def show_team_page(team_name):
     recent_posts = dishsql.get_recent_posts_team(team_url_name=team_name,
             page=pager.page, count=pager.count, session=session)
     return render_template_with_defaults('team.html', team=matching_team,
-                                         recent_posts=recent_posts)
+                                         recent_posts=recent_posts, pager=pager)
 
 @app.route('/science-dictionary/')
 def show_dictionary_page():
