@@ -153,6 +153,11 @@ def send_post(post_name):
 @app.errorhandler(404)
 def page_not_found(e):
     error_string = "404! The page you have requested does not exist!"
+    error_string += "<br />"
+    error_string += dish_info.url[0:-1] + request.path
+    # error_string += "<br />"
+    # error_string += "<br />"
+    # error_string += "Here's our homepage instead, hope you find what you're looking for!"
     return render_template_with_defaults('index.html', error=error_string)
 
 if __name__ == '__main__':
