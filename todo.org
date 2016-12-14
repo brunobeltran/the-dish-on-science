@@ -15,6 +15,7 @@
         -- on desktop, we want definition to pop up in "right of article" div
         -- on mobile, we probably want to pop out a pre-loaded div below the word of interest
       BRUNO ** Put this shit on github
+            -- automatically update sitemap with new posts
             -- "mip map" all site images
             -- popular posts image sizes are heterogenous
             -- add the correct afs permissions hooks after the article is added to the website
