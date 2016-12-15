@@ -10,18 +10,18 @@
         <div class="meta">
             <time class="published" datetime="{{ post.publication_date.strftime('%Y-%m-%d') }}">{{ post.publication_date.strftime('%B %d, %Y') }}</time>
 {% for author in post.authors %}
-            <!--TODO: implement author page <span class="name">{{ author.nickname }}</span><img src="{{ author.headshot_src }}" alt="" /> -->
-            <a href="#" class="author"><span class="name">{{ author.nickname | safe }}</span><img src="{{ author.headshot_src }}" alt="" /></a>
+        <a href="{{ author.headshot_src }}" class="author"><span class="name">{{ author.line_broken_nickname | safe }}</span><img src="{{ author.headshot_src }}" alt="" /></a>
 {% endfor %}
         </div>
     </header>
-    <span class="title image"><img src="{{ post.five_by_two_image_src }}" alt="Featured Article Image" /></span>
-    {{ post.html|safe }}
+    <span class="title image">
+        <img src="{{ post.five_by_two_image_src }}" alt="Featured Article Image" /></span>
+    {{ post.html | safe }}
     <footer>
         <ul class="stats">
             {% for author in post.authors %}
-            <!-- <li><a href="/authors/{{ author.url_name }}">{{ author.nickname }}</a></li> -->
-            <li>{{ author.nickname }}</li>
+            <!-- <li><a href="/authors/{{ author.url_name }}">{{ author.line_broken_nickname | safe }}</a></li> -->
+            <li>{{ author.line_broken_nickname | safe }}</li>
             {% endfor %}
             {% for team in post.teams %}
             <li><a href="/topics/{{ team.url_name }}">{{ team.name }}</a></li>

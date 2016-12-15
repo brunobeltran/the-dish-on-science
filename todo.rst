@@ -2,8 +2,6 @@
 Goals
 *****
 
-#. make author names split across multi lines not revert on initialize_website by default
-   by having the linebreaks be inserted automatically by the template
 #. popular_posts_per_page not honored
 #. automatically update sitemap with new posts
 #. "mip map" all site images

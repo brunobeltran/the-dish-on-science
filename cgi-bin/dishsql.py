@@ -17,7 +17,7 @@ from xlsx_to_json import xlsx_to_json
 
 from contextlib import contextmanager
 import sqlalchemy as sa
-from sqlalchemy import Table, Column
+from sqlalchemy import Table, Column, orm
 from sqlalchemy.sql import select
 from sqlalchemy.sql.expression import and_
 from sqlalchemy.engine.url import URL
@@ -167,7 +167,7 @@ post_author_table = Table('post_author', Base.metadata,
 post_illustrator_table = Table('post_illustrator', Base.metadata,
     Column('author_id', sa.Integer, sa.ForeignKey('author.id'), index=True),
     Column('post_id', sa.Integer, sa.ForeignKey('post.id'), index=True))
-# TODO: to allow different nicknames per article, add a column here
+# to allow different nicknames per article, add a column here
 # and an analogous one in the illustrator table
     #Column('nickname', sa.String(limits['max']['name']))
 
@@ -203,6 +203,22 @@ class Author(Base):
         return "<Author(%r, %r)>" % (
             self.id, self.name
         )
+
+    def __init__(self):
+        self.add_line_broken_nickname()
+
+    @orm.reconstructor
+    def init_on_load(self):
+        self.add_line_broken_nickname()
+
+    def add_line_broken_nickname(self):
+        if len(self.nickname) > 14:
+            self.line_broken_nickname = self.nickname.replace(' ', '<br />') \
+                                                     .replace('-', '-<br />')
+        else:
+            self.line_broken_nickname = self.nickname
+
+
 
     @classmethod
     def get_or_create(cls, author_dict, session=None,
@@ -342,13 +358,6 @@ def fix_teams(post_dict, session):
     if not 'teams' in post_dict:
         raise CannotFixError('No teams were provided when '
                              + 'constructing Post: ' + post_dict['url_title'])
-    # # old way of checking if team names were valid, used the json file
-    # # holding team information directly
-    # all_teams = get_teams_from_disk()
-    # valid_team_names = [team for team in all_teams
-    #                   if team.name in self.teams
-    #                   or team.url_name in self.teams]
-    # self.teams = valid_team_names #TODO construct team objects from sql table here
 
     # it's not expected that Teams get created all the time, so if it looks
     # like you're trying to create a Team that does not exist, error out to
