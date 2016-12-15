@@ -9,7 +9,10 @@ In fact, sea urchins have been at the center of many scientific insights that sh
 
 Sea urchins don’t have eyes, ears, or noses, but they do have mouths. The sea urchin mouth is found on the underside of its body and consists of five little pointed ‘teeth’ ([charmingly called an “Aristotle’s lantern”](http://www.thelivingcoast.org/sea-urchins-teeth-and-aristotles-lantern/)). These hungry little mouths mainly eat seaweed growing on the rocky bottom of the sea.
 
-![Purple sea urchin eating kelp](./images/munchyurchin.mov)
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/uD7Vj6kKyjs?loop=1&playlist=uD7Vj6kKyjs"
+frameborder="0" allowfullscreen></iframe>
+
 *A purple sea urchin at Hopkins Marine Station munches on some kelp. Video at 8x normal speed by N. Low.*
 
 They can eat so much seaweed that they completely transform entire marine ecosystems. Imagine an army of lawnmowers that mows down everything in its path – trees, bushes, and grass. A large group of hungry, roaming sea urchins can have similar impacts on some marine ecosystems. In particular, sea urchins have been responsible for the deforestation of kelp forest ecosystems in many parts of the world.
@@ -20,6 +23,7 @@ They can eat so much seaweed that they completely transform entire marine ecosys
 Many kelp forests exist in a balance between how fast the kelp grows and how fast it gets eaten by sea urchins. When the kelp grows faster than sea urchins eat it, kelp forests can grow and expand. When sea urchins increase in number, the balance tips toward the other direction. If there are too many sea urchins, they can eat away all of the kelp and turn the lush, productive kelp forest into a ‘barren’ of sea urchins. This has widespread consequences: the kelp forest is home to many other animals, including many of the fish and shellfish that people like to eat. If the kelp forest disappears, so do all these other animals (and our seafood dinners!).
 
  ![A kelp forest and and urchin barren.](./images/kelpbarren.png)
+
 *High levels of sea urchin grazing can ‘tip’ a kelp forest ecosystem into an urchin barren. Photos by [NOAA's National Marine Sanctuaries](https://www.flickr.com/photos/onms/26972424160/in/photolist-H6sHZS-7fas5P-Ho8UoQ) and N. Low.*
 
 This drastic change in ecosystem state has been observed in many different types of kelp forests all over the world. Because it is so dramatic and widespread, many scientists use this kelp forest-urchin barren system as a model to study ‘tipping points’ in ecosystems. For example, how many sea urchins can a kelp forest have before it ‘tips over’ to become an urchin barren? And if the number of sea urchins goes down, does the urchin barren turn back into a lush kelp forest? By understanding how these tipping points work, we can learn how to better manage ecosystems and keep them from ‘tipping’ into a less productive, less desirable state.
@@ -31,10 +35,19 @@ In other words, it is easier to prevent an ecosystem from ‘tipping over’ int
 
 ***Why we need predators***
 
-So how do you reduce a population of underwater lawnmowers? Well, you find something that eats them. [Sea otters are really, really good at eating sea urchins](https://www.youtube.com/watch?v=dEELVW0V6tg). When there are sea otters around, there are fewer sea urchins, and those sea urchins also spend more time hiding instead of eating kelp. Therefore, the sea otters have an indirect, beneficial effect on the kelp, and they tip the ecosystem toward the ‘kelp forest’ state.
+So how do you reduce a population of underwater lawnmowers? Well, you find something that eats them.
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/dEELVW0V6tg"
+frameborder="0" allowfullscreen></iframe>
+
+*Sea otters are really, really good at eating sea urchins*
+
+When there are sea otters around, there are fewer sea urchins, and those sea urchins also spend more time hiding instead of eating kelp. Therefore, the sea otters have an indirect, beneficial effect on the kelp, and they tip the ecosystem toward the ‘kelp forest’ state.
 
 
  ![Sea otter eating a sea urchin](./images/otterurchin.jpg)
+
 *Sea otters can control sea urchin populations by eating them, and thus have positive effects on kelp forests. Photo by [Matt Knoth](https://www.flickr.com/photos/mattknoth/1066152486/in/photolist-pgx26g-ovS5q1-7rCGbY-4wMcJK-oYL59R-oYMjFU-F5FhrQ-85VMgb-4N4uEU-8rBrx3-4U4Cnu-DrSbH-4WvcE4-2CdiZq-8rBrqf-2XRzB4-5NPGTU-bjW8xd-6UUdZF-rbLJcR-3KEBaB-5BTzFG-5ia6ZM-oonRa4-rvKUGn-rKVm25-qRdmQS-rvCmkw-rNde38-rNdeRT-rN8evP-rN8dZP-rKVnHG) ([CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)).*
 
 Because the effects of the sea otters ‘cascade’ down the food chain, scientists call this relationship between sea otters, sea urchins, and kelp a ‘trophic cascade’.  This is actually one of the best known examples of a trophic cascade –  crack open a textbook with a section on community ecology, and there’s a good chance you’ll see an otter, an urchin, and kelp.
