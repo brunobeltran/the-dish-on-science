@@ -19,6 +19,10 @@
     {{ post.html|safe }}
     <footer>
         <ul class="stats">
+            {% for author in post.authors %}
+            <!-- <li><a href="/authors/{{ author.url_name }}">{{ author.nickname }}</a></li> -->
+            <li>{{ author.nickname }}</li>
+            {% endfor %}
             {% for team in post.teams %}
             <li><a href="/topics/{{ team.url_name }}">{{ team.name }}</a></li>
             {% endfor %}
