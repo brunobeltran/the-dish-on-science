@@ -4,7 +4,7 @@ Goals
 
 #. popular_posts_per_page not honored
 #. automatically update sitemap with new posts
-#. "mip map" all site images
+#. "mip map" all site images, minify all css/js/html
 #. popular posts image sizes are heterogenous
 #. Search box
 #. make a page to look at a specific author's articles, with optional bio at top
