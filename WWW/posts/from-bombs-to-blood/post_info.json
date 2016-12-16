@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Samantha Piekos",
+            "nickname": "Sam Piekos"
+        }
+    ],
+    "blurb": "An overview of the history of stem cells",
+    "description": "Stem cells are a hot topic. They come up in conversations a lot: from the high hopes we have for the development of new stem cell therapies to the ethics of embryonic stem cell research. We talk about stem cells a great deal, but what exactly are they?",
+    "five_by_two_image_src": "./images/Human_embryonic_stem_cells.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2016-12-16",
+    "teams": [
+        "cell-biology"
+    ],
+    "title": "From Bombs to Blood: The Evolution of Stem Cell Biology",
+    "two_by_one_image_src": "",
+    "url_title": "from-bombs-to-blood"
+}
