@@ -678,7 +678,7 @@ class Post(Base):
 
     @property
     def absolute_url(self):
-        return thedish.thedish.url + self.url
+        return thedish.dish_info.url + self.url
 
     @property
     def post_directory(self):

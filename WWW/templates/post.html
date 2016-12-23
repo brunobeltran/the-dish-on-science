@@ -1,5 +1,12 @@
 {% extends "index.html" %}
 {% block title %} {{ post.title }} | {{ thedish.official_name }} {% endblock %}
+{% block meta %}
+    <meta property="og:url"       content="{{ post.absolute_url }}" />
+    <meta property="og:type"      content="website" />
+    <meta property="og:title"     content="{{ post.title }}" />
+    <meta property="og:description"   content="{{ post.description }}" />
+    <meta property="og:image" content="{{ post.five_by_two_image_src }}" />
+{% endblock %}
 {% block main %}
 <article class="post">
     <header>
@@ -12,6 +19,9 @@
 {% for author in post.authors %}
         <a href="{{ author.headshot_src }}" class="author"><span class="name">{{ author.line_broken_nickname | safe }}</span><img src="{{ author.headshot_src }}" alt="" /></a>
 {% endfor %}
+        <a class="icon fa-reddit" href="https://www.reddit.com/submit?url={{ post.absolute_url }}&title={{ post.title }}"><span class="label">Reddit</span></a>
+        <a class="icon fa-twitter" href="https://twitter.com/share?text={{ post.blurb }}&url={{ post.absolute_url }}"><span class="label">Twitter</span></a>
+        <a class="icon fa-facebook" href="http://www.facebook.com/sharer.php?u={{ post.absolute_url }}"><span class="label">Facebook</span></a>
         </div>
     </header>
     <span class="title image">
@@ -26,24 +36,9 @@
             {% for team in post.teams %}
             <li><a href="/topics/{{ team.url_name }}">{{ team.name }}</a></li>
             {% endfor %}
-            <!--
-            <li><div class="fb-like"
-                data-href="{{ post.absolute_url }}"
-                data-layout="standard"
-                data-action="like"
-                data-show-faces="true"></div>
-            </li>
-            <li><a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="{{ post.absolute_url }}" data-via="Dish_on_Science">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            </li>
-            <li><a href="https://twitter.com/Dish_on_Science" class="twitter-follow-button" data-show-count="false">Follow @Dish_on_Science</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            </li>
-            -->
-            <!-- if we wanted to have our own unpoliced like system...
-            <li><a href="#" class="icon fa-heart">28</a></li>
-            <li><a href="#" class="icon fa-comment">128</a></li>
-            -->
+            <li><a class="icon fa-reddit" href="https://www.reddit.com/submit?url={{ post.absolute_url }}&title={{ post.title }}"><span class="label">Reddit</span></a></li>
+            <li><a class="icon fa-twitter" href="https://twitter.com/share?text={{ post.blurb }}&url={{ post.absolute_url }}"><span class="label">Twitter</span></a></li>
+            <li><a class="icon fa-facebook" href="http://www.facebook.com/sharer.php?u={{ post.absolute_url }}"><span class="label">Facebook</span></a></li>
         </ul>
     </footer>
 </article>

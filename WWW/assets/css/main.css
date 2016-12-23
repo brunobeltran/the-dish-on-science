@@ -2724,6 +2724,7 @@
                         .post > footer .stats li .icon:before {
                             color: rgba(160, 160, 160, 0.3);
                             margin-right: 0.75em;
+                            font-size: large;
                         }
 
         @media screen and (max-width: 980px) {
@@ -2808,6 +2809,13 @@
 
                             .post > header .meta .author img {
                                 width: 3.5em;
+                            }
+
+                            .post > footer .stats li .icon {
+                            }
+
+                            .post > header .meta a .icon {
+                                font-size: larger;
                             }
 
         }

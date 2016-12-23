@@ -14,9 +14,9 @@ file, the-dish.conf
 css-html-js-minify,
 python-dateutil, xlrd, markdown, pymysql, sqlalchemy, enum34, and flask
 
-The markdown and currently no other modules are installed as git submodules in
-subdirectories of cgi-bin and manually added to sys.path in the relevant places,
-since Stanford's servers do not give us any way to install packages ourselves.
+The markdown and xlrd are installed as git submodules in subdirectories of
+cgi-bin and manually added to sys.path in the relevant places, since Stanford's
+servers do not give us any way to install packages ourselves.
 
 Run the website locally by executing:
 $ python2 cgi-bin/dishflask.py

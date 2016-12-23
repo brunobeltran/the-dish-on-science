@@ -27,13 +27,13 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!-- open graph tags allow e.g. facebook to show a preview of the site -->
+{% block meta %}
     <meta property="og:url"       content="{{ thedish.url }}" />
     <meta property="og:type"      content="website" />
     <meta property="og:title"     content="{{ thedish.official_name }}" />
     <meta property="og:description"   content="{{ thedish.long_name }}" />
-    <!-- <meta property="og:description"   content="The Dish on Science: As
-       Told by Stanford Graduate Students" /> -->
     <meta property="og:image" content="{{ thedish.logo_src }}" />
+{% endblock %}
   </head>
   <body>
     <script>
