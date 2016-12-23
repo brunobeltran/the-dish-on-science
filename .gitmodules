@@ -1,3 +1,6 @@
 [submodule "cgi-bin/Python-Markdown"]
 	path = cgi-bin/Python-Markdown
 	url = https://github.com/waylan/Python-Markdown.git
+[submodule "cgi-bin/xlrd"]
+	path = cgi-bin/xlrd
+	url = https://github.com/python-excel/xlrd.git

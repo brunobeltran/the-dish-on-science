@@ -1,6 +1,7 @@
 import sys
 import os
 import logging
+sys.path = ['xlrd'] + sys.path
 import xlrd
 import json
 
