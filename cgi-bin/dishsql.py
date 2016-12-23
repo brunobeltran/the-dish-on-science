@@ -698,7 +698,6 @@ class Post(Base):
                 or os.path.isfile(md_file) \
                 and os.path.getctime(md_file) > os.path.getctime(html_file)
         if should_rebuild_html:
-            md_text = codecs.open(md_file, 'r', encoding='utf-8').read()
             html = markdownFromFile(input=md_file, output=html_file,
                                     encoding='utf-8')
         return codecs.open(html_file, 'r', encoding='utf-8').read()
