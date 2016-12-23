@@ -309,6 +309,14 @@ class Team(Base):
     def from_urlname(cls, url_name, session):
         return session.query(Team).filter_by(url_name=url_name).first()
 
+    @property
+    def url(self):
+        return '/topics/' + str(self.url_name)
+
+    @property
+    def absolute_url(self):
+        return thedish.dish_info.url + self.url
+
 # to support the old post_info.json format
 default_post_dict_keys = ['title', 'url_title', 'blurb', 'description',
                           'publication_date', 'five_by_two_image_src',

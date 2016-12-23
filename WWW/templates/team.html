@@ -1,6 +1,14 @@
 {% extends "index.html" %}
 {% block title %} {{ team.name }} | {{ thedish.official_name }} {% endblock %}
 {% block main_header %}
+{% block meta %}
+    <meta name="description" content="{{ team.description }}" />
+    <meta property="og:url"       content="{{ team.absolute_url }}" />
+    <meta property="og:type"      content="website" />
+    <meta property="og:title"     content="{{ team.name }}" />
+    <meta property="og:description"   content="{{ team.description }}" />
+    <meta property="og:image" content="{{ team.logo_src }}" />
+{% endblock %}
 <section id="team">
     <img class="logo" src="{{ team.logo_src }}" alt="" />
     <header>

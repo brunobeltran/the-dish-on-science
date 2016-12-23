@@ -33,6 +33,7 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!-- open graph tags allow e.g. facebook to show a preview of the site -->
 {% block meta %}
+    <meta name="description" content="{{ thedish.description }}" />
     <meta property="og:url"       content="{{ thedish.url }}" />
     <meta property="og:type"      content="website" />
     <meta property="og:title"     content="{{ thedish.official_name }}" />
