@@ -2840,6 +2840,12 @@
                         font-size: 1.1em;
                     }
 
+                    /* we hack away the margin for full size screens, cancel
+                     * that out here */
+                    .post > header .meta > :last-child {
+                            margin: 0 0 1em 0;
+                    }
+
         }
 
         @media screen and (max-width: 480px) {
@@ -2865,12 +2871,19 @@
                     /* instead of hiding author name, we will hide author
                      * picture, since nobody uses it */
                     /* display: none; */
+                    margin: 0 0 0 0;
                 }
 
                 .post > header .meta .author > img {
                     /* instead of hiding author name, we will hide author
                      * picture, since nobody uses it */
                     display: none;
+                }
+
+                /* don't space out social media icons too much on small screens
+                 * */
+                .post > header .meta > a.icon {
+                        margin: 0 0 0em 0;
                 }
 
             .post > .image.featured {
