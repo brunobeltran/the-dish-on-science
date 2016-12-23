@@ -13,7 +13,8 @@ import random
 
 # for creating posts objects from a directory
 from xlsx_to_json import xlsx_to_json
-# from markdown import markdownFromFile
+sys.path = ['Python-Markdown'] + sys.path
+from markdown import markdownFromFile
 
 from contextlib import contextmanager
 import sqlalchemy as sa
@@ -697,11 +698,9 @@ class Post(Base):
                 or os.path.isfile(md_file) \
                 and os.path.getctime(md_file) > os.path.getctime(html_file)
         if should_rebuild_html:
-            #md_text = codecs.open(md_file, 'r', encoding='utf-8').read()
-            # html = markdownFromFile(input=md_file, output=html_file,
-            #                         encoding='utf-8')
-            pass
-            #codecs.open(html_file, 'w', encoding='utf-8', errors='xmlcharrefreplace').write(html)
+            md_text = codecs.open(md_file, 'r', encoding='utf-8').read()
+            html = markdownFromFile(input=md_file, output=html_file,
+                                    encoding='utf-8')
         return codecs.open(html_file, 'r', encoding='utf-8').read()
 
     @staticmethod
