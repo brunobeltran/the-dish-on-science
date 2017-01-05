@@ -35,7 +35,7 @@ In other words, it is easier to prevent an ecosystem from ‘tipping over’ int
 
 ***Why we need predators***
 
-So how do you reduce a population of underwater lawnmowers? Well, you find something that eats them.[Sea otters are really, really good at eating sea urchins](https://www.youtube.com/watch?v=dEELVW0V6tg)
+So how do you reduce a population of underwater lawnmowers? Well, you find something that eats them. [Sea otters are really, really good at eating sea urchins](https://www.youtube.com/watch?v=dEELVW0V6tg). When there are sea otters around, there are fewer sea urchins, and those sea urchins also spend more time hiding instead of eating kelp. Therefore, the sea otters have an indirect, beneficial effect on the kelp, and they tip the ecosystem toward the ‘kelp forest’ state.
 When there are sea otters around, there are fewer sea urchins, and those sea urchins also spend more time hiding instead of eating kelp. Therefore, the sea otters have an indirect, beneficial effect on the kelp, and they tip the ecosystem toward the ‘kelp forest’ state.
 
 
