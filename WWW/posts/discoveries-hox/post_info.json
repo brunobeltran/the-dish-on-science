@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/penguin.png",
+            "name": "Susanna Brantley",
+            "nickname": "Susanna Brantley"
+        }
+    ],
+    "blurb": "Why do we have 10 fingers and toes? Learn about a set of genes responsible for our body plan.",
+    "description": "The Bay Area is a great place for hiking, and just last weekend I visited a nearby state park. On the trail, I saw two lizards with long tails sunning themselves on a rock and a millipede moving quickly toward the shade. A lizard\u2019s leg is made up of muscles, bones, and nerves, just like a human hiker\u2019s leg, but the details and shapes are very different. Why does a millipede have hundreds of legs, but most insects have only six? The answer? A special set of genes \u2013 the Hox genes.",
+    "five_by_two_image_src": "./images/bithorax.png",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/bithorax1x1.png",
+    "publication_date": "2017-01-09",
+    "teams": [
+        "monumental-scientific-discoveries"
+    ],
+    "title": "Hox Genes: A Body's Blueprint",
+    "two_by_one_image_src": "./images/bithorax2x1.png",
+    "url_title": "discoveries-hox"
+}
