@@ -158,7 +158,8 @@ def xlsx_to_json(xlsx_file_name, json_file_name):
             break
     else:
         raise BadRowException('Row labels differ from all known versions of '
-                              + 'post_info.xlsx file: ' + ' '.join(title_rvs))
+                              + 'post_info.xlsx in file "' + xlsx_file_name
+                              + '": ' + ' '.join(title_rvs))
     value_col = sh.col(values_col_idx)
     post = {}
     post['title'] = value_col[idx.title].value
@@ -170,7 +171,8 @@ def xlsx_to_json(xlsx_file_name, json_file_name):
     try:
         ct = sh.cell_type(idx.publication_date, values_col_idx)
     except IndexError:
-        raise BadRowException('No publication date provided!')
+        raise BadRowException('in file "' + xlsx_file_name
+                              + '":No publication date provided!')
     if ct == xlrd.XL_CELL_DATE:
         pdate = value_col[idx.publication_date].value
         pdate = xlrd.xldate.xldate_as_datetime(pdate, wb.datemode)

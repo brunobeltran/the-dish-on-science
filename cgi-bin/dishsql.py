@@ -205,21 +205,14 @@ class Author(Base):
             self.id, self.name
         )
 
-    def __init__(self):
-        self.add_line_broken_nickname()
-
-    @orm.reconstructor
-    def init_on_load(self):
-        self.add_line_broken_nickname()
-
-    def add_line_broken_nickname(self):
+    @property
+    def line_broken_nickname(self):
+        if self.nickname is None:
+            return None
         if len(self.nickname) > 14:
-            self.line_broken_nickname = self.nickname.replace(' ', '<br />') \
-                                                     .replace('-', '-<br />')
+            return self.nickname.replace(' ', '<br />').replace('-', '-<br />')
         else:
-            self.line_broken_nickname = self.nickname
-
-
+            return self.nickname
 
     @classmethod
     def get_or_create(cls, author_dict, session=None,
