@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Diana LaScala-Gruenewald",
+            "nickname": ""
+        }
+    ],
+    "blurb": "How SCUBA divers and marine mammals avoid the crippling illness that haunted the men who built the Brooklyn Bridge",
+    "description": "The Brooklyn Bridge is an engineering marvel.  At the time it was completed in 1883, it was the world\u2019s longest suspension bridge, stretching almost a mile between Brooklyn and Manhattan and dwarfing the tallest of New York\u2019s skyscrapers.  But for the workers who labored beneath the East River to create its foundation, the Brooklyn Bridge was a living hell.  Many of the laborers suffered health problems, including flu-like symptoms, aches that sometimes grew into excruciating pains, paralysis, brain damage, heart attacks and even death.  All together, these symptoms came to be known as a disease called \u201cthe bends.\u201d",
+    "five_by_two_image_src": "./images/feature_image.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-01-24",
+    "teams": [
+        "marine-biology"
+    ],
+    "title": "Getting Bent",
+    "two_by_one_image_src": "",
+    "url_title": "getting-bent"
+}
