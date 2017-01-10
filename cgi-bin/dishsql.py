@@ -376,8 +376,8 @@ def fix_teams(post_dict, session):
             continue
         # if the string provided doesn't match the team name or url name,
         # it's not valid
-        raise CannotFixError("Post {} references the team {}, which "
-                            + "does not exist!".format(post_dict['url_title'], team))
+        raise CannotFixError(post_dict['url_title'] + " references the team "
+                             + team + ", which does not exist!")
 
 def fix_authors(post_dict, session=None):
     # if no author name specified, use team name
@@ -503,13 +503,17 @@ def fix_image_file_name(post_dict, file_name):
         # don't forget to strip the / from self.url, os.path.join ignores
         # all arguments that come before the first one that it thinks looks
         # like an absolute path
-        supposed_file = os.path.normpath(os.path.join(thedish.www_dir, 'posts', post_dict['url_title'], file_name))
+        supposed_file = os.path.normpath(os.path.join(thedish.www_dir,
+                                                      'posts',
+                                                      post_dict['url_title'],
+                                                      file_name))
         if not os.path.isfile(supposed_file):
             # logger.error("Looks like you referred to an image with a " \
                             # + "relative URL, but the image does not appear " \
                             # + " to exist: " \
                             # + file_name)
-            raise CannotFixError('Cannot find image file: ' + file_name)
+            raise CannotFixError(post_dict['url_title']
+                                 + ': Cannot find image file: ' + file_name)
         # make into absolute path for website
         file_name = os.path.normpath(os.sep + os.path.join('posts', post_dict['url_title'], file_name))
     else: # if looks_like_absolute_attempt.match(file_name):
@@ -523,7 +527,8 @@ def fix_image_file_name(post_dict, file_name):
             # logger.error("Looks like you're trying to use a post-specific " \
                             # + "author headshot, but the file does not exist: " \
                             # + file_name)
-            raise CannotFixError('Cannot find image file: ' + file_name)
+            raise CannotFixError(post_dict['url_title']
+                                 + 'Cannot find image file: ' + file_name)
     return file_name
 
 
