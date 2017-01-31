@@ -1,5 +1,3 @@
-![](./images/Park.jpg)
-
 You probably remember the 1993 film, Jurassic Park. If not, the skinny is that a bunch of ambitious scientists use dinosaur DNA from preserved mosquitoes combined with modern reptile DNA to create a family fun dinosaur theme park (with real-life dinosaurs). However, you might also remember this scenario is not all sunshines and rainbows for the humans. A.K.A, the dinosaurs bring down the hammer, eat a lot of people, and destroy the park.
 
 But…. why am I talking about Jurrasic Park? It is because this work of science fiction is a little more science and a little less fiction these days. I am not actually talking dinosaurs here, but we are now in an era where de-extinction is becoming possible.
