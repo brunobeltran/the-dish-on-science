@@ -608,6 +608,18 @@ class Post(Base):
         # reconstructed from its JSON specification
         self.view_count = 0
 
+        # and always reconstruct html if necessary
+        html_file = os.path.join(self.post_directory, 'post.html')
+        md_file = os.path.join(self.post_directory, 'post.md')
+        # if not os.path.isfile(md_file) and not os.path.isfile(html_file):
+        #     #TODO: allow LaTeX.
+        should_rebuild_html = not os.path.isfile(html_file) \
+                or os.path.isfile(md_file) \
+                and os.path.getctime(md_file) > os.path.getctime(html_file)
+        if should_rebuild_html:
+            markdownFromFile(input=md_file, output=html_file,
+                             encoding='utf-8',
+                             extensions=['markdown.extensions.footnotes'])
         # gracefully return an object even is there is no connection
         if session is None:
             return self
@@ -618,19 +630,6 @@ class Post(Base):
             # this line wouldn't work in a classical constructor
             self = execute_update_behavior(self, existing_post, session, update_behavior)
         return self
-        # if update_behavior == UpdateBehavior.leave:
-        #     self = existing_post
-        # elif update_behavior == UpdateBehavior.update:
-        #     for attr, attr_state in self._sa_instance_state.attrs.items():
-        #         if attr_state.state.modified:
-        #             setattr(existing_post, attr, getattr(self, attr))
-        # elif update_behavior == UpdateBehavior.replace:
-        #     existing_post.delete()
-        #     session.add(self)
-        # else:
-        #     raise ValueError("Post.get_or_create: unknown UpdateBehavior")
-        # return self
-
 
     @classmethod
     def from_urltitle(cls, url_title, session):
@@ -692,20 +691,10 @@ class Post(Base):
 
     @property
     def html(self):
-        """This goes against our usual rule of not doing stuff related to
-        constructing posts during normal website operation, but this only
-        incurs one ctime check, so we'll let it go for now."""
+        """Read the html file into memory and return it."""
         html_file = os.path.join(self.post_directory, 'post.html')
-        md_file = os.path.join(self.post_directory, 'post.md')
-        if not os.path.isfile(md_file) and not os.path.isfile(html_file):
-            #TODO: allow LaTeX. For now, there's no post content here, return an empty post
-            return ''
-        should_rebuild_html = not os.path.isfile(html_file) \
-                or os.path.isfile(md_file) \
-                and os.path.getctime(md_file) > os.path.getctime(html_file)
-        if should_rebuild_html:
-            html = markdownFromFile(input=md_file, output=html_file,
-                                    encoding='utf-8')
+        if not os.path.isfile(html_file):
+            return '<p>Error, post not found!</p>'
         return codecs.open(html_file, 'r', encoding='utf-8').read()
 
     @staticmethod
