@@ -147,19 +147,33 @@ def xlsx_to_json(xlsx_file_name, json_file_name):
     title_rvs = [row.value for row in title_col]
     # first a simple sanity check that they're using the right excel sheet
     row_types = [title_rows, old_title_rows, old2_title_rows]
+    # save what was wrong on best attempt
+    best_bad_rows = title_rvs
+    best_good_rows = RowIdx
     idxs = [RowIdx, OldRowIdx, Old2RowIdx]
     for i, rows in enumerate(row_types):
         bad_rows = []
+        good_rows = []
         for j, row in enumerate(title_rvs):
             if j >= len(rows) or rows[j] != row:
                 bad_rows.append(row)
+                good_row = '' if j >= len(rows) else rows[j]
+                good_rows.append(good_row) 
+        # if we found the set of rows that this Excel file is following
         if not bad_rows:
             idx = idxs[i]
             break
+        # otherwise check if this is the best we've done so far
+        if len(best_bad_rows) > len(bad_rows):
+            best_bad_rows = bad_rows
+            best_good_rows = good_rows
     else:
         raise BadRowException('Row labels differ from all known versions of '
                               + 'post_info.xlsx in file "' + xlsx_file_name
-                              + '": ' + ' '.join(title_rvs))
+                              + '". In closest match, the rows [[' 
+                              + ' '.join(best_bad_rows) + ']] differ from '
+                              + 'expected rows [[' + ' '.join(best_good_rows) 
+                              + ']].')
     value_col = sh.col(values_col_idx)
     post = {}
     post['title'] = value_col[idx.title].value
