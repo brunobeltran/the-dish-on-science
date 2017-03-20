@@ -498,6 +498,7 @@ def fix_image_file_name(post_dict, file_name):
         raise CannotFixError('Cannot fix empty image file name from post: '
                        + post_dict['url_title'])
     looks_like_local_attempt = re.compile('(\./).*')
+    looks_like_raw_filename = re.compile('[a-zA-Z0-9-_]+\.[a-zA-Z]')
     # looks_like_absolute_attempt = re.compile('.*/posts/.*/images/.*')
     if looks_like_local_attempt.match(file_name):
         # don't forget to strip the / from self.url, os.path.join ignores
@@ -516,19 +517,40 @@ def fix_image_file_name(post_dict, file_name):
                                  + ': Cannot find image file: ' + file_name)
         # make into absolute path for website
         file_name = os.path.normpath(os.sep + os.path.join('posts', post_dict['url_title'], file_name))
+    elif looks_like_raw_filename.match(file_name):
+        local_option = os.path.normpath(os.path.join(thedish.www_dir,
+                                                      'posts',
+                                                      post_dict['url_title'],
+                                                      'images',
+                                                      file_name))
+        absolute_option = os.path.normpath(os.path.join(thedish.www_dir,
+                                                        'images',
+                                                        file_name))
+        if os.path.isfile(local_option):
+            file_name = os.path.normpath(os.sep + os.path.join('posts',
+                                                               post_dict['url_title'],
+                                                               'images',
+                                                               file_name))
+        elif os.path.isfile(absolute_option):
+            file_name = os.path.normpath(os.sep + os.path.join('images', file_name))
+        else:
+            raise CannotFixError(post_dict['url_title'] + ': Cannot find file '
+                                 + file_name + '. Seems to be a filename with '
+                                 + 'no path information but not found in '
+                                 + '/images or in /posts/NAME/images.')
+
     else: # if looks_like_absolute_attempt.match(file_name):
         # if it's a properly formatted absolute url, it should start with
-        if file_name[0] == '/':
-            supposed_file = os.path.join(thedish.www_dir, file_name[1:])
-        # but try to do the right thing even if it doesn't
-        else:
-            supposed_file = os.path.join(thedish.www_dir, file_name)
+        if file_name[0] != '/':
+            # but try to do the right thing even if it doesn't
+            file_name = '/' + file_name
+        supposed_file = os.path.join(thedish.www_dir, file_name[1:])
         if not os.path.isfile(supposed_file):
             # logger.error("Looks like you're trying to use a post-specific " \
                             # + "author headshot, but the file does not exist: " \
                             # + file_name)
             raise CannotFixError(post_dict['url_title']
-                                 + 'Cannot find image file: ' + file_name)
+                                 + ': Cannot find image file: ' + file_name)
     return file_name
 
 
