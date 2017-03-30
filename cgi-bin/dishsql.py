@@ -813,6 +813,28 @@ def insert_all_teams(update_behavior=UpdateBehavior.update):
         # request that all changes be committed.
         session.add_all(teams)
 
+def delete_post(url_title, session=None):
+    """Deletes a post from the sql server associated with the given session
+    (the one produced by dishsql.Session() is the default. Does not issue
+    commit or close to session if it was passed in, but will clean up default
+    session.
+
+    Posts are identified by url_title.
+    Raises ValueError on missing post to delete.
+
+    Returns deleted post, which will obviously have many useful attributes
+    missing, since they are handled by SQL association tables.."""
+    post = session.query(Post).filter_by(url_title=post_name).first()
+    if post is None:
+        raise ValueError('Post with {url_title:s} does not exist!'.format(url_title=url_title))
+    if session is None:
+        with session_scope() as session:
+            session.delete(post)
+    else:
+        session.delete(post)
+    return post
+
+
 def insert_post(post_dir, update_behavior=UpdateBehavior.update):
     """Attempt to insert/update a post from it's directory"""
     with session_scope() as session:
