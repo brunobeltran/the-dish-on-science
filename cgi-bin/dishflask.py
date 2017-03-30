@@ -1,5 +1,5 @@
 #!/afs/ir/group/thedishonscience/venv-tdos/bin/python3.4
-from flask import Flask, render_template, url_for, send_from_directory, request, g
+from flask import Flask, render_template, url_for, send_from_directory, request, g, redirect
 from collections import namedtuple
 import random
 import os
@@ -131,6 +131,13 @@ def send_post(post_name):
         error_string = "No post with URL '{}posts/{}'".format(dish_info.url, post_name)
         return render_template_with_defaults('index.html', error=error_string)
     return render_template_with_defaults('post.html', post=matching_post)
+
+@app.route('/editing/articles')
+@app.route('/editing/articles.xlsx')
+def redirect_to_drive():
+    return redirect("https://drive.google.com/open?id=1R69WfpVN3L8xKHOSkQHUpIPWH-8kdpxCEwqbGm5bsrQ",
+                    code=302)
+
 
 # @app.route('/assets/<path:path>')
 # def send_assets(path):
