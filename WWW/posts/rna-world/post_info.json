@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/elephant.png",
+            "name": "Jeremy Work",
+            "nickname": ""
+        }
+    ],
+    "blurb": "How life on earth first may have begun, through the evolution of self-sufficient RNA molecules.",
+    "description": "Before there were chickens or eggs, there were RNA molecules that gained the ability to duplicate themselves. How did these molecules manage to do this outside of cells on the early earth, and how did this lead to life as we know it?",
+    "five_by_two_image_src": "./images/soup.png",
+    "illustrators": [
+        {
+            "headshot_src": "/images/elephant.png",
+            "name": "Melissa Ko",
+            "nickname": ""
+        }
+    ],
+    "one_by_one_image_src": "./images/soup3.png",
+    "publication_date": "2017-03-29",
+    "teams": [
+        "biochemistry-and-bioinformatics"
+    ],
+    "title": "The RNA World: How all of life (maybe) began",
+    "two_by_one_image_src": "./images/soup2.png",
+    "url_title": "rna-world"
+}
