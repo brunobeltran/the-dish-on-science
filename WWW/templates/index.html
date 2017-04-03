@@ -157,7 +157,7 @@
               <div class="meta">
                 <time class="published" datetime="{{ post.publication_date.strftime('%Y-%m-%d') }}">{{ post.publication_date.strftime('%B %d, %Y') }}</time>
       {% for author in post.authors %}
-              <a href="{{ author.headshot_src }}" class="author"><span class="name">{{ author.line_broken_nickname | safe }}</span><img src="{{ author.headshot_src }}" alt="" /></a>
+              <a href="{{ author.headshot_src }}" class="author"><span class="name">{{ author.line_broken_nickname | safe }}</span><img src="{{ author.headshot_src }}" alt="Headshot of {{ author.nickname }}" /></a>
       {% endfor %}
               </div>
             </header>
@@ -229,7 +229,7 @@
 
         <!-- Intro -->
         <section id="intro">
-          <a href="/" class="logo"><img src="{{ thedish.logo_src }}" alt="" /></a>
+          <a href="/" class="logo"><img src="{{ thedish.logo_src }}" alt="The Dish on Science logo" /></a>
           <header>
             <h2>{{ thedish.official_name }}</h2>
             <p>{{ thedish.subtitle }}</p>
