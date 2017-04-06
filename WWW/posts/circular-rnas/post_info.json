@@ -3,12 +3,12 @@
         {
             "headshot_src": "",
             "name": "Joy Wan",
-            "nickname": ""
+            "nickname": "Joy Y. Wan"
         }
     ],
     "blurb": "The quest towards a well-rounded understanding of RNA",
-    "description": "In the biological world, we see that many things come in different shapes and sizes: animals, plants, microbes, and proteins. It turns out that even RNA falls into that category. In this article, we will explore what circular RNAs are, the history of their discovery, and why we should care about them.",
-    "five_by_two_image_src": "./images/Research-Figure-5.jpg",
+    "description": "In the biological world, we see that many things come in different shapes and sizes: animals, plants, microbes, and proteins. It turns out that even RNA falls into that category. In this article, we will explore what circular RNAs are, the history of their discovery, and why we should care about them. ",
+    "five_by_two_image_src": "./images/circular-rna.png",
     "illustrators": [],
     "one_by_one_image_src": "",
     "publication_date": "2017-03-29",
