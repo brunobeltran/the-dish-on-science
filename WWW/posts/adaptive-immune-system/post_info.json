@@ -1,0 +1,15 @@
+{
+    "title": "The Adaptive Immune System: Attack of the Clones",
+    "publication_date": "2017-04-07",
+    "url_title": "adaptive-immune-system",
+    "five_by_two_image_src": "./images/attack-of-the-b-cell-clones.png",
+    "blurb": "Your Body’s Department of Defense: T cells and B cells",
+    "description": "Your body is tasked with fighting off hordes of microbes each day. So how does it keep you healthy? Your adaptive immune system plays a key role. It has two key features that work to keep your body free of foreign invaders: specificity and memory",
+    "teams": ["immune-system"],
+    "authors": [{
+        "name": "Jia Ying Toh",
+        "nickname": "Jia Ying Toh",
+        "headshot_src": "/images/paperplane.png"
+    }]
+}
+

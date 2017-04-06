@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Diana Li",
+            "nickname": ""
+        }
+    ],
+    "blurb": "New video footage shows how the Humboldt squid could use skin patterns to camouflage and communicate",
+    "description": "We may never truly know what animals are thinking and saying, but scientists are working to crack the animal communication code. This gets tricky for animals that don\u2019t emit any sound and don\u2019t live in a place that\u2019s easy to see. The Humboldt squid, which lives in the open ocean, falls into both categories, but that didn\u2019t deter researchers at Stanford and National Geographic. In a 2015 study, the team revealed some of the latest gossip among Humboldt squids in their natural oceanic habitat.",
+    "five_by_two_image_src": "./images/Dosidicus_Patrick.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/Dosidicus_Patrick_1x1.jpg",
+    "publication_date": "2017-04-07",
+    "teams": [
+        "marine-biology"
+    ],
+    "title": "If Squids Could Talk",
+    "two_by_one_image_src": "./images/Dosidicus_Patrick_2x1.jpg",
+    "url_title": "if-squids-could-talk"
+}

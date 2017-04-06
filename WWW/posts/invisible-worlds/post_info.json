@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Diana LaScala-Gruenewald",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Modern technology enables real-time observations of the deep ocean",
+    "description": "It\u2019s often said that we know more about space than we do about Earth\u2019s own oceans.  In the case of the midocean ridges, the maxim is pretty much true.",
+    "five_by_two_image_src": "./images/image1.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-04-07",
+    "teams": [
+        "marine-biology"
+    ],
+    "title": "Exploring Invisible Worlds",
+    "two_by_one_image_src": "",
+    "url_title": "invisible-worlds"
+}
