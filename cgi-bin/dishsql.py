@@ -666,6 +666,7 @@ class Post(Base):
         kwarg replace=True specifies whether to replace the entry with the data
         in the directory specified."""
         if not os.path.isdir(post_directory):
+            raise FileNotFoundError('No such post directory: {}'.format(post_directory))
             return None
         url_title = os.path.basename(post_directory)
         xlsx_file = os.path.join(post_directory, 'post_info.xlsx')
@@ -682,7 +683,7 @@ class Post(Base):
         elif os.path.isfile(json_file):
             return cls.from_json(json_file, session, update_behavior)
         else:
-            # logger.error("The post directory {} does not have a post_info file!".format(post_directory), file=sys.stderr)
+            raise FileNotFoundError("The post directory {} does not have a post_info file!".format(post_directory), file=sys.stderr)
             return None
 
     @classmethod
