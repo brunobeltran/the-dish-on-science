@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/elephant.png",
+            "name": "Jeremy Work",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Distinguishing fact from fiction surrounding the health and safety of genetically modified food.",
+    "description": "Genetic modification has allowed us to make better crops and food, yet the majority of the public is skeptical of the safety and quality of genetically modified food. Are these opinions founded, or can we mass dispel the myths surrounding these new efficient crops?",
+    "five_by_two_image_src": "./images/cobs.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-04-14",
+    "teams": [
+        "biochemistry-and-bioinformatics"
+    ],
+    "title": "Genetically modified food and you!",
+    "two_by_one_image_src": "",
+    "url_title": "genetically-modified-food"
+}

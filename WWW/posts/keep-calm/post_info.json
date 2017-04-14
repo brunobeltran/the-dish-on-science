@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/dinosaur.png",
+            "name": "Shizuka Yamada",
+            "nickname": ""
+        }
+    ],
+    "blurb": "You stress. Your friends stress. Your cells stress. Learn how cells keep calm by methylating mRNAs. ",
+    "description": "When cells are exposed to acute stresses they react with a series of molecular events collectively termed the 'cellular stress response.' Scientists in the Jaffrey group have revealed a novel method to fine-tuning the specific production of stress response proteins in a process they call m6A cap-independent translation.  ",
+    "five_by_two_image_src": "./images/keepcalm.png",
+    "illustrators": [
+        {
+            "headshot_src": "",
+            "name": "Shizuka Yamada",
+            "nickname": ""
+        }
+    ],
+    "one_by_one_image_src": "./images/keepcalm11.png",
+    "publication_date": "2017-04-14",
+    "teams": [
+        "cell-biology"
+    ],
+    "title": "Keep Calm and Methylate On",
+    "two_by_one_image_src": "./images/keepcalm21.png",
+    "url_title": "keep-calm"
+}
