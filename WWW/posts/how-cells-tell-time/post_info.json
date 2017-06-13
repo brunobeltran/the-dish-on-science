@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "./images/Grandi.jpg",
+            "name": "Fiorella Grandi",
+            "nickname": ""
+        }
+    ],
+    "blurb": "An overview of how your cells build molecular clocks. ",
+    "description": "An overview of how your cells build molecular clocks to maintain the daily cycles of your life.  ",
+    "five_by_two_image_src": "./images/cover.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-06-13",
+    "teams": [
+        "Cell Biology "
+    ],
+    "title": "Living by the CLOCK: How Cells Tell Time",
+    "two_by_one_image_src": "",
+    "url_title": "how-cells-tell-time"
+}

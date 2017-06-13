@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Melissa Ko",
+            "nickname": ""
+        }
+    ],
+    "blurb": "How unsupervised analysis of gene expression in tumors has guided personalized treatments for breast cancer patients.",
+    "description": "Breast cancer is the most common cancer in women and about a quarter of a million new cases of breast cancer will be diagnosed this year. For many years previously, patients with breast cancer have been prescribed essentially the same blanket treatment for their cancer. However, \u201cbreast cancer\u201d itself is not just one disease; patients who are diagnosed with breast cancer may have tumors that differ in many significant ways, including amount of aggression and sensitivity to drug treatments.\n",
+    "five_by_two_image_src": "./images/unsupervised-learning-example.png",
+    "illustrators": [
+        {
+            "headshot_src": "",
+            "name": "Melissa Ko",
+            "nickname": ""
+        }
+    ],
+    "one_by_one_image_src": "./images/unsupervised-learning-example-thumb.png",
+    "publication_date": "2017-06-13",
+    "teams": [
+        "biochemistry-and-bioinformatics"
+    ],
+    "title": "Breast Cancer - One Diagnosis, Many Different Diseases?",
+    "two_by_one_image_src": "./images/subtype-clustering-cropped.png",
+    "url_title": "clustering-breast-cancer-data"
+}
