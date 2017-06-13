@@ -11,8 +11,8 @@ app = Flask(__name__, static_url_path='')
 app.debug = False
 app.template_folder = os.path.join(www_dir, 'templates')
 
-posts_per_page = 3
-popular_posts_per_page = 5
+posts_per_page = 4
+popular_posts_per_page = 6
 
 # the canonical Flask way of initializing/tearing down a request-wide object
 @app.before_request

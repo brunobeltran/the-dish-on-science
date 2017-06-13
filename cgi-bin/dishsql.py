@@ -330,18 +330,19 @@ def fix_publication_date(post_dict):
 
 def fix_title(post_dict):
     if not validate_length(post_dict['title'], 'title'):
-        raise CannotFixError("Can't fix the title!")
+        raise CannotFixError("Title " + post_dict['title'] + " is too long!")
 
 def fix_url(post_dict):
     if not validate_length(post_dict['url_title'], 'url_title'):
-        raise CannotFixError('Cannot fix url_title!')
+        raise CannotFixError("URL title " + post_dict['url_title'] + " is too long!")
     allowed_chars = set(string.ascii_lowercase + string.digits + '-')
     if not set(post_dict['url_title']) <= allowed_chars:
-        pass # logger.warning('Illegal characters in URL!: ' + post_dict['url_title'])
+        raise CannotFixError('URL Title ' + post_dict['url_title'] +
+                'contains invalid characters! Use only [a-z0-9-]')
 
 def fix_blurb(post_dict):
     if not validate_length(post_dict['blurb'], 'blurb'):
-        raise CannotFixError('Cannot fix blurb!')
+        raise CannotFixError("Blurb " + post_dict['blurb'] + " is too long!")
 
 def fix_description(post_dict):
     if not 'description' in post_dict:
@@ -514,23 +515,19 @@ def fix_image_file_name(post_dict, file_name):
                             # + " to exist: " \
                             # + file_name)
             raise CannotFixError(post_dict['url_title']
-                                 + ': Cannot find image file: ' + file_name)
+                                 + ': Cannot find image file: ' + file_name
+                                 + ' at path ' + supposed_file)
         # make into absolute path for website
         file_name = os.path.normpath(os.sep + os.path.join('posts', post_dict['url_title'], file_name))
     elif looks_like_raw_filename.match(file_name):
-        local_option = os.path.normpath(os.path.join(thedish.www_dir,
-                                                      'posts',
-                                                      post_dict['url_title'],
-                                                      'images',
-                                                      file_name))
-        absolute_option = os.path.normpath(os.path.join(thedish.www_dir,
-                                                        'images',
-                                                        file_name))
+        local_option = os.path.normpath(os.path.join(
+                thedish.www_dir, 'posts', post_dict['url_title'], 'images',
+                file_name))
+        absolute_option = os.path.normpath(os.path.join(
+                thedish.www_dir, 'images', file_name))
         if os.path.isfile(local_option):
             file_name = os.path.normpath(os.sep + os.path.join('posts',
-                                                               post_dict['url_title'],
-                                                               'images',
-                                                               file_name))
+                    post_dict['url_title'], 'images', file_name))
         elif os.path.isfile(absolute_option):
             file_name = os.path.normpath(os.sep + os.path.join('images', file_name))
         else:
@@ -683,7 +680,7 @@ class Post(Base):
         elif os.path.isfile(json_file):
             return cls.from_json(json_file, session, update_behavior)
         else:
-            raise FileNotFoundError("The post directory {} does not have a post_info file!".format(post_directory), file=sys.stderr)
+            raise FileNotFoundError("The post directory {} does not have a post_info file!".format(post_directory))
             return None
 
     @classmethod
