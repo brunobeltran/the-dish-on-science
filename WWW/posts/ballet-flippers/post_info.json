@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Diana Li",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Unusual structures on the flippers of humpback whales aid swimming maneuverability",
+    "description": "We often associate sleek shapes with fast speed and agility. Think of hawks, tunas, rockets, and even Olympic swimmers. But the flippers of one of the ocean's largest swimmers, the humpback whale, is covered with bumps along the front. Given the trend towards slick, streamlined surfaces, why be bumpy where other animals (and manmade creations) are smooth?",
+    "five_by_two_image_src": "./images/whale_5x2.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/whale_1x1.jpg",
+    "publication_date": "2017-07-16",
+    "teams": [
+        "marine-biology"
+    ],
+    "title": "Ballet Flippers",
+    "two_by_one_image_src": "./images/whale_2x1.jpg",
+    "url_title": "ballet-flippers"
+}
