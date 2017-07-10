@@ -41,7 +41,7 @@ def update_counts_manually(file_name):
 
 
 default_preview_text = "Announcing cool new content from The Dish on Science!"
-def create_announcement_email(new_posts, extra_article_pairs, preview_text=None, events=None, date=None):
+def create_announcement_email_given_posts_(new_posts, extra_article_pairs, preview_text=None, events=None, date=None):
     if date is None:
         date = datetime.datetime.now()
     if preview_text is None:
@@ -52,7 +52,7 @@ def create_announcement_email(new_posts, extra_article_pairs, preview_text=None,
     email_url = thedish.dish_info.url + email_rel_url
     email_file = thedish.www_dir + email_rel_url
     extra_article_pairs = [(extra_article_pairs[2*i], extra_article_pairs[2*i+1])
-                           for i in range(len(extra_article_pairs)/2)]
+                           for i in range(int(len(extra_article_pairs)/2))]
     context = {'preview_text': preview_text, 'new_posts': new_posts,
                'article_pairs': extra_article_pairs, 'events': events,
                'thedish': thedish.dish_info, 'archive_url': email_url,
@@ -61,12 +61,10 @@ def create_announcement_email(new_posts, extra_article_pairs, preview_text=None,
     with codecs.open(email_file, 'w', encoding='utf=8') as f:
         f.write(email)
 
-
-
-
-
-
-
-
-
-
+def create_announcement_email(new_posts, extra_article_pairs,
+        preview_text=None, events=None, date=None):
+    with dishsql.session_scope() as session:
+        new_posts = [dishsql.get_post_by_name(post, session) for post in new_posts]
+        extra_article_pairs = [dishsql.get_post_by_name(post, session) for post in extra_article_pairs]
+        return create_announcement_email_given_posts_(new_posts,
+                extra_article_pairs, preview_text, events, date)
