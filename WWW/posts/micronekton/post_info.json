@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/Eportner_profile.png",
+            "name": "Elan Portner",
+            "nickname": ""
+        }
+    ],
+    "blurb": "The largest animal migration in the world is one you've probably never heard of.",
+    "description": "Across the global ocean, billions of small animals undergo a daily commute of hundreds of feet between their daytime habitat in the ocean depths and their nighttime feeding grounds just below the surface of the water. This may not sound impressive compared to the thousands of miles covered during the migrations of whales or birds, but when considered collectively, the migration of these tiny animals blows all other animal migrations out of the water.",
+    "five_by_two_image_src": "./images/dsl_5x2.png",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/dsl_1x1.png",
+    "publication_date": "2017-07-10",
+    "teams": [
+        "Marine Biology"
+    ],
+    "title": "Tiny fins making a big splash",
+    "two_by_one_image_src": "./images/dsl_2x1.png",
+    "url_title": "micronekton"
+}

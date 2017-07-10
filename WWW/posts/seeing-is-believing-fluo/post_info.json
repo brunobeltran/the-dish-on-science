@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Bryan Xie",
+            "nickname": ""
+        }
+    ],
+    "blurb": "How can we tell one cell from another?",
+    "description": "Fluorescence generates vibrant colors that allows us to tell one cell from another, and even one biomolecule from another. This has led to great advances in our understanding of immunology by allowing us a peek into biological interactions at the cellular level.",
+    "five_by_two_image_src": "./images/fluorescent-cells.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-07-10",
+    "teams": [
+        "Cell Biology"
+    ],
+    "title": "Seeing is Believing: Fluorescence",
+    "two_by_one_image_src": "",
+    "url_title": "seeing-is-believing-fluo"
+}
