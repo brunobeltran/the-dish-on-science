@@ -31,9 +31,9 @@ def update_counts_manually(file_name):
         if match:
             to_update[match.groups()[0]] = counts[i].value
 
-    with dishsql_admin.session_scope() as session:
+    with dishsql.session_scope() as session:
         for page, count in to_update.items():
-            post = session.query(dishsql_admin.Post).\
+            post = session.query(dishsql.Post).\
                            filter_by(url_title=page).\
                            first()
             if post:

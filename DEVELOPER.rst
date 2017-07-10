@@ -10,7 +10,7 @@ The website requires:
 with a database called g_thedishonscience_dish_website (charset utf8).
 2) an apache server setup in a configuration compatible with the example conf
 file, the-dish.conf
-3) a working flask installation, python 2, and the modules:
+3) a working flask installation, at least python 2.6, and the modules:
 css-html-js-minify,
 python-dateutil, xlrd, markdown, mysqlclient (or mysql-python if on 2.x), sqlalchemy, enum34 (if on <py3.4), and flask
 

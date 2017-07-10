@@ -811,7 +811,7 @@ def insert_all_teams(update_behavior=UpdateBehavior.update):
         # request that all changes be committed.
         session.add_all(teams)
 
-def delete_post(url_title, session=None):
+def delete_post(post_name, session=None):
     """Deletes a post from the sql server associated with the given session
     (the one produced by dishsql.Session() is the default. Does not issue
     commit or close to session if it was passed in, but will clean up default
