@@ -2649,7 +2649,7 @@
                     white-space: nowrap;
                 }
 
-        .post > .title.image img {
+        .post img {
             max-height: 50em;
             max-width: 100%;
         }
