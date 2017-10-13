@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Mike Gloudemans",
+            "nickname": "Mike Gloudemans"
+        }
+    ],
+    "blurb": "Distinguishing essential genes from those we can live without",
+    "description": "A young boy comes into the doctor's office presenting unusual sypmtoms. To solve his case, we'll explore which genes are most essential for human health, and which ones can survive heavy mutation.",
+    "five_by_two_image_src": "./images/survivorship-bias-head.png",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/survivorship-bias-thumbnail2.png",
+    "publication_date": "2017-10-12",
+    "teams": [
+        "forty-two"
+    ],
+    "title": "The Essence of Life",
+    "two_by_one_image_src": "./images/survivorship-bias-thumbnail1.png",
+    "url_title": "essential-genes"
+}
