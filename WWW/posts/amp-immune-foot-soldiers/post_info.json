@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Kelly McGill",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Antimicrobial Peptides: immune foot soldiers that are quick-acting, deadly, and on the front lines",
+    "description": "How do we survive infections when some types of bacteria can double their population as quickly as a run of a sitcom episode (twenty minutes) while our adaptive immune system takes a few days to produce antibodies and T cells in our defense? What defenses does our body use in the meantime to keep the infection under control?",
+    "five_by_two_image_src": "./images/TDSO_AMP.001-cropped.png",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-10-12",
+    "teams": [
+        "Immune System"
+    ],
+    "title": "Antimicrobial Peptides: Your Body's Homeland Security",
+    "two_by_one_image_src": "",
+    "url_title": "amp-immune-foot-soldiers"
+}
