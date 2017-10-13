@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Isabel Jean Jones",
+            "nickname": "Isabel Jones"
+        }
+    ],
+    "blurb": "As worry mounts about the anticipated effects of climate change on ocean ecosystems, how will marine parasites fare?",
+    "description": "If someone asks you what the most common life strategy on earth is, you might be surprised by the answer. It turns out that some 40% of known species on our planet are parasites. Parasites are organisms that spend at least some part of their life on or in a host species, at that host\u2019s prolonged expense or eventual death. Rarely inspiring respect, parasites are more commonly considered scoundrels and degenerates, exploiting other species in order take the easiest route to reproductive bliss. But there is nothing easy about being a parasite. Many parasites have complex transmission, requiring successive infection of multiple different hosts in order to complete their lifecycle. In fact, that parasitism is so successful in the face of such complexity is a testament to the strategy\u2019s evolutionary elegance. But how will this elegant life strategy hold up to accelerating climate change?",
+    "five_by_two_image_src": "./images/img1.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/img5.jpg",
+    "publication_date": "2017-10-12",
+    "teams": [
+        "marine-biology"
+    ],
+    "title": "Turning up the heat on ocean parasites: sink or swim?",
+    "two_by_one_image_src": "./images/img4.jpg",
+    "url_title": "turning-up-the-heat"
+}
