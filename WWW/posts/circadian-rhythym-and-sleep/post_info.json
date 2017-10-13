@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/hedgehog.png",
+            "name": "Jenny Hsu",
+            "nickname": ""
+        }
+    ],
+    "blurb": "The science and genetics of sleep preferences",
+    "description": "We each have a powerful alarm clock in our cells that tells us when to sleep and when to be active \u2013 our circadian rhythm \u2013 and it\u2019s wound differently for each person. In this article you\u2019ll learn how circadian rhythm controls sleep, how a greatly altered circadian rhythm leads to sleep disorders, and the latest research on the genetics of sleep preferences.",
+    "five_by_two_image_src": "./images/sleeping-dog.png",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-10-12",
+    "teams": [
+        "cell-biology"
+    ],
+    "title": "Morning Bird or Night Owl?",
+    "two_by_one_image_src": "",
+    "url_title": "circadian-rhythym-and-sleep"
+}
