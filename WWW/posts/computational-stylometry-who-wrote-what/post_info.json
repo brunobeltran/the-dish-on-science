@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Rohan Mehta",
+            "nickname": "Rohan Mehta"
+        }
+    ],
+    "blurb": "How we use computers to find out who wrote what.",
+    "description": "We can use mathematical and computational techniques to analyze texts with unknown authorship to see if we can determine who wrote them.  I present two simple examples of these techniques and use them to answer questions about the writings of William Shakespeare.",
+    "five_by_two_image_src": "shakesig.png",
+    "illustrators": [],
+    "one_by_one_image_src": "shakesig_tiny.png",
+    "publication_date": "2017-11-06",
+    "teams": [
+        "forty-two"
+    ],
+    "title": "Linguistic Whodunits",
+    "two_by_one_image_src": "shakesig_tiny.png",
+    "url_title": "computational-stylometry-who-wrote-what"
+}

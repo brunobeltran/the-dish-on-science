@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "headshot_src": "./images/hannah.png",
+            "name": "Johanna O'Day",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Stanford researchers relieve pain using light",
+    "description": "Ever wish pain could go away with the press of a button? Stanford scientists used optogenetics to explore the brain's pain circuit and with the switch of a light, they were able to specifically activate nociceptors, sensory nerve cells, to reduce (or induce) pain!",
+    "five_by_two_image_src": "./images/cover5_2.png",
+    "illustrators": [
+        {
+            "headshot_src": "",
+            "name": "Johanna O'Day",
+            "nickname": ""
+        }
+    ],
+    "one_by_one_image_src": "./images/croppedimage1_1.png",
+    "publication_date": "2017-11-06",
+    "teams": [
+        "neuroscience"
+    ],
+    "title": "Pain, Pain Go Away",
+    "two_by_one_image_src": "./images/croppedimage2_1.png",
+    "url_title": "pain-pain-go-away"
+}

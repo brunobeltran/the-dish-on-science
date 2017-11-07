@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Anna Cunningham",
+            "nickname": ""
+        }
+    ],
+    "blurb": "A new approach to developing kinase inhibitors.",
+    "description": "Kinase inhibitors are one of the most common types of prescription drugs, but developing them is difficult and expensive. Using a new method, kinase inhibitors can be designed quickly and easily just by knowing the protein sequence!",
+    "five_by_two_image_src": "./images/cover_5x2.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/thumbnail.jpg",
+    "publication_date": "2017-11-06",
+    "teams": [
+        "biochemistry-and-bioinformatics"
+    ],
+    "title": "Designing Drugs",
+    "two_by_one_image_src": "./images/cover_2x1.jpg",
+    "url_title": "rationally-designed-peptides"
+}

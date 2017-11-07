@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Elise Robinson",
+            "nickname": ""
+        }
+    ],
+    "blurb": "A guide to understanding the danger",
+    "description": "Radiation. Invisible stuff. Scary enough to manipulate nations, but convenient enough to ignore for that perfect suntan \u2013 what is radiation exactly, and how does it age, mutate, or potentially kill us?",
+    "five_by_two_image_src": "./images/Bomb.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-11-06",
+    "teams": [
+        "general-biology"
+    ],
+    "title": "Radiation",
+    "two_by_one_image_src": "",
+    "url_title": "radiation"
+}

@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Hannah Rosen",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Two recent studies show octopus may have eyes in the back of their head",
+    "description": "Octopus and squid are known for their sophisticated eyes, but recent studies show they may be able to sense light with their skin too.",
+    "five_by_two_image_src": "octopus vision.jpg",
+    "illustrators": [
+        {
+            "headshot_src": "",
+            "name": "Hannah Rosen",
+            "nickname": ""
+        }
+    ],
+    "one_by_one_image_src": "octopus vision thumbnail.jpg",
+    "publication_date": "2017-11-06",
+    "teams": [
+        "marine-biology"
+    ],
+    "title": "Octopus vision, it's in the eye (or skin) of the beholder",
+    "two_by_one_image_src": "octopus vision cropped.jpg",
+    "url_title": "octopus-vision-is-in-the-skin-of-the-beholder"
+}

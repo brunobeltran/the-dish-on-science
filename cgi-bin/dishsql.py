@@ -339,6 +339,9 @@ def fix_url(post_dict):
     if not set(post_dict['url_title']) <= allowed_chars:
         raise CannotFixError('URL Title ' + post_dict['url_title'] +
                 'contains invalid characters! Use only [a-z0-9-]')
+    if not os.path.exists(os.path.normpath(os.path.join(
+            thedish.www_dir, 'posts', post_dict['url_title']))):
+        raise CannotFixError("URL title " + post_dict['url_title'] + " does not match any existing directory in WWW/posts!")
 
 def fix_blurb(post_dict):
     if not validate_length(post_dict['blurb'], 'blurb'):
@@ -499,7 +502,7 @@ def fix_image_file_name(post_dict, file_name):
         raise CannotFixError('Cannot fix empty image file name from post: '
                        + post_dict['url_title'])
     looks_like_local_attempt = re.compile('(\./).*')
-    looks_like_raw_filename = re.compile('[a-zA-Z0-9-_]+\.[a-zA-Z]')
+    looks_like_raw_filename = re.compile('[ a-zA-Z0-9-_]+\.[a-zA-Z]')
     # looks_like_absolute_attempt = re.compile('.*/posts/.*/images/.*')
     if looks_like_local_attempt.match(file_name):
         # don't forget to strip the / from self.url, os.path.join ignores

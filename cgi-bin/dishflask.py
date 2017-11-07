@@ -138,7 +138,6 @@ def redirect_to_drive():
     return redirect("https://drive.google.com/open?id=1R69WfpVN3L8xKHOSkQHUpIPWH-8kdpxCEwqbGm5bsrQ",
                     code=302)
 
-
 # @app.route('/assets/<path:path>')
 # def send_assets(path):
 #     return send_from_directory('/var/www/thedishonscience.com/WWW/assets/', path)
@@ -154,8 +153,6 @@ def redirect_to_drive():
 # @app.route('/posts/<post_name>/images/<path:path>')
 # def send_post_images(post_name, path):
 #     return send_from_directory('/var/www/thedishonscience.com/WWW/posts/{}/images/'.format(post_name), path)
-
-
 
 @app.errorhandler(404)
 def page_not_found(e):
