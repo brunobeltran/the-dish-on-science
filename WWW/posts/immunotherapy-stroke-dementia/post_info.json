@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Sarah E. Barnes",
+            "nickname": ""
+        }
+    ],
+    "blurb": "How treating inflammation in the brain following stroke can prevent patients from developing dementia.",
+    "description": "Recent work by the Buckwalter Lab at Stanford University indicates that eliminating B cells following stroke may protect patients from later developing vascular dementia.",
+    "five_by_two_image_src": "StrokeBrain.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-12-04",
+    "teams": [
+        "translational-biology"
+    ],
+    "title": "A Novel Immunotherapy for Preventing Post-Stroke Dementia",
+    "two_by_one_image_src": "",
+    "url_title": "immunotherapy-stroke-dementia"
+}

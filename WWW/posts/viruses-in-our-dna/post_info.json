@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "headshot_src": "./images/Grandi.jpg",
+            "name": "Fiorella Grandi",
+            "nickname": ""
+        }
+    ],
+    "blurb": "How viruses came to dominate a significant portion of your genome and what they're doing now",
+    "description": "Most of your genome doesn\u2019t code for proteins, but for viruses. Here we discuss their roles in controlling some basic aspects of human development.",
+    "five_by_two_image_src": "./images/cover.png",
+    "illustrators": [
+        {
+            "headshot_src": "./images/Kozyrytska.jpg",
+            "name": "Kat Kozyrytska",
+            "nickname": ""
+        }
+    ],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-12-04",
+    "teams": [
+        "Cell Biology"
+    ],
+    "title": "The Ghosts in Your Genome: How Retroviruses Influence your Development",
+    "two_by_one_image_src": "",
+    "url_title": "viruses-in-our-dna"
+}

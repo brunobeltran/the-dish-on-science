@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Natalie Low",
+            "nickname": ""
+        }
+    ],
+    "blurb": "To understand the past and future of our oceans, marine biologists explore some unconventional sources of data.",
+    "description": "What do you think of when you picture a marine biologist at work? Perhaps a SCUBA diver counting animals underwater, or people leaning over the side of a boat to put tags on whales, or exploring the deep ocean using submarines. Or even a person bending over a microscope, trying to identify tiny plankton. Few people would picture someone sorting through the contents of ancient trash heaps, or comparing Roman mosaic artworks, or poring over old colonial maps. After all, those are jobs for archaeologists and historians. Marine biologists study ocean life, not human history, right?",
+    "five_by_two_image_src": "./images/historicalecology.png",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2017-12-04",
+    "teams": [
+        "marine-biology"
+    ],
+    "title": "Back To The Future",
+    "two_by_one_image_src": "",
+    "url_title": "back-to-the-future"
+}

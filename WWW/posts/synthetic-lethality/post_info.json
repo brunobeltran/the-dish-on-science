@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Anna Cunningham",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Using existing DNA mutations in cancer to find new targeted therapies",
+    "description": "Cancer is difficult to treat because it mutates quickly and frequently, enabling cancer cells to develop resistance to many therapies. However, scientists and doctors can take advantage of the many mutations in cancer using a concept called synthetic lethality.",
+    "five_by_two_image_src": "./images/cancer_5x2.jpeg",
+    "illustrators": [
+        {
+            "headshot_src": "",
+            "name": "Melissa Ko",
+            "nickname": ""
+        }
+    ],
+    "one_by_one_image_src": "./images/cancer_1x1.jpeg",
+    "publication_date": "2017-12-04",
+    "teams": [
+        "biochemistry-and-bioinformatics"
+    ],
+    "title": "Synthetic lethality: a new angle for cancer therapy",
+    "two_by_one_image_src": "./images/cancer_2x1.jpeg",
+    "url_title": "synthetic-lethality"
+}
