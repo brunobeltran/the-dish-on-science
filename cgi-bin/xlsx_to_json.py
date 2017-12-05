@@ -133,6 +133,8 @@ class RowIdx:
     one_by_one_image_src = 19
     publication_date = 20
 
+typo_title_rows = list(title_rows)
+typo_title_rows[16] = u'Illustrator Nickame(s)'
 
 class BadRowException(Exception):
     pass
@@ -146,11 +148,12 @@ def xlsx_to_json(xlsx_file_name, json_file_name):
     title_col = sh.col(title_col_idx)
     title_rvs = [row.value for row in title_col]
     # first a simple sanity check that they're using the right excel sheet
-    row_types = [title_rows, old_title_rows, old2_title_rows]
+    row_types = [title_rows, old_title_rows, old2_title_rows, typo_title_rows]
     # save what was wrong on best attempt
     best_bad_rows = title_rvs
     best_good_rows = RowIdx
-    idxs = [RowIdx, OldRowIdx, Old2RowIdx]
+    # "TypoRowIdx" == RowIdx
+    idxs = [RowIdx, OldRowIdx, Old2RowIdx, RowIdx]
     for i, rows in enumerate(row_types):
         bad_rows = []
         good_rows = []
