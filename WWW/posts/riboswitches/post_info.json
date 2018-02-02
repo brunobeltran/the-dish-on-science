@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/elephant.png",
+            "name": "Jeremy Work",
+            "nickname": ""
+        }
+    ],
+    "blurb": "mRNAs are regulated in many ways, but riboswitches are one of the craftier methods.",
+    "description": "Messenger RNA (mRNA) is more than just a carrier of information from the genome to the ribosome. Some mRNAs include additional sequences that regulate their message by sensing molecules in the cell. These \u201criboswitch\u201d sequences are an interesting and unique form of biosensor and cellular regulator.",
+    "five_by_two_image_src": "./images/riboswitch.png",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2018-02-02",
+    "teams": [
+        "biochemistry-and-bioinformatics"
+    ],
+    "title": "Riboswitches: A clever way to regulate mRNA",
+    "two_by_one_image_src": "",
+    "url_title": "riboswitches"
+}
