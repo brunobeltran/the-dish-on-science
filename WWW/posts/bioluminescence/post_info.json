@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "headshot_src": "/images/hedgehog.png",
+            "name": "Julia Mason",
+            "nickname": ""
+        }
+    ],
+    "blurb": "How and why marine organisms create bioluminescence, living light",
+    "description": "Deep beneath the ocean, far beyond the reach of the sun\u2019s rays, the waters pulsate and twinkle with electric blue light. Not distant stars, but marine organisms create this otherworldly glow, an enchanting adaptation called bioluminescence.",
+    "five_by_two_image_src": "./images/vamptentfluor.jpg",
+    "illustrators": [
+        {
+            "headshot_src": "",
+            "name": "Natalie Low",
+            "nickname": ""
+        }
+    ],
+    "one_by_one_image_src": "",
+    "publication_date": "2018-07-18",
+    "teams": [
+        "Marine-Biology"
+    ],
+    "title": "Glowing in the Deep",
+    "two_by_one_image_src": "",
+    "url_title": "bioluminescence"
+}
