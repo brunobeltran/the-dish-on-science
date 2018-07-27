@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Diana Li",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Visualization of underwater vortices reveals how fish make the best of a swirilng situation",
+    "description": "Marine animals face a lot of potential issues when swimming through the water. One wrong turn, and you could end up as someone else\u2019s next meal. Not turning enough could result in bumping into a lot of things. But there is one important feature found everywhere that they have to face almost all the time, and this feature is rarely seen \u2013 vortices.",
+    "five_by_two_image_src": "./images/KarmanStreet5x2.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "./images/KarmanStreet1x1.jpg",
+    "publication_date": "2018-07-27",
+    "teams": [
+        "marine-biology"
+    ],
+    "title": "Going with the Flow",
+    "two_by_one_image_src": "./images/KarmanStreet2x1.jpg",
+    "url_title": "going-with-the-flow"
+}
