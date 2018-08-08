@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Johanna M Sweere",
+            "nickname": "Jolien Sweere"
+        }
+    ],
+    "blurb": "Microbes: how exposure to the right ones can be be a good thing",
+    "description": "Why does the immune system sometimes go haywire and cause allergies? Scientists now think that a healthy immune system needs training early in life by unlikely allies: microbes. How can microbes be our friends in the face of allergies, and why are these disorders getting more common recently?",
+    "five_by_two_image_src": "./images/Oldfriends_cover.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2018-08-07",
+    "teams": [
+        "Immune System"
+    ],
+    "title": "Hello Microbe My Old Friend: How a Diverse Microbiome Trains the Immune System against Allergies",
+    "two_by_one_image_src": "",
+    "url_title": "microbe-old-friends-allergies"
+}
