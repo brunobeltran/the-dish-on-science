@@ -161,7 +161,7 @@ def xlsx_to_json(xlsx_file_name, json_file_name):
             if j >= len(rows) or rows[j] != row:
                 bad_rows.append(row)
                 good_row = '' if j >= len(rows) else rows[j]
-                good_rows.append(good_row) 
+                good_rows.append(good_row)
         # if we found the set of rows that this Excel file is following
         if not bad_rows:
             idx = idxs[i]
@@ -172,10 +172,11 @@ def xlsx_to_json(xlsx_file_name, json_file_name):
             best_good_rows = good_rows
     else:
         raise BadRowException('Row labels differ from all known versions of '
-                              + 'post_info.xlsx in file "' + xlsx_file_name
-                              + '". In closest match, the rows [[' 
-                              + ' '.join(best_bad_rows) + ']] differ from '
-                              + 'expected rows [[' + ' '.join(best_good_rows) 
+                              + 'post_info.xlsx in file "' + str(xlsx_file_name)
+                              + '". In closest match, the rows [['
+                              + ' '.join([str(r) for r in best_bad_rows])
+                              + ']] differ from expected rows [['
+                              + ' '.join([str(r) for r in best_good_rows])
                               + ']].')
     value_col = sh.col(values_col_idx)
     post = {}
