@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Kelly McGill",
+            "nickname": ""
+        }
+    ],
+    "blurb": "The goal of vaccination is to provide protective, long lasting immunity against a disease.",
+    "description": "Who should get the seasonal flu vaccine?  Why is the flu vaccine different each year? How does the flu vaccine protect us?\nThe CDC has estimated that seasonal influenza or the flu is responsible for around 50,000 deaths worldwide each year1.  In 1918, the \u201cSpanish flu\u201d pandemic killed over 6,750,00 people in the U.S. and caused over 50 million deaths worldwide2.  The more recent 2009 pandemic flu resulted in over 200,00 deaths during its first year of circulation in the human population1.",
+    "five_by_two_image_src": "./images/TDOS_FLU.001.png",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2018-09-24",
+    "teams": [
+        "Immune System"
+    ],
+    "title": "\"Seasonal Flu Virus: Why Vaccines Never Go Out of Style\"",
+    "two_by_one_image_src": "",
+    "url_title": "seasonalfluvaccine"
+}
