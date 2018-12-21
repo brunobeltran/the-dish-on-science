@@ -1,0 +1,32 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Susanna Brantley",
+            "nickname": "Susanna Brantley"
+        },
+        {
+            "headshot_src": "",
+            "name": "Ron Shanderson",
+            "nickname": "Susanna Brantley"
+        }
+    ],
+    "blurb": "Epigenetics \u2013 how you are more than your genes.",
+    "description": "All cells in your body share the same genome, but a heart cell keeps a beat while a liver cell does detox. How can the same genome give rise to such different cell types? The answer is epigenetics. Here we describe the history, function, and relevance of epigenetics to the cells in your body.",
+    "five_by_two_image_src": "./images/nucleosome.png",
+    "illustrators": [
+        {
+            "headshot_src": "",
+            "name": "Ron Shanderson",
+            "nickname": "Ron Shanderson"
+        }
+    ],
+    "one_by_one_image_src": "./images/nucleosome_thumb.png",
+    "publication_date": "2018-12-21",
+    "teams": [
+        "monumental-scientific-discoveries"
+    ],
+    "title": "Above Genetics",
+    "two_by_one_image_src": "./images/nucleosome_crop.png",
+    "url_title": "above-genetics"
+}
