@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Rohan Mehta",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Measuring the influence of US Supreme Court justices by modeling their votes as little magnets",
+    "description": "What can we learn about how the members of the US Supreme Court influence each other by applying ideas from statistical physics to their voting patterns?",
+    "five_by_two_image_src": "supreme_particles.png",
+    "illustrators": [],
+    "one_by_one_image_src": "supreme_particles_cropped_more.png",
+    "publication_date": "2019-05-17",
+    "teams": [
+        "forty-two"
+    ],
+    "title": "The Supreme Court Through the Eyes of Statistical Mechanics",
+    "two_by_one_image_src": "supreme_particles_cropped.png",
+    "url_title": "supreme-court-influence-maximum-entropy"
+}
