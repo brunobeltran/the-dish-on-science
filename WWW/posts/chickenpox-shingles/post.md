@@ -6,7 +6,7 @@ Varicella-zoster virus can be spread through the air making it *extremely* infec
 
 How does your immune system stop chickenpox? When the VZV reaches the skin, alarm signals are sent to the immune system by molecules called cytokines <sup>1</sup>. These cytokines are like someone pulling a fire alarm. They call immune cells to the site of infection to start fighting the virus. One cell type they call are to the fight are T cells. T cells are a type of immune cell that have specificity and memory. Your immune system needs to develop T cells specifically trained to recognize and kill the VZV; fighting the infection and preventing VZV reactivation<sup>1</sup>. Think of it like a police force that has the Wanted Ad for the criminal and are waiting for a sighting to take action.
 
-![Wanted Ad for Chickenpox](https://drive.google.com/drive/u/1/folders/1N2vvK1jEyL-7Iw35sqbOFJVVrgS6hUs_)
+![Wanted Ad for Chickenpox](./images/ChickenPox_Shingles_Images.003.jpeg)
 
 Once your body finds a T cell that is good at fighting VZV, it forms that cell into what we call a memory T-cell. The memory T cell sticks around after the infection to ensure that your body will be able to fight off chickenpox better and faster the next time it tries to attack. T cells fight off VZV by killing the infected cells directly and by recruiting another kind of immune cell, B cells<sup>3</sup>. These B cells also have specificity and memory. B cells produce antibodies, a special type of protein that binds to VZV specifically<sup>3</sup>. Antibodies can activate the killing of infected cells by binding to the infected cell surface and serving as the Wanted Ads for virus<sup>5</sup>. B cell antibodies help T cells to kill the virus<sup>5</sup>. The chickenpox infection in children is normally self-limiting meaning that it’s resolved by your immune system’s actions without requiring additional medical treatment<sup>3</sup>.
 
@@ -25,7 +25,7 @@ Even though the chickenpox vaccine successfully prevents you from getting sick w
 
 VZV hides in neurons from the immune system throughout life<sup>3</sup>.
 
-![Chickenpox hiding in a neuron](https://drive.google.com/drive/u/1/folders/1N2vvK1jEyL-7Iw35sqbOFJVVrgS6hUs_)
+![Chickenpox hiding in a neuron](./images/ChickenPox_Shingles_Images.002.jpeg)
 
 How and why VZV reactivates is still unknown and remains an active area of medical research<sup>3</sup>. The secondary infection with VZV is called herpes zoster or **shingles**<sup>3</sup>. The risk of shingles increases with age or with immunocompromisation (i.e. cancer, organ transplant, HIV, drugs)<sup>3</sup>. Researchers believe that the increased risk correlates with the how your your immune system weakens with age, especially your police force, T cells<sup>1</sup>. About one in three adults both worldwide will suffer from a shingles infection<sup>8</sup>.
 
@@ -33,7 +33,7 @@ How and why VZV reactivates is still unknown and remains an active area of medic
 
 A shingles infection may involve a rash<sup>3</sup>. Since the VZV hides out in neurons, the rash can appear anywhere on the body, but it’s usually limited to one side or the face. This is unlike chickenpox which can cover the whole body<sup>9</sup>.
 
-![Shingles Rash](https://drive.google.com/drive/u/1/folders/1N2vvK1jEyL-7Iw35sqbOFJVVrgS6hUs_)
+![Shingles Rash](./images/ChickenPox_Shingles_Images.004.jpeg)
 |:--:| 
 | *The progression of shingles* |
 ```
