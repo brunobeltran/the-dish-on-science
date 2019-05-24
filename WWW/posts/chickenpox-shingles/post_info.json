@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Kelly McGill",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Are you itching to learn more about chickenpox and how it connects to shingles? Do the\nvaccines work?",
+    "description": "One in three people develop shingles in their lifetime. What causes this epidemic? The same virus that causes chickenpox causes shingles, Varicella-zoster virus (VZV)1.  VZV is a member of the herpes family - whose other members are responsible for cold sores and genital herpes1.  The first infection with VZV causes chickenpox2.  Once the active infection is over, the virus becomes latent - it\u2019s still present in your body, but it\u2019s now hiding from your immune system in nerve cells i.e. neurons3.  If the virus re-activates, this secondary infection is called shingles3.",
+    "five_by_two_image_src": "./images/ChickenPox_Shingles_Images.001.jpeg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2019-05-24",
+    "teams": [
+        "immune-system"
+    ],
+    "title": "Chickenpox To Shingles: Young to Old and How Vaccines Changed the Game",
+    "two_by_one_image_src": "",
+    "url_title": "chickenpox-shingles"
+}

@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "./images/Nicole_headshot.jpg",
+            "name": "Nicole Moyen",
+            "nickname": ""
+        }
+    ],
+    "blurb": "We tell you whybeing hydrated matters, and how to  know whether you\u2019re hydrated.",
+    "description": "Why does our body actually need water? How do you know if you\u2019re hydrated, and how can you maintain your hydration?",
+    "five_by_two_image_src": "./images/WomanDrinking.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2019-05-24",
+    "teams": [
+        "general-biology"
+    ],
+    "title": "How to Know If You're Hydrated",
+    "two_by_one_image_src": "",
+    "url_title": "check-your-hydration"
+}

@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "headshot_src": "./images/francis.jpg",
+            "name": "Francis Aguisanda",
+            "nickname": "Francis Aguisanda"
+        }
+    ],
+    "blurb": "How do you make a stem cell?",
+    "description": "Stem cells have the potential to change the face of healthcare. How can we generate these cells in the lab? This article gives a brief overview of induced pluripotent stem cell technology and how this can be applied to treat patients.",
+    "five_by_two_image_src": "./images/ipsc-800px-by-300px.png",
+    "illustrators": [
+        {
+            "headshot_src": "",
+            "name": "Kat Kozyrytska",
+            "nickname": "Kat Kozyrytska"
+        }
+    ],
+    "one_by_one_image_src": "./images/ipsc-80x-by-80px.png",
+    "publication_date": "2019-05-24",
+    "teams": [
+        "cell-biology"
+    ],
+    "title": "Rejuvenation and Repair: How Stem Cells are Changing Healthcare",
+    "two_by_one_image_src": "./images/ipsc-400px-by-200px.png",
+    "url_title": "stem-cells-and-healthcare"
+}
