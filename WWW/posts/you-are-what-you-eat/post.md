@@ -1,5 +1,4 @@
-﻿### How much impact can a single person’s lifestyle have on the entire planet’s carbon footprint? 
-
+﻿**How much impact can a single person’s lifestyle have on the entire planet’s carbon footprint?** 
 The answer, and where it lies, might surprise you.
  
 New estimates predict that Earth’s temperature will increase by 2.7º F by 2040 (which isn’t that far away), which would cause devastating climate changes, even worse than those that would have accompanied the previously predicted 3.1º increase by 2060. The estimates also predict nearly $54 trillion dollars spent in damage control due to the secondary symptoms of climate change like the California forest fires seen within the last few months (1). With the current administration’s planned exit from the Paris Agreement and lack of other environmental reform efforts, it might seem like little can be done to reverse the effects of the century’s buildup of carbon emissions. However, we might be able to help the planet more easily through **individual changes** than via national and international legislation.
@@ -43,7 +42,7 @@ All of these daunting statistics may make you want to you quit meat and dairy im
 
 Along with eliminating meat and dairy from certain meals each week, another way to help the environment is to consider reducing the amount of these food groups consumed in a single sitting. For example, many restaurants are experimenting with supplementing burger meat with mushrooms to form a burger patty that can still assume the flavor and protein of red meat, but reduces the total amount of meat used per patty. If you are considering fully eliminating meat from your diet, but love the taste and texture, consider trying plant based substitutes. Given that these alternatives have been on the market for a number of years, most grocery stores stock a wide variety made with different grains and vegetables and therefore have varying consistencies and flavors (and hopefully one that appeals to your taste buds). These substitutes also come in a number of different formats, including: sausage, deli meat, hot dogs, and meatballs.
 
-### Key Takeways
+### Key Takeaways
   
 The most important takeaway here is that **balance is key**: decreasing consumption of meat and animal byproducts by even a small amount can have a huge effect.
 
