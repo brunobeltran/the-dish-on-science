@@ -1,0 +1,27 @@
+{
+    "authors": [
+        {
+            "headshot_src": "./images/Derek_Chen.JPG",
+            "name": "Derek Chen",
+            "nickname": "Derek Chen"
+        }
+    ],
+    "blurb": "Genetics and Cancer: An unlikely relationship between the duo",
+    "description": "Cancer is inherently a genetic disease. Within our bodies, there is an ongoing biological battle between two categories of genes with opposing functions. On one side, there are cancer-causing genes. But on the other side, there are genes responsible for preventing this illness from arising in the first place. Read on to learn more about the genetic mechanisms behind cancer.",
+    "five_by_two_image_src": "./images/Cancer_Genetics_Cover.png",
+    "illustrators": [
+        {
+            "headshot_src": "./images/Derek_Chen.JPG",
+            "name": "Derek Chen",
+            "nickname": "Derek Chen"
+        }
+    ],
+    "one_by_one_image_src": "",
+    "publication_date": "2019-12-19",
+    "teams": [
+        "cell-biology"
+    ],
+    "title": "Cancer Genetics & Epigenetics",
+    "two_by_one_image_src": "",
+    "url_title": "cancer-genetics-epigenetics"
+}
