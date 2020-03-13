@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Ryan Treves",
+            "nickname": ""
+        }
+    ],
+    "blurb": "DNA sequencing can be used to incriminate ivory traffickers and help save elephants from extinction",
+    "description": "Using DNA analysis of ivory and dung samples from Elephants across Africa, a team at the University of Washington demonstrates how tusks shipped across the world can be linked to incriminate traffickers. This new strategy may help save African Elephants from devastating population loss due to poaching.",
+    "five_by_two_image_src": "./images/African_Elephant_Uganda.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2020-03-13",
+    "teams": [
+        "translational-biology"
+    ],
+    "title": "From Pipette to Gavel: Using DNA Sequencing to Combat Ivory Cartels",
+    "two_by_one_image_src": "",
+    "url_title": "from-pipette-to-gavel"
+}
