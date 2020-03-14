@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Kelly McGill",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Cytokine Storms: How Immune Resistance Can Turn Deadly.",
+    "description": "The word \u201cstorm\u201d might make you think of thunder and lightening, or maybe floods, tornadoes and hurricanes.  These storms can cause a lot of damage and led to 2,143 injuries and 522 deaths in 2015.  However, there is another kind of storm, a much deadlier storm, that in past, killed more people than WWII.  This deadly storm is called a cytokine storm.",
+    "five_by_two_image_src": "./images/cytokine_stormImagescover.jpeg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2020-03-25",
+    "teams": [
+        "immune-system"
+    ],
+    "title": "Cytokines: Deadly Storms of the Immune System",
+    "two_by_one_image_src": "",
+    "url_title": "cytokine-storm"
+}
