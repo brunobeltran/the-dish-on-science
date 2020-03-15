@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Kelly McGill",
+            "nickname": ""
+        }
+    ],
+    "blurb": "Curious to know what the purpose is of your appendix? Your appendix isn\u2019t just a waste of space.  It works with your immune system to keep you healthy and your gut happy",
+    "description": "For many years, scientists and doctors alike weren\u2019t sure if the appendix actually had a purpose(1). The fact that many animals have an appendix, including rodents, rabbits, some primates, and humans, seemed to suggest the appendix did have a purpose, whether or not the purpose was still useful(1). Some scientists believed that the appendix was a left-over part of a digestive tract that was used to digest cellulose (found in foods like broccoli, cauliflower, kale) when our diets had more greens than meat(2). It wasn\u2019t until we realized that we need bacteria in our gut to survive that other theories for the appendix\u2019s function emerged(1).",
+    "five_by_two_image_src": "./images/TDOS_AppendixImages.001.jpeg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2020-05-06",
+    "teams": [
+        "immune-system"
+    ],
+    "title": "Appendix: What is it good for?",
+    "two_by_one_image_src": "",
+    "url_title": "appendix-function"
+}
