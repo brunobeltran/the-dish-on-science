@@ -30,7 +30,7 @@ Under normal circumstances, proto-oncogenes are genes involved with healthy cell
 
 Mutations in proto-oncogenes can be classified as **gain-of-function** mutations as the gene “gains” the additional “function” of causing an increased risk of cancer. Oncogenes are the result of dominant mutations. The ras family of genes has been implicated to cause a wide variety of cancers, such as pancreatic, lung, colon, thyroid, and leukemic cancers. Mutations in the ras gene have been observed in more than 30% of all cancers, and this gene family is involved with cellular processes like dividing and growing [1].
 
- #### Abridged List of Oncogenes in Human Cancers [2]
+#### Abridged List of Oncogenes in Human Cancers [2]
 | Gene |Type of cancer  |
 |--|--|
 | *akt* |  Ovarian and pancreatic carcinomas|
@@ -48,7 +48,7 @@ Mutations in proto-oncogenes can be classified as **gain-of-function** mutations
 
 
 
- ### Tumor Suppressor Genes as our “Brake Pedals”
+### Tumor Suppressor Genes as our “Brake Pedals”
   
 Let’s imagine the same car scenario from earlier. Only this time, the brake pedals in your car represent tumor suppressor genes. The brake pedals connect to your front wheels and back wheels, giving your car two sets of brake pedals. This is important and a distinction to oncogenes. When one set of your brake pedals malfunctions, you’re still able to drive, albeit with an increased likelihood of crashing off the road. However, if both sets of brake pedals malfunction, then the probability of crashing has significantly increased. This is akin to how tumor suppressor genes work: healthy patients generally have two copies (one from Mom, one from Dad) of the tumor suppressor genes. In patients with cancer, they typically have both their tumor suppressor genes mutated, giving cancer the ability to grow uncontrollably. 
 
@@ -63,7 +63,7 @@ The idea that both copies of the tumor suppressor gene need to be mutated is kno
 Mutations to tumor suppressor genes can be classified as **loss-of-function mutations**, as the gene “loses” the protective “function” of preventing a cell from becoming cancerous. Tumor suppressor genes are the result of recessive mutations. The famous TP53 gene, known as the “guardian of the genome,” has been observed to be mutated in over 50% of all human cancers [4]. Another crucial tumor suppressor gene, the PTEN gene, if mutated, can lead to an inherited disorder called Cowden syndrome. Patients with Cowden syndrome have an increased risk of developing breast and thyroid cancers, among others.
 
 
- #### Abridged List of Tumor Suppressor Genes in Human Cancers [5]
+#### Abridged List of Tumor Suppressor Genes in Human Cancers [5]
 | Gene |Type of cancer  |
 |--|--|
 | *APC*|  Colon/rectum carcinoma|
@@ -115,7 +115,7 @@ Generally speaking, tumor suppressor genes are hypermethylated, thus very silenc
  
 Cancer epigenetics like DNA methylation can be found in all types of human cancers, and health professionals have used this fact to develop novel cancer treatments that target the methylation process. Developing drug therapeutics that can inhibit DNA methylation of tumor suppressor genes can prove useful in the fight against defeating cancer. Think of this as releasing Gene from his “chemical handcuffs” so Gene can go back to doing amazing charity work for the neighborhood. More broadly, epigenetics is an emerging field that excites researchers because it not only affects cancer genetics but also influences the genetics of many other health conditions as well.
 
-  ### Conclusions
+### Conclusions
  As we’ve discussed previously, cancer is inherently a genetic disease. Oncogenes and tumor suppressor genes are in a never-ending battle opposing each other within our bodies. The lifestyle choices you make can either help or hurt your cells in fighting off cancer. You can maintain the brakes in good shape or you can stomp on the gas — your cells, your call.
 
   
