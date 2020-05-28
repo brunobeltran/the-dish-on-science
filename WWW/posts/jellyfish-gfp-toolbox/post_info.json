@@ -1,0 +1,21 @@
+{
+    "authors": [
+        {
+            "headshot_src": "",
+            "name": "Susanna E. Brantley",
+            "nickname": "Susanna E. Brantley"
+        }
+    ],
+    "blurb": "How Fascination with Nature's Beauty Helped Create One of Scientists' Most Valuable Tools",
+    "description": "The beautiful image above is a glowing green nematode worm, C. elegans. This worm is naturally translucent, not green. To make it glow, the worm was engineered to contain a jellyfish protein called Green Fluorescent Protein (GFP) in each of its cells.  This addition allowed scientists to capture this glowing image with a fluorescent microscope. Today, GFP is used in labs around the world to study the behavior of cells, organelles (mitochondri anyone?), and proteins in real time. GFP has been adapted to react to  changes in a cell\u2019s environment,like pH levels or concentration of specific ions like oxygen or iron. This single protein has provided scientists insight into the mechanisms of cell division, protein dynamics, cell motility, tissue growth, and many other important biological phenomena.",
+    "five_by_two_image_src": "./images/celegans.jpg",
+    "illustrators": [],
+    "one_by_one_image_src": "",
+    "publication_date": "2020-05-28",
+    "teams": [
+        "monumental-scientific-discoveries"
+    ],
+    "title": "Every Toolbox Needs a Jellyfish",
+    "two_by_one_image_src": "",
+    "url_title": "jellyfish-gfp-toolbox"
+}
