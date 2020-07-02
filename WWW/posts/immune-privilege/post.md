@@ -10,7 +10,7 @@ Another part of the body that gets special treatment is the pregnant uterus cont
 
 Immune privilege is an adaptation by our immune system that enables different immune defenses and additional protection that avoid damaging and killing bystander cells (5). This article will focus specifically on the immune privilege of your eyes.
     
- ![Eye Structure ](.images/TDOS_EyePrivilege.002.jpeg)
+![Eye Structure ](.images/TDOS_EyePrivilege.002.jpeg)
 
 ### Mechanisms of Immune Privilege
 Your eyes’ immune privilege status is maintained by three mechanisms (6):
